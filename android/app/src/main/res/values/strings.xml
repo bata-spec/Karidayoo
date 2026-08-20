@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Karidayoo</string>
+    <string name="title_activity_main">Karidayoo</string>
+    <string name="package_name">com.bataspec.karidayoo</string>
+    <string name="custom_url_scheme">com.bataspec.karidayoo</string>
+</resources>
