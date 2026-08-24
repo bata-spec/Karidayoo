@@ -1,12 +1,23 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate, useParams } from 'react-router-dom';
 import { deleteWork, exportWork, getWork, renameWork } from '../db';
+import { buildWorkZip } from '../utils/zip';
 import type { Work } from '../types';
+
+function downloadBlob(blob: Blob, filename: string) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
 
 export default function DashboardLayout() {
   const { workId } = useParams();
   const navigate = useNavigate();
   const [work, setWork] = useState<Work | null | undefined>(undefined);
+  const [zipping, setZipping] = useState(false);
 
   useEffect(() => {
     if (!workId) return;
@@ -21,16 +32,25 @@ export default function DashboardLayout() {
     setWork({ ...work, name: name.trim() });
   }
 
-  async function handleExport() {
+  async function handleExportJson() {
     if (!workId) return;
     const data = await exportWork(workId);
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${data.work.name || 'work'}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
+    downloadBlob(blob, `${data.work.name || 'work'}.json`);
+  }
+
+  async function handleExportZip() {
+    if (!workId) return;
+    setZipping(true);
+    try {
+      const data = await exportWork(workId);
+      const blob = await buildWorkZip(data);
+      downloadBlob(blob, `${data.work.name || 'work'}.zip`);
+    } catch {
+      alert('ZIPの作成に失敗しました。');
+    } finally {
+      setZipping(false);
+    }
   }
 
   async function handleDelete() {
@@ -63,12 +83,15 @@ export default function DashboardLayout() {
           </a>
           <h1>{work.name}</h1>
         </div>
-        <div className="row">
+        <div className="row" style={{ flexWrap: 'wrap' }}>
           <button type="button" className="btn btn-ghost" onClick={handleRename}>
             名前変更
           </button>
-          <button type="button" className="btn btn-ghost" onClick={handleExport}>
-            エクスポート
+          <button type="button" className="btn btn-ghost" onClick={handleExportJson}>
+            JSONエクスポート
+          </button>
+          <button type="button" className="btn btn-ghost" onClick={handleExportZip} disabled={zipping}>
+            {zipping ? 'ZIP作成中...' : 'ZIPエクスポート'}
           </button>
           <button type="button" className="btn btn-danger" onClick={handleDelete}>
             削除

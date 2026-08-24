@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createWork, importWork, listWorks } from '../db';
+import { parseWorkZip } from '../utils/zip';
 import type { Work, WorkExport } from '../types';
 
 export default function HomePage() {
@@ -24,8 +25,8 @@ export default function HomePage() {
 
   async function handleImportFile(file: File) {
     try {
-      const text = await file.text();
-      const data = JSON.parse(text) as WorkExport;
+      const isZip = file.name.toLowerCase().endsWith('.zip');
+      const data = isZip ? await parseWorkZip(file) : (JSON.parse(await file.text()) as WorkExport);
       if (!data.work || !Array.isArray(data.entries)) {
         alert('作品データの形式が正しくありません。');
         return;
@@ -80,7 +81,7 @@ export default function HomePage() {
       <input
         ref={fileInputRef}
         type="file"
-        accept="application/json"
+        accept="application/json,.json,application/zip,.zip"
         style={{ display: 'none' }}
         onChange={(e) => {
           const file = e.target.files?.[0];
@@ -89,7 +90,7 @@ export default function HomePage() {
         }}
       />
       <button type="button" className="btn" onClick={() => fileInputRef.current?.click()}>
-        JSONファイルからインポート
+        JSON / ZIPファイルからインポート
       </button>
     </div>
   );
