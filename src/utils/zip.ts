@@ -67,7 +67,7 @@ export async function parseWorkZip(file: File): Promise<WorkExport> {
   const zip = await JSZip.loadAsync(file);
 
   const workFile = zip.file('work.json');
-  if (!workFile) throw new Error('work.json が見つかりません。Karidayooで作成したZIPファイルではない可能性があります。');
+  if (!workFile) throw new Error('work.json が見つかりません。創作ノートで作成したZIPファイルではない可能性があります。');
   const workJson = JSON.parse(await workFile.async('string')) as ZipWorkJson;
 
   const entryFiles: JSZip.JSZipObject[] = [];

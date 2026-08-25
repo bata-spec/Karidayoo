@@ -1,6 +1,6 @@
 {
-  "name": "Karidayoo",
-  "short_name": "Karidayoo",
+  "name": "創作ノート",
+  "short_name": "創作ノート",
   "description": "ゲーム・小説などの設定や資料を管理する創作支援ツール",
   "start_url": "./",
   "scope": "./",

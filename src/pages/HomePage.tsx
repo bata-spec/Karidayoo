@@ -42,7 +42,7 @@ export default function HomePage() {
   return (
     <div className="page">
       <div className="top-bar">
-        <h1>Karidayoo</h1>
+        <h1>創作ノート</h1>
       </div>
 
       <form onSubmit={handleCreate} className="row" style={{ marginBottom: 20 }}>
