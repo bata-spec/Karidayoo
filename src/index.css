@@ -151,16 +151,20 @@ button {
   overflow-x: auto;
 }
 
-.tabs a {
+.tabs a,
+.tabs button {
   padding: 8px 12px;
   text-decoration: none;
   font-size: 0.9rem;
   color: var(--color-text-muted);
+  border: none;
   border-bottom: 2px solid transparent;
+  background: none;
   white-space: nowrap;
 }
 
-.tabs a.active {
+.tabs a.active,
+.tabs button.active {
   color: var(--color-accent-strong);
   border-bottom-color: var(--color-accent);
   font-weight: 600;

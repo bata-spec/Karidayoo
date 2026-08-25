@@ -11,16 +11,24 @@ export default function EntryListPage() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [showUntagged, setShowUntagged] = useState(false);
   const [showAll, setShowAll] = useState(false);
+  const [browseMode, setBrowseMode] = useState<'category' | 'tag'>('category');
 
   useEffect(() => {
     if (!workId) return;
     listEntries(workId).then(setEntries);
   }, [workId]);
 
-  const categories = useMemo(() => {
+  const categoryCounts = useMemo(() => {
     if (!entries) return [];
-    return Array.from(new Set(entries.map((e) => e.category).filter(Boolean)));
+    const counts = new Map<string, number>();
+    for (const e of entries) {
+      const c = e.category || '未分類';
+      counts.set(c, (counts.get(c) ?? 0) + 1);
+    }
+    return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'));
   }, [entries]);
+
+  const categories = useMemo(() => categoryCounts.map(([c]) => c), [categoryCounts]);
 
   const tagCounts = useMemo(() => {
     if (!entries) return [];
@@ -36,7 +44,7 @@ export default function EntryListPage() {
   const filtered = useMemo(() => {
     if (!entries) return [];
     return entries.filter((e) => {
-      if (category && e.category !== category) return false;
+      if (category && (e.category || '未分類') !== category) return false;
       if (selectedTag && !e.tags.includes(selectedTag)) return false;
       if (showUntagged && e.tags.length > 0) return false;
       if (!search.trim()) return true;
@@ -45,10 +53,13 @@ export default function EntryListPage() {
     });
   }, [entries, search, category, selectedTag, showUntagged]);
 
+  const browsingByCategory = category !== '';
   const browsingByTag = selectedTag !== null || showUntagged;
-  const showList = search.trim() !== '' || browsingByTag || showAll || tagCounts.length === 0;
+  const hasAnyGrouping = categoryCounts.length > 0 || tagCounts.length > 0;
+  const showList = search.trim() !== '' || browsingByCategory || browsingByTag || showAll || !hasAnyGrouping;
 
-  function backToTags() {
+  function backToBrowse() {
+    setCategory('');
     setSelectedTag(null);
     setShowUntagged(false);
     setShowAll(false);
@@ -86,21 +97,42 @@ export default function EntryListPage() {
         <p className="helper-text">読み込み中...</p>
       ) : !showList ? (
         <div>
-          <p className="helper-text" style={{ marginBottom: 10 }}>
-            タグを選ぶと、そのタグが付いたエントリだけ表示されます。
-          </p>
-          <div className="row" style={{ flexWrap: 'wrap', gap: 8 }}>
-            {tagCounts.map(([tag, count]) => (
-              <button key={tag} type="button" className="chip" onClick={() => setSelectedTag(tag)}>
-                {tag} ({count})
-              </button>
-            ))}
-            {untaggedCount > 0 && (
-              <button type="button" className="chip" onClick={() => setShowUntagged(true)}>
-                タグなし ({untaggedCount})
-              </button>
-            )}
+          <div className="tabs" style={{ marginBottom: 4 }}>
+            <button
+              type="button"
+              className={browseMode === 'category' ? 'active' : ''}
+              onClick={() => setBrowseMode('category')}
+            >
+              カテゴリで見る
+            </button>
+            <button type="button" className={browseMode === 'tag' ? 'active' : ''} onClick={() => setBrowseMode('tag')}>
+              タグで見る
+            </button>
           </div>
+
+          {browseMode === 'category' ? (
+            <div className="row" style={{ flexWrap: 'wrap', gap: 8 }}>
+              {categoryCounts.map(([c, count]) => (
+                <button key={c} type="button" className="chip" onClick={() => setCategory(c)}>
+                  {c} ({count})
+                </button>
+              ))}
+            </div>
+          ) : (
+            <div className="row" style={{ flexWrap: 'wrap', gap: 8 }}>
+              {tagCounts.map(([tag, count]) => (
+                <button key={tag} type="button" className="chip" onClick={() => setSelectedTag(tag)}>
+                  {tag} ({count})
+                </button>
+              ))}
+              {untaggedCount > 0 && (
+                <button type="button" className="chip" onClick={() => setShowUntagged(true)}>
+                  タグなし ({untaggedCount})
+                </button>
+              )}
+            </div>
+          )}
+
           <div style={{ marginTop: 14 }}>
             <button type="button" className="btn btn-ghost" onClick={() => setShowAll(true)}>
               すべて表示({entries.length}件)
@@ -109,13 +141,15 @@ export default function EntryListPage() {
         </div>
       ) : (
         <div>
-          {(browsingByTag || showAll) && tagCounts.length > 0 && (
-            <div className="row" style={{ marginBottom: 10 }}>
-              <button type="button" className="btn btn-ghost" onClick={backToTags}>
-                ← タグ一覧に戻る
+          {(browsingByCategory || browsingByTag || showAll) && hasAnyGrouping && (
+            <div className="row" style={{ marginBottom: 10, flexWrap: 'wrap' }}>
+              <button type="button" className="btn btn-ghost" onClick={backToBrowse}>
+                ← 一覧に戻る
               </button>
+              {category && <span className="chip">{category}</span>}
               {selectedTag && <span className="chip">{selectedTag}</span>}
               {showUntagged && <span className="chip">タグなし</span>}
+              {showAll && <span className="chip">すべて</span>}
             </div>
           )}
 
