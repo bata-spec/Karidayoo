@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { deleteWork, exportWork, getWork, renameWork } from '../db';
 import { buildWorkZip } from '../utils/zip';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 import type { Work } from '../types';
 
 function downloadBlob(blob: Blob, filename: string) {
@@ -14,6 +16,7 @@ function downloadBlob(blob: Blob, filename: string) {
 }
 
 export default function DashboardLayout() {
+  const { t } = useTranslation();
   const { workId } = useParams();
   const navigate = useNavigate();
   const [work, setWork] = useState<Work | null | undefined>(undefined);
@@ -26,7 +29,7 @@ export default function DashboardLayout() {
 
   async function handleRename() {
     if (!work) return;
-    const name = prompt('作品名を変更', work.name);
+    const name = prompt(t('work.renamePrompt'), work.name);
     if (!name || !name.trim()) return;
     await renameWork(work.id, name.trim());
     setWork({ ...work, name: name.trim() });
@@ -47,7 +50,7 @@ export default function DashboardLayout() {
       const blob = await buildWorkZip(data);
       downloadBlob(blob, `${data.work.name || 'work'}.zip`);
     } catch {
-      alert('ZIPの作成に失敗しました。');
+      alert(t('errors.zipCreateFailed'));
     } finally {
       setZipping(false);
     }
@@ -55,20 +58,20 @@ export default function DashboardLayout() {
 
   async function handleDelete() {
     if (!work) return;
-    if (!confirm(`「${work.name}」を削除します。元に戻せません。よろしいですか？`)) return;
+    if (!confirm(t('work.deleteConfirm', { name: work.name }))) return;
     await deleteWork(work.id);
     navigate('/');
   }
 
   if (work === undefined) {
-    return <div className="page">読み込み中...</div>;
+    return <div className="page">{t('common.loading')}</div>;
   }
   if (work === null) {
     return (
       <div className="page">
-        <p>作品が見つかりませんでした。</p>
+        <p>{t('work.notFound')}</p>
         <a className="btn" href="#/">
-          ホームに戻る
+          {t('work.backToHome')}
         </a>
       </div>
     );
@@ -78,36 +81,37 @@ export default function DashboardLayout() {
     <div className="page">
       <div className="top-bar">
         <div className="row">
-          <a href="#/" className="btn btn-ghost" aria-label="ホームに戻る">
+          <a href="#/" className="btn btn-ghost" aria-label={t('work.backToHome')}>
             ←
           </a>
           <h1>{work.name}</h1>
         </div>
         <div className="row" style={{ flexWrap: 'wrap' }}>
+          <LanguageSwitcher />
           <button type="button" className="btn btn-ghost" onClick={handleRename}>
-            名前変更
+            {t('work.rename')}
           </button>
           <button type="button" className="btn btn-ghost" onClick={handleExportJson}>
-            JSONエクスポート
+            {t('work.exportJson')}
           </button>
           <button type="button" className="btn btn-ghost" onClick={handleExportZip} disabled={zipping}>
-            {zipping ? 'ZIP作成中...' : 'ZIPエクスポート'}
+            {zipping ? t('work.zipping') : t('work.exportZip')}
           </button>
           <button type="button" className="btn btn-danger" onClick={handleDelete}>
-            削除
+            {t('common.delete')}
           </button>
         </div>
       </div>
 
       <nav className="tabs">
         <NavLink to="entries" className={({ isActive }) => (isActive ? 'active' : '')}>
-          エントリ一覧
+          {t('nav.entries')}
         </NavLink>
         <NavLink to="graph" className={({ isActive }) => (isActive ? 'active' : '')}>
-          グラフビュー
+          {t('nav.graph')}
         </NavLink>
         <NavLink to="templates" className={({ isActive }) => (isActive ? 'active' : '')}>
-          テンプレート
+          {t('nav.templates')}
         </NavLink>
       </nav>
 

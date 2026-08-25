@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "Loading...",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "add": "Add",
+    "untitled": "(Untitled)",
+    "uncategorized": "Uncategorized",
+    "deletedEntry": "(Deleted)",
+    "showAll": "Show all ({{count}})",
+    "backToList": "← Back to list",
+    "allChip": "All",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "Entries",
+    "graph": "Graph view",
+    "templates": "Templates"
+  },
+  "home": {
+    "newWorkPlaceholder": "New work name",
+    "createWork": "+ Create work",
+    "noWorks": "No works yet. Create one using the form above.",
+    "updatedAt": "Updated: {{date}}",
+    "importSectionTitle": "Import a work",
+    "importButton": "Import from JSON / ZIP file"
+  },
+  "work": {
+    "notFound": "Work not found.",
+    "renamePrompt": "Rename work",
+    "rename": "Rename",
+    "exportJson": "Export JSON",
+    "zipping": "Building ZIP...",
+    "exportZip": "Export ZIP",
+    "deleteConfirm": "Delete \"{{name}}\"? This cannot be undone. Are you sure?",
+    "backToHome": "Back to home"
+  },
+  "entryList": {
+    "searchPlaceholder": "Search title, body, tags",
+    "allCategories": "All categories",
+    "newEntry": "+ New entry",
+    "browseByCategory": "Browse by category",
+    "browseByTag": "Browse by tag",
+    "untagged": "Untagged ({{count}})",
+    "noEntries": "No entries yet.",
+    "noMatch": "No entries match.",
+    "untaggedLabel": "Untagged"
+  },
+  "entryView": {
+    "notFound": "Entry not found.",
+    "viewRelations": "View relations",
+    "deleteConfirm": "Delete \"{{title}}\"? Are you sure?",
+    "bodyTitle": "Body",
+    "relationsTitle": "Relations",
+    "imagesTitle": "Images"
+  },
+  "entryEdit": {
+    "newTitle": "New entry",
+    "editTitle": "Edit entry",
+    "titleLabel": "Title",
+    "titlePlaceholder": "e.g. Aldo",
+    "categoryLabel": "Category",
+    "categoryPlaceholder": "e.g. Character, Nation, Era, Faction, Foreshadowing...",
+    "tagsLabel": "Tags",
+    "removeTagAria": "Remove tag",
+    "tagInputPlaceholder": "Type a tag and press Enter",
+    "propertiesTitle": "Properties",
+    "bodyPlaceholder": "Write freely. Other entries' titles are auto-linked."
+  },
+  "graph": {
+    "backToFullGraph": "← Back to full graph",
+    "pickHint": "Pick one to show a graph of just that category/tag's entries.",
+    "empty": "No relations to show yet. Add relations from an entry's edit screen."
+  },
+  "templates": {
+    "helper": "Register a commonly used set of properties per category to insert them all at once via \"Insert from template\" while editing an entry.",
+    "noTemplates": "No templates yet.",
+    "deleteConfirm": "Delete this template?",
+    "newTemplateTitle": "Create a new template",
+    "nameLabel": "Template name",
+    "namePlaceholder": "e.g. Character basics",
+    "categoryLabel": "Target category",
+    "categoryPlaceholder": "e.g. Character",
+    "propertiesLabel": "Property names (values are inserted blank)",
+    "saveButton": "Save template"
+  },
+  "properties": {
+    "keyPlaceholder": "Property name (e.g. Age)",
+    "valuePlaceholder": "Value",
+    "removeAria": "Remove property",
+    "addRow": "+ Add property",
+    "insertFromTemplate": "Insert from template"
+  },
+  "relations": {
+    "labelPlaceholder": "Relation (e.g. Mentor, Rival, Affiliation)",
+    "removeAria": "Remove relation",
+    "searchPlaceholder": "Search titles to add a relation..."
+  },
+  "images": {
+    "altFallback": "Attached image",
+    "captionPlaceholder": "Caption",
+    "mainLabel": "★ Main",
+    "setMainButton": "Set as main",
+    "addButton": "+ Add image"
+  },
+  "wikiLink": {
+    "empty": "No body text yet."
+  },
+  "errors": {
+    "workNotFound": "Work not found",
+    "zipMissingWorkJson": "work.json not found. This ZIP may not have been created by {{appName}}.",
+    "invalidWorkData": "The work data format is invalid.",
+    "importFailed": "Import failed. Please check the file contents.",
+    "zipCreateFailed": "Failed to build the ZIP.",
+    "imageLoadFailed": "Failed to load the image."
+  },
+  "language": {
+    "label": "Language"
+  }
+}

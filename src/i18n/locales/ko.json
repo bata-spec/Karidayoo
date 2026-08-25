@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "delete": "삭제",
+    "save": "저장",
+    "cancel": "취소",
+    "edit": "편집",
+    "add": "추가",
+    "untitled": "(제목 없음)",
+    "uncategorized": "미분류",
+    "deletedEntry": "(삭제됨)",
+    "showAll": "모두 보기 ({{count}}건)",
+    "backToList": "← 목록으로 돌아가기",
+    "allChip": "전체",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "항목 목록",
+    "graph": "그래프 보기",
+    "templates": "템플릿"
+  },
+  "home": {
+    "newWorkPlaceholder": "새 작품 이름",
+    "createWork": "＋ 작품 만들기",
+    "noWorks": "아직 작품이 없습니다. 위 양식에서 작품을 만들어 주세요.",
+    "updatedAt": "업데이트: {{date}}",
+    "importSectionTitle": "작품 데이터 가져오기",
+    "importButton": "JSON / ZIP 파일에서 가져오기"
+  },
+  "work": {
+    "notFound": "작품을 찾을 수 없습니다.",
+    "renamePrompt": "작품 이름 변경",
+    "rename": "이름 변경",
+    "exportJson": "JSON 내보내기",
+    "zipping": "ZIP 생성 중...",
+    "exportZip": "ZIP 내보내기",
+    "deleteConfirm": "\"{{name}}\"을(를) 삭제합니다. 되돌릴 수 없습니다. 계속하시겠습니까?",
+    "backToHome": "홈으로 돌아가기"
+  },
+  "entryList": {
+    "searchPlaceholder": "제목·본문·태그로 검색",
+    "allCategories": "모든 카테고리",
+    "newEntry": "＋ 새 항목",
+    "browseByCategory": "카테고리로 보기",
+    "browseByTag": "태그로 보기",
+    "untagged": "태그 없음 ({{count}})",
+    "noEntries": "아직 항목이 없습니다.",
+    "noMatch": "조건에 맞는 항목이 없습니다.",
+    "untaggedLabel": "태그 없음"
+  },
+  "entryView": {
+    "notFound": "항목을 찾을 수 없습니다.",
+    "viewRelations": "관련 보기",
+    "deleteConfirm": "\"{{title}}\"을(를) 삭제합니다. 계속하시겠습니까?",
+    "bodyTitle": "본문",
+    "relationsTitle": "관련",
+    "imagesTitle": "이미지"
+  },
+  "entryEdit": {
+    "newTitle": "새 항목",
+    "editTitle": "항목 편집",
+    "titleLabel": "제목",
+    "titlePlaceholder": "예: 알도",
+    "categoryLabel": "카테고리",
+    "categoryPlaceholder": "예: 캐릭터, 국가, 시대, 조직, 복선...",
+    "tagsLabel": "태그",
+    "removeTagAria": "태그 삭제",
+    "tagInputPlaceholder": "태그를 입력하고 Enter",
+    "propertiesTitle": "속성",
+    "bodyPlaceholder": "자유롭게 작성하세요. 다른 항목의 제목은 자동으로 링크됩니다."
+  },
+  "graph": {
+    "backToFullGraph": "← 전체 그래프로 돌아가기",
+    "pickHint": "선택하면 해당 카테고리/태그의 항목만으로 그래프를 표시합니다.",
+    "empty": "아직 표시할 관련이 없습니다. 항목 편집 화면에서 관련을 추가해 주세요."
+  },
+  "templates": {
+    "helper": "카테고리별로 자주 쓰는 속성 세트를 등록해두면, 항목 편집 시 \"템플릿에서 삽입\"으로 한 번에 추가할 수 있습니다.",
+    "noTemplates": "아직 템플릿이 없습니다.",
+    "deleteConfirm": "이 템플릿을 삭제하시겠습니까?",
+    "newTemplateTitle": "새 템플릿 만들기",
+    "nameLabel": "템플릿 이름",
+    "namePlaceholder": "예: 캐릭터 기본 정보",
+    "categoryLabel": "대상 카테고리",
+    "categoryPlaceholder": "예: 캐릭터",
+    "propertiesLabel": "항목 이름(값은 비워서 삽입됩니다)",
+    "saveButton": "템플릿 저장"
+  },
+  "properties": {
+    "keyPlaceholder": "항목 이름(예: 나이)",
+    "valuePlaceholder": "값",
+    "removeAria": "항목 삭제",
+    "addRow": "＋ 항목 추가",
+    "insertFromTemplate": "템플릿에서 삽입"
+  },
+  "relations": {
+    "labelPlaceholder": "관계(예: 사제, 라이벌, 소속)",
+    "removeAria": "관련 삭제",
+    "searchPlaceholder": "제목으로 검색하여 관련 추가..."
+  },
+  "images": {
+    "altFallback": "첨부 이미지",
+    "captionPlaceholder": "캡션",
+    "mainLabel": "★ 메인",
+    "setMainButton": "메인으로 설정",
+    "addButton": "＋ 이미지 추가"
+  },
+  "wikiLink": {
+    "empty": "아직 본문이 없습니다."
+  },
+  "errors": {
+    "workNotFound": "작품을 찾을 수 없습니다",
+    "zipMissingWorkJson": "work.json을 찾을 수 없습니다. {{appName}}에서 만든 ZIP 파일이 아닐 수 있습니다.",
+    "invalidWorkData": "작품 데이터 형식이 올바르지 않습니다.",
+    "importFailed": "가져오기에 실패했습니다. 파일 내용을 확인해 주세요.",
+    "zipCreateFailed": "ZIP 생성에 실패했습니다.",
+    "imageLoadFailed": "이미지를 불러오지 못했습니다."
+  },
+  "language": {
+    "label": "언어"
+  }
+}

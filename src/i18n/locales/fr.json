@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "untitled": "(Sans titre)",
+    "uncategorized": "Sans catégorie",
+    "deletedEntry": "(Supprimé)",
+    "showAll": "Tout afficher ({{count}})",
+    "backToList": "← Retour à la liste",
+    "allChip": "Tous",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "Fiches",
+    "graph": "Vue graphique",
+    "templates": "Modèles"
+  },
+  "home": {
+    "newWorkPlaceholder": "Nom de la nouvelle œuvre",
+    "createWork": "+ Créer une œuvre",
+    "noWorks": "Aucune œuvre pour le moment. Créez-en une avec le formulaire ci-dessus.",
+    "updatedAt": "Mis à jour : {{date}}",
+    "importSectionTitle": "Importer une œuvre",
+    "importButton": "Importer un fichier JSON / ZIP"
+  },
+  "work": {
+    "notFound": "Œuvre introuvable.",
+    "renamePrompt": "Renommer l'œuvre",
+    "rename": "Renommer",
+    "exportJson": "Exporter en JSON",
+    "zipping": "Création du ZIP...",
+    "exportZip": "Exporter en ZIP",
+    "deleteConfirm": "« {{name}} » sera supprimée. Cette action est irréversible. Continuer ?",
+    "backToHome": "Retour à l'accueil"
+  },
+  "entryList": {
+    "searchPlaceholder": "Rechercher par titre, texte ou tags",
+    "allCategories": "Toutes les catégories",
+    "newEntry": "+ Nouvelle fiche",
+    "browseByCategory": "Parcourir par catégorie",
+    "browseByTag": "Parcourir par tag",
+    "untagged": "Sans tag ({{count}})",
+    "noEntries": "Aucune fiche pour le moment.",
+    "noMatch": "Aucune fiche ne correspond.",
+    "untaggedLabel": "Sans tag"
+  },
+  "entryView": {
+    "notFound": "Fiche introuvable.",
+    "viewRelations": "Voir les relations",
+    "deleteConfirm": "« {{title}} » sera supprimée. Continuer ?",
+    "bodyTitle": "Texte",
+    "relationsTitle": "Relations",
+    "imagesTitle": "Images"
+  },
+  "entryEdit": {
+    "newTitle": "Nouvelle fiche",
+    "editTitle": "Modifier la fiche",
+    "titleLabel": "Titre",
+    "titlePlaceholder": "ex. : Aldo",
+    "categoryLabel": "Catégorie",
+    "categoryPlaceholder": "ex. : Personnage, Nation, Époque, Faction, Présage...",
+    "tagsLabel": "Tags",
+    "removeTagAria": "Retirer le tag",
+    "tagInputPlaceholder": "Saisissez un tag puis appuyez sur Entrée",
+    "propertiesTitle": "Propriétés",
+    "bodyPlaceholder": "Écrivez librement. Les titres des autres fiches deviennent automatiquement des liens."
+  },
+  "graph": {
+    "backToFullGraph": "← Retour au graphe complet",
+    "pickHint": "Sélectionnez-en un pour afficher le graphe des fiches de cette catégorie/ce tag uniquement.",
+    "empty": "Aucune relation à afficher pour le moment. Ajoutez des relations depuis l'écran d'édition d'une fiche."
+  },
+  "templates": {
+    "helper": "Enregistrez un ensemble de propriétés fréquemment utilisées par catégorie pour les insérer d'un coup via « Insérer depuis un modèle » lors de l'édition d'une fiche.",
+    "noTemplates": "Aucun modèle pour le moment.",
+    "deleteConfirm": "Supprimer ce modèle ?",
+    "newTemplateTitle": "Créer un nouveau modèle",
+    "nameLabel": "Nom du modèle",
+    "namePlaceholder": "ex. : Infos de base du personnage",
+    "categoryLabel": "Catégorie cible",
+    "categoryPlaceholder": "ex. : Personnage",
+    "propertiesLabel": "Noms des propriétés (les valeurs seront insérées vides)",
+    "saveButton": "Enregistrer le modèle"
+  },
+  "properties": {
+    "keyPlaceholder": "Nom de la propriété (ex. : Âge)",
+    "valuePlaceholder": "Valeur",
+    "removeAria": "Retirer la propriété",
+    "addRow": "+ Ajouter une propriété",
+    "insertFromTemplate": "Insérer depuis un modèle"
+  },
+  "relations": {
+    "labelPlaceholder": "Relation (ex. : Mentor, Rival, Affiliation)",
+    "removeAria": "Retirer la relation",
+    "searchPlaceholder": "Rechercher des titres pour ajouter une relation..."
+  },
+  "images": {
+    "altFallback": "Image jointe",
+    "captionPlaceholder": "Légende",
+    "mainLabel": "★ Principale",
+    "setMainButton": "Définir comme principale",
+    "addButton": "+ Ajouter une image"
+  },
+  "wikiLink": {
+    "empty": "Pas encore de texte."
+  },
+  "errors": {
+    "workNotFound": "Œuvre introuvable",
+    "zipMissingWorkJson": "work.json introuvable. Ce ZIP n'a peut-être pas été créé par {{appName}}.",
+    "invalidWorkData": "Le format des données de l'œuvre est invalide.",
+    "importFailed": "Échec de l'importation. Vérifiez le contenu du fichier.",
+    "zipCreateFailed": "Échec de la création du ZIP.",
+    "imageLoadFailed": "Échec du chargement de l'image."
+  },
+  "language": {
+    "label": "Langue"
+  }
+}

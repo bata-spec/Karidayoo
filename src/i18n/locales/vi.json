@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "delete": "Xóa",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "edit": "Chỉnh sửa",
+    "add": "Thêm",
+    "untitled": "(Chưa có tiêu đề)",
+    "uncategorized": "Chưa phân loại",
+    "deletedEntry": "(Đã xóa)",
+    "showAll": "Hiện tất cả ({{count}})",
+    "backToList": "← Quay lại danh sách",
+    "allChip": "Tất cả",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "Danh sách mục",
+    "graph": "Xem sơ đồ",
+    "templates": "Mẫu"
+  },
+  "home": {
+    "newWorkPlaceholder": "Tên tác phẩm mới",
+    "createWork": "+ Tạo tác phẩm",
+    "noWorks": "Chưa có tác phẩm nào. Hãy tạo một tác phẩm bằng biểu mẫu ở trên.",
+    "updatedAt": "Cập nhật: {{date}}",
+    "importSectionTitle": "Nhập dữ liệu tác phẩm",
+    "importButton": "Nhập từ tệp JSON / ZIP"
+  },
+  "work": {
+    "notFound": "Không tìm thấy tác phẩm.",
+    "renamePrompt": "Đổi tên tác phẩm",
+    "rename": "Đổi tên",
+    "exportJson": "Xuất JSON",
+    "zipping": "Đang tạo tệp ZIP...",
+    "exportZip": "Xuất ZIP",
+    "deleteConfirm": "\"{{name}}\" sẽ bị xóa. Không thể hoàn tác. Bạn có muốn tiếp tục?",
+    "backToHome": "Quay lại trang chủ"
+  },
+  "entryList": {
+    "searchPlaceholder": "Tìm theo tiêu đề, nội dung hoặc thẻ",
+    "allCategories": "Tất cả danh mục",
+    "newEntry": "+ Mục mới",
+    "browseByCategory": "Xem theo danh mục",
+    "browseByTag": "Xem theo thẻ",
+    "untagged": "Không có thẻ ({{count}})",
+    "noEntries": "Chưa có mục nào.",
+    "noMatch": "Không có mục nào phù hợp.",
+    "untaggedLabel": "Không có thẻ"
+  },
+  "entryView": {
+    "notFound": "Không tìm thấy mục.",
+    "viewRelations": "Xem liên kết",
+    "deleteConfirm": "\"{{title}}\" sẽ bị xóa. Bạn có muốn tiếp tục?",
+    "bodyTitle": "Nội dung",
+    "relationsTitle": "Liên kết",
+    "imagesTitle": "Hình ảnh"
+  },
+  "entryEdit": {
+    "newTitle": "Mục mới",
+    "editTitle": "Chỉnh sửa mục",
+    "titleLabel": "Tiêu đề",
+    "titlePlaceholder": "vd: Aldo",
+    "categoryLabel": "Danh mục",
+    "categoryPlaceholder": "vd: Nhân vật, Quốc gia, Thời đại, Phe phái, Điềm báo...",
+    "tagsLabel": "Thẻ",
+    "removeTagAria": "Xóa thẻ",
+    "tagInputPlaceholder": "Nhập thẻ rồi nhấn Enter",
+    "propertiesTitle": "Thuộc tính",
+    "bodyPlaceholder": "Viết tự do. Tiêu đề của các mục khác sẽ tự động trở thành liên kết."
+  },
+  "graph": {
+    "backToFullGraph": "← Quay lại sơ đồ đầy đủ",
+    "pickHint": "Chọn để chỉ hiển thị sơ đồ của các mục thuộc danh mục/thẻ đó.",
+    "empty": "Chưa có mối quan hệ nào để hiển thị. Thêm mối quan hệ từ màn hình chỉnh sửa mục."
+  },
+  "templates": {
+    "helper": "Lưu sẵn một bộ thuộc tính thường dùng cho mỗi danh mục để chèn cùng lúc bằng \"Chèn từ mẫu\" khi chỉnh sửa mục.",
+    "noTemplates": "Chưa có mẫu nào.",
+    "deleteConfirm": "Xóa mẫu này?",
+    "newTemplateTitle": "Tạo mẫu mới",
+    "nameLabel": "Tên mẫu",
+    "namePlaceholder": "vd: Thông tin cơ bản nhân vật",
+    "categoryLabel": "Danh mục áp dụng",
+    "categoryPlaceholder": "vd: Nhân vật",
+    "propertiesLabel": "Tên thuộc tính (giá trị sẽ được chèn trống)",
+    "saveButton": "Lưu mẫu"
+  },
+  "properties": {
+    "keyPlaceholder": "Tên thuộc tính (vd: Tuổi)",
+    "valuePlaceholder": "Giá trị",
+    "removeAria": "Xóa thuộc tính",
+    "addRow": "+ Thêm thuộc tính",
+    "insertFromTemplate": "Chèn từ mẫu"
+  },
+  "relations": {
+    "labelPlaceholder": "Mối quan hệ (vd: Sư phụ, Đối thủ, Phe phái)",
+    "removeAria": "Xóa liên kết",
+    "searchPlaceholder": "Tìm tiêu đề để thêm liên kết..."
+  },
+  "images": {
+    "altFallback": "Hình ảnh đính kèm",
+    "captionPlaceholder": "Chú thích",
+    "mainLabel": "★ Ảnh chính",
+    "setMainButton": "Đặt làm ảnh chính",
+    "addButton": "+ Thêm hình ảnh"
+  },
+  "wikiLink": {
+    "empty": "Chưa có nội dung."
+  },
+  "errors": {
+    "workNotFound": "Không tìm thấy tác phẩm",
+    "zipMissingWorkJson": "Không tìm thấy work.json. Tệp ZIP này có thể không được tạo bởi {{appName}}.",
+    "invalidWorkData": "Định dạng dữ liệu tác phẩm không hợp lệ.",
+    "importFailed": "Nhập thất bại. Vui lòng kiểm tra nội dung tệp.",
+    "zipCreateFailed": "Không thể tạo tệp ZIP.",
+    "imageLoadFailed": "Không thể tải hình ảnh."
+  },
+  "language": {
+    "label": "Ngôn ngữ"
+  }
+}

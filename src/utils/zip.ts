@@ -1,4 +1,5 @@
 import JSZip from 'jszip';
+import i18n from '../i18n';
 import type { Entry, ImageRef, Template, Work, WorkExport } from '../types';
 
 interface ZipImageRef {
@@ -67,7 +68,7 @@ export async function parseWorkZip(file: File): Promise<WorkExport> {
   const zip = await JSZip.loadAsync(file);
 
   const workFile = zip.file('work.json');
-  if (!workFile) throw new Error('work.json が見つかりません。創作ノートで作成したZIPファイルではない可能性があります。');
+  if (!workFile) throw new Error(i18n.t('errors.zipMissingWorkJson', { appName: i18n.t('app.name') }));
   const workJson = JSON.parse(await workFile.async('string')) as ZipWorkJson;
 
   const entryFiles: JSZip.JSZipObject[] = [];
@@ -97,8 +98,8 @@ export async function parseWorkZip(file: File): Promise<WorkExport> {
     entries.push({
       id: raw.id,
       workId: workJson.work.id,
-      category: raw.category ?? '未分類',
-      title: raw.title ?? '(無題)',
+      category: raw.category ?? i18n.t('common.uncategorized'),
+      title: raw.title ?? i18n.t('common.untitled'),
       tags: raw.tags ?? [],
       properties: raw.properties ?? [],
       body: raw.body ?? '',

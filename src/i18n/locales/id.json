@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "Memuat...",
+    "delete": "Hapus",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "edit": "Edit",
+    "add": "Tambah",
+    "untitled": "(Tanpa judul)",
+    "uncategorized": "Tanpa kategori",
+    "deletedEntry": "(Dihapus)",
+    "showAll": "Tampilkan semua ({{count}})",
+    "backToList": "← Kembali ke daftar",
+    "allChip": "Semua",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "Daftar entri",
+    "graph": "Tampilan grafik",
+    "templates": "Template"
+  },
+  "home": {
+    "newWorkPlaceholder": "Nama karya baru",
+    "createWork": "+ Buat karya",
+    "noWorks": "Belum ada karya. Buat satu menggunakan formulir di atas.",
+    "updatedAt": "Diperbarui: {{date}}",
+    "importSectionTitle": "Impor data karya",
+    "importButton": "Impor dari file JSON / ZIP"
+  },
+  "work": {
+    "notFound": "Karya tidak ditemukan.",
+    "renamePrompt": "Ubah nama karya",
+    "rename": "Ubah nama",
+    "exportJson": "Ekspor JSON",
+    "zipping": "Membuat ZIP...",
+    "exportZip": "Ekspor ZIP",
+    "deleteConfirm": "\"{{name}}\" akan dihapus. Tindakan ini tidak dapat dibatalkan. Lanjutkan?",
+    "backToHome": "Kembali ke beranda"
+  },
+  "entryList": {
+    "searchPlaceholder": "Cari berdasarkan judul, isi, atau tag",
+    "allCategories": "Semua kategori",
+    "newEntry": "+ Entri baru",
+    "browseByCategory": "Jelajahi berdasarkan kategori",
+    "browseByTag": "Jelajahi berdasarkan tag",
+    "untagged": "Tanpa tag ({{count}})",
+    "noEntries": "Belum ada entri.",
+    "noMatch": "Tidak ada entri yang cocok.",
+    "untaggedLabel": "Tanpa tag"
+  },
+  "entryView": {
+    "notFound": "Entri tidak ditemukan.",
+    "viewRelations": "Lihat relasi",
+    "deleteConfirm": "\"{{title}}\" akan dihapus. Lanjutkan?",
+    "bodyTitle": "Isi",
+    "relationsTitle": "Relasi",
+    "imagesTitle": "Gambar"
+  },
+  "entryEdit": {
+    "newTitle": "Entri baru",
+    "editTitle": "Edit entri",
+    "titleLabel": "Judul",
+    "titlePlaceholder": "cth: Aldo",
+    "categoryLabel": "Kategori",
+    "categoryPlaceholder": "cth: Karakter, Negara, Era, Faksi, Firasat...",
+    "tagsLabel": "Tag",
+    "removeTagAria": "Hapus tag",
+    "tagInputPlaceholder": "Ketik tag lalu tekan Enter",
+    "propertiesTitle": "Properti",
+    "bodyPlaceholder": "Tulis dengan bebas. Judul entri lain akan otomatis menjadi tautan."
+  },
+  "graph": {
+    "backToFullGraph": "← Kembali ke grafik lengkap",
+    "pickHint": "Pilih untuk menampilkan grafik hanya untuk entri kategori/tag tersebut.",
+    "empty": "Belum ada relasi untuk ditampilkan. Tambahkan relasi dari layar edit entri."
+  },
+  "templates": {
+    "helper": "Daftarkan set properti yang sering dipakai per kategori agar bisa disisipkan sekaligus lewat \"Sisipkan dari template\" saat mengedit entri.",
+    "noTemplates": "Belum ada template.",
+    "deleteConfirm": "Hapus template ini?",
+    "newTemplateTitle": "Buat template baru",
+    "nameLabel": "Nama template",
+    "namePlaceholder": "cth: Info dasar karakter",
+    "categoryLabel": "Kategori target",
+    "categoryPlaceholder": "cth: Karakter",
+    "propertiesLabel": "Nama properti (nilai akan disisipkan kosong)",
+    "saveButton": "Simpan template"
+  },
+  "properties": {
+    "keyPlaceholder": "Nama properti (cth: Umur)",
+    "valuePlaceholder": "Nilai",
+    "removeAria": "Hapus properti",
+    "addRow": "+ Tambah properti",
+    "insertFromTemplate": "Sisipkan dari template"
+  },
+  "relations": {
+    "labelPlaceholder": "Relasi (cth: Mentor, Rival, Afiliasi)",
+    "removeAria": "Hapus relasi",
+    "searchPlaceholder": "Cari judul untuk menambahkan relasi..."
+  },
+  "images": {
+    "altFallback": "Gambar terlampir",
+    "captionPlaceholder": "Keterangan",
+    "mainLabel": "★ Utama",
+    "setMainButton": "Jadikan utama",
+    "addButton": "+ Tambah gambar"
+  },
+  "wikiLink": {
+    "empty": "Belum ada isi teks."
+  },
+  "errors": {
+    "workNotFound": "Karya tidak ditemukan",
+    "zipMissingWorkJson": "work.json tidak ditemukan. ZIP ini mungkin bukan dibuat oleh {{appName}}.",
+    "invalidWorkData": "Format data karya tidak valid.",
+    "importFailed": "Impor gagal. Periksa isi filenya.",
+    "zipCreateFailed": "Gagal membuat ZIP.",
+    "imageLoadFailed": "Gagal memuat gambar."
+  },
+  "language": {
+    "label": "Bahasa"
+  }
+}

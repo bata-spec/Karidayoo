@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "กำลังโหลด...",
+    "delete": "ลบ",
+    "save": "บันทึก",
+    "cancel": "ยกเลิก",
+    "edit": "แก้ไข",
+    "add": "เพิ่ม",
+    "untitled": "(ไม่มีชื่อ)",
+    "uncategorized": "ไม่มีหมวดหมู่",
+    "deletedEntry": "(ถูกลบแล้ว)",
+    "showAll": "แสดงทั้งหมด ({{count}})",
+    "backToList": "← กลับไปยังรายการ",
+    "allChip": "ทั้งหมด",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "รายการข้อมูล",
+    "graph": "มุมมองกราฟ",
+    "templates": "เทมเพลต"
+  },
+  "home": {
+    "newWorkPlaceholder": "ชื่อผลงานใหม่",
+    "createWork": "+ สร้างผลงาน",
+    "noWorks": "ยังไม่มีผลงาน สร้างผลงานได้จากแบบฟอร์มด้านบน",
+    "updatedAt": "อัปเดตล่าสุด: {{date}}",
+    "importSectionTitle": "นำเข้าข้อมูลผลงาน",
+    "importButton": "นำเข้าจากไฟล์ JSON / ZIP"
+  },
+  "work": {
+    "notFound": "ไม่พบผลงาน",
+    "renamePrompt": "เปลี่ยนชื่อผลงาน",
+    "rename": "เปลี่ยนชื่อ",
+    "exportJson": "ส่งออก JSON",
+    "zipping": "กำลังสร้างไฟล์ ZIP...",
+    "exportZip": "ส่งออก ZIP",
+    "deleteConfirm": "จะลบ \"{{name}}\" การกระทำนี้ไม่สามารถย้อนกลับได้ ต้องการดำเนินการต่อหรือไม่?",
+    "backToHome": "กลับไปหน้าแรก"
+  },
+  "entryList": {
+    "searchPlaceholder": "ค้นหาจากชื่อเรื่อง เนื้อหา หรือแท็ก",
+    "allCategories": "ทุกหมวดหมู่",
+    "newEntry": "+ เพิ่มรายการใหม่",
+    "browseByCategory": "ดูตามหมวดหมู่",
+    "browseByTag": "ดูตามแท็ก",
+    "untagged": "ไม่มีแท็ก ({{count}})",
+    "noEntries": "ยังไม่มีรายการ",
+    "noMatch": "ไม่พบรายการที่ตรงกัน",
+    "untaggedLabel": "ไม่มีแท็ก"
+  },
+  "entryView": {
+    "notFound": "ไม่พบรายการ",
+    "viewRelations": "ดูความสัมพันธ์",
+    "deleteConfirm": "จะลบ \"{{title}}\" ต้องการดำเนินการต่อหรือไม่?",
+    "bodyTitle": "เนื้อหา",
+    "relationsTitle": "ความสัมพันธ์",
+    "imagesTitle": "รูปภาพ"
+  },
+  "entryEdit": {
+    "newTitle": "เพิ่มรายการใหม่",
+    "editTitle": "แก้ไขรายการ",
+    "titleLabel": "ชื่อเรื่อง",
+    "titlePlaceholder": "เช่น: อัลโด",
+    "categoryLabel": "หมวดหมู่",
+    "categoryPlaceholder": "เช่น: ตัวละคร ประเทศ ยุคสมัย กลุ่ม การปูเรื่อง...",
+    "tagsLabel": "แท็ก",
+    "removeTagAria": "ลบแท็ก",
+    "tagInputPlaceholder": "พิมพ์แท็กแล้วกด Enter",
+    "propertiesTitle": "คุณสมบัติ",
+    "bodyPlaceholder": "เขียนได้อย่างอิสระ ชื่อเรื่องของรายการอื่นจะกลายเป็นลิงก์โดยอัตโนมัติ"
+  },
+  "graph": {
+    "backToFullGraph": "← กลับไปยังกราฟทั้งหมด",
+    "pickHint": "เลือกเพื่อแสดงกราฟเฉพาะรายการในหมวดหมู่/แท็กนั้น",
+    "empty": "ยังไม่มีความสัมพันธ์ให้แสดง เพิ่มความสัมพันธ์ได้จากหน้าจอแก้ไขรายการ"
+  },
+  "templates": {
+    "helper": "บันทึกชุดคุณสมบัติที่ใช้บ่อยตามหมวดหมู่ เพื่อเพิ่มพร้อมกันได้ด้วย \"แทรกจากเทมเพลต\" เมื่อแก้ไขรายการ",
+    "noTemplates": "ยังไม่มีเทมเพลต",
+    "deleteConfirm": "ต้องการลบเทมเพลตนี้หรือไม่?",
+    "newTemplateTitle": "สร้างเทมเพลตใหม่",
+    "nameLabel": "ชื่อเทมเพลต",
+    "namePlaceholder": "เช่น: ข้อมูลพื้นฐานตัวละคร",
+    "categoryLabel": "หมวดหมู่เป้าหมาย",
+    "categoryPlaceholder": "เช่น: ตัวละคร",
+    "propertiesLabel": "ชื่อคุณสมบัติ (ค่าจะถูกแทรกเป็นช่องว่าง)",
+    "saveButton": "บันทึกเทมเพลต"
+  },
+  "properties": {
+    "keyPlaceholder": "ชื่อคุณสมบัติ (เช่น: อายุ)",
+    "valuePlaceholder": "ค่า",
+    "removeAria": "ลบคุณสมบัติ",
+    "addRow": "+ เพิ่มคุณสมบัติ",
+    "insertFromTemplate": "แทรกจากเทมเพลต"
+  },
+  "relations": {
+    "labelPlaceholder": "ความสัมพันธ์ (เช่น: อาจารย์-ศิษย์ คู่แข่ง สังกัด)",
+    "removeAria": "ลบความสัมพันธ์",
+    "searchPlaceholder": "ค้นหาชื่อเรื่องเพื่อเพิ่มความสัมพันธ์..."
+  },
+  "images": {
+    "altFallback": "รูปภาพที่แนบมา",
+    "captionPlaceholder": "คำบรรยายภาพ",
+    "mainLabel": "★ ภาพหลัก",
+    "setMainButton": "ตั้งเป็นภาพหลัก",
+    "addButton": "+ เพิ่มรูปภาพ"
+  },
+  "wikiLink": {
+    "empty": "ยังไม่มีเนื้อหา"
+  },
+  "errors": {
+    "workNotFound": "ไม่พบผลงาน",
+    "zipMissingWorkJson": "ไม่พบ work.json ไฟล์ ZIP นี้อาจไม่ได้สร้างจาก {{appName}}",
+    "invalidWorkData": "รูปแบบข้อมูลผลงานไม่ถูกต้อง",
+    "importFailed": "นำเข้าล้มเหลว โปรดตรวจสอบเนื้อหาไฟล์",
+    "zipCreateFailed": "สร้างไฟล์ ZIP ไม่สำเร็จ",
+    "imageLoadFailed": "โหลดรูปภาพไม่สำเร็จ"
+  },
+  "language": {
+    "label": "ภาษา"
+  }
+}

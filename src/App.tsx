@@ -1,4 +1,7 @@
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { rtlLanguages } from './i18n';
 import HomePage from './pages/HomePage';
 import DashboardLayout from './pages/DashboardLayout';
 import EntryListPage from './pages/EntryListPage';
@@ -8,6 +11,14 @@ import GraphPage from './pages/GraphPage';
 import TemplatesPage from './pages/TemplatesPage';
 
 export default function App() {
+  const { i18n, t } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+    document.documentElement.dir = rtlLanguages.has(i18n.language) ? 'rtl' : 'ltr';
+    document.title = t('app.name');
+  }, [i18n.language, t]);
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />

@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "delete": "Excluir",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "add": "Adicionar",
+    "untitled": "(Sem título)",
+    "uncategorized": "Sem categoria",
+    "deletedEntry": "(Excluído)",
+    "showAll": "Mostrar tudo ({{count}})",
+    "backToList": "← Voltar à lista",
+    "allChip": "Todos",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "Entradas",
+    "graph": "Visualização de grafo",
+    "templates": "Modelos"
+  },
+  "home": {
+    "newWorkPlaceholder": "Nome da nova obra",
+    "createWork": "+ Criar obra",
+    "noWorks": "Ainda não há obras. Crie uma usando o formulário acima.",
+    "updatedAt": "Atualizado: {{date}}",
+    "importSectionTitle": "Importar uma obra",
+    "importButton": "Importar de arquivo JSON / ZIP"
+  },
+  "work": {
+    "notFound": "Obra não encontrada.",
+    "renamePrompt": "Renomear obra",
+    "rename": "Renomear",
+    "exportJson": "Exportar JSON",
+    "zipping": "Gerando ZIP...",
+    "exportZip": "Exportar ZIP",
+    "deleteConfirm": "\"{{name}}\" será excluída. Isso não pode ser desfeito. Deseja continuar?",
+    "backToHome": "Voltar ao início"
+  },
+  "entryList": {
+    "searchPlaceholder": "Buscar por título, texto ou tags",
+    "allCategories": "Todas as categorias",
+    "newEntry": "+ Nova entrada",
+    "browseByCategory": "Ver por categoria",
+    "browseByTag": "Ver por tag",
+    "untagged": "Sem tag ({{count}})",
+    "noEntries": "Ainda não há entradas.",
+    "noMatch": "Nenhuma entrada corresponde.",
+    "untaggedLabel": "Sem tag"
+  },
+  "entryView": {
+    "notFound": "Entrada não encontrada.",
+    "viewRelations": "Ver relações",
+    "deleteConfirm": "\"{{title}}\" será excluída. Deseja continuar?",
+    "bodyTitle": "Texto",
+    "relationsTitle": "Relações",
+    "imagesTitle": "Imagens"
+  },
+  "entryEdit": {
+    "newTitle": "Nova entrada",
+    "editTitle": "Editar entrada",
+    "titleLabel": "Título",
+    "titlePlaceholder": "ex.: Aldo",
+    "categoryLabel": "Categoria",
+    "categoryPlaceholder": "ex.: Personagem, Nação, Época, Facção, Prenúncio...",
+    "tagsLabel": "Tags",
+    "removeTagAria": "Remover tag",
+    "tagInputPlaceholder": "Digite uma tag e pressione Enter",
+    "propertiesTitle": "Propriedades",
+    "bodyPlaceholder": "Escreva livremente. Os títulos de outras entradas viram links automaticamente."
+  },
+  "graph": {
+    "backToFullGraph": "← Voltar ao grafo completo",
+    "pickHint": "Escolha uma para ver o grafo apenas com as entradas dessa categoria/tag.",
+    "empty": "Ainda não há relações para mostrar. Adicione relações na tela de edição de uma entrada."
+  },
+  "templates": {
+    "helper": "Registre um conjunto de propriedades comuns por categoria para inseri-las de uma vez com \"Inserir do modelo\" ao editar uma entrada.",
+    "noTemplates": "Ainda não há modelos.",
+    "deleteConfirm": "Excluir este modelo?",
+    "newTemplateTitle": "Criar novo modelo",
+    "nameLabel": "Nome do modelo",
+    "namePlaceholder": "ex.: Dados básicos do personagem",
+    "categoryLabel": "Categoria alvo",
+    "categoryPlaceholder": "ex.: Personagem",
+    "propertiesLabel": "Nomes de propriedades (os valores são inseridos em branco)",
+    "saveButton": "Salvar modelo"
+  },
+  "properties": {
+    "keyPlaceholder": "Nome da propriedade (ex.: Idade)",
+    "valuePlaceholder": "Valor",
+    "removeAria": "Remover propriedade",
+    "addRow": "+ Adicionar propriedade",
+    "insertFromTemplate": "Inserir do modelo"
+  },
+  "relations": {
+    "labelPlaceholder": "Relação (ex.: Mentor, Rival, Afiliação)",
+    "removeAria": "Remover relação",
+    "searchPlaceholder": "Busque títulos para adicionar uma relação..."
+  },
+  "images": {
+    "altFallback": "Imagem anexada",
+    "captionPlaceholder": "Legenda",
+    "mainLabel": "★ Principal",
+    "setMainButton": "Definir como principal",
+    "addButton": "+ Adicionar imagem"
+  },
+  "wikiLink": {
+    "empty": "Ainda não há texto."
+  },
+  "errors": {
+    "workNotFound": "Obra não encontrada",
+    "zipMissingWorkJson": "work.json não encontrado. Este ZIP pode não ter sido criado pelo {{appName}}.",
+    "invalidWorkData": "O formato dos dados da obra é inválido.",
+    "importFailed": "Falha ao importar. Verifique o conteúdo do arquivo.",
+    "zipCreateFailed": "Falha ao gerar o ZIP.",
+    "imageLoadFailed": "Falha ao carregar a imagem."
+  },
+  "language": {
+    "label": "Idioma"
+  }
+}

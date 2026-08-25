@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { deleteTemplate, listTemplates, saveTemplate } from '../db';
 import type { Property, Template } from '../types';
 import { newId } from '../utils/id';
 
 export default function TemplatesPage() {
+  const { t } = useTranslation();
   const { workId } = useParams();
   const [templates, setTemplates] = useState<Template[]>([]);
   const [name, setName] = useState('');
@@ -46,7 +48,7 @@ export default function TemplatesPage() {
   }
 
   async function handleDelete(id: string) {
-    if (!confirm('このテンプレートを削除しますか？')) return;
+    if (!confirm(t('templates.deleteConfirm'))) return;
     await deleteTemplate(id);
     refresh();
   }
@@ -54,43 +56,43 @@ export default function TemplatesPage() {
   return (
     <div>
       <p className="helper-text" style={{ marginBottom: 16 }}>
-        カテゴリごとによく使う項目セットを登録しておくと、エントリ編集時に「テンプレートから挿入」でまとめて追加できます。
+        {t('templates.helper')}
       </p>
 
       {templates.length === 0 ? (
         <div className="empty-state">
-          <p>まだテンプレートがありません。</p>
+          <p>{t('templates.noTemplates')}</p>
         </div>
       ) : (
         <div className="card-list" style={{ marginBottom: 24 }}>
-          {templates.map((t) => (
-            <div className="card" key={t.id}>
+          {templates.map((tpl) => (
+            <div className="card" key={tpl.id}>
               <div className="top-bar" style={{ marginBottom: 8 }}>
                 <div>
-                  <strong>{t.name}</strong> <span className="chip">{t.category}</span>
+                  <strong>{tpl.name}</strong> <span className="chip">{tpl.category}</span>
                 </div>
-                <button type="button" className="btn btn-danger" onClick={() => handleDelete(t.id)}>
-                  削除
+                <button type="button" className="btn btn-danger" onClick={() => handleDelete(tpl.id)}>
+                  {t('common.delete')}
                 </button>
               </div>
-              <div className="helper-text">{t.properties.map((p) => p.key).join(' / ')}</div>
+              <div className="helper-text">{tpl.properties.map((p) => p.key).join(' / ')}</div>
             </div>
           ))}
         </div>
       )}
 
-      <div className="section-title">新しいテンプレートを作る</div>
+      <div className="section-title">{t('templates.newTemplateTitle')}</div>
       <form onSubmit={handleCreate} className="card">
         <div className="field">
-          <label>テンプレート名</label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="例:キャラクター基本情報" />
+          <label>{t('templates.nameLabel')}</label>
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder={t('templates.namePlaceholder')} />
         </div>
         <div className="field">
-          <label>対象カテゴリ</label>
-          <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="例:キャラクター" />
+          <label>{t('templates.categoryLabel')}</label>
+          <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder={t('templates.categoryPlaceholder')} />
         </div>
         <div className="field">
-          <label>項目名(値は空のまま挿入されます)</label>
+          <label>{t('templates.propertiesLabel')}</label>
           <div className="row-list">
             {properties.map((p, i) => (
               <div className="row" key={i}>
@@ -98,7 +100,7 @@ export default function TemplatesPage() {
                   type="text"
                   value={p.key}
                   onChange={(e) => updateRow(i, 'key', e.target.value)}
-                  placeholder="項目名(例:年齢)"
+                  placeholder={t('properties.keyPlaceholder')}
                   style={{ flex: 1 }}
                 />
                 <button type="button" className="btn btn-ghost" onClick={() => removeRow(i)}>
@@ -108,11 +110,11 @@ export default function TemplatesPage() {
             ))}
           </div>
           <button type="button" className="btn" onClick={() => setProperties([...properties, { key: '', value: '' }])}>
-            ＋ 項目を追加
+            {t('properties.addRow')}
           </button>
         </div>
         <button type="submit" className="btn btn-primary" disabled={!name.trim() || !category.trim()}>
-          テンプレートを保存
+          {t('templates.saveButton')}
         </button>
       </form>
     </div>

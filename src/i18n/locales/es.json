@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "delete": "Eliminar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "add": "Añadir",
+    "untitled": "(Sin título)",
+    "uncategorized": "Sin categoría",
+    "deletedEntry": "(Eliminado)",
+    "showAll": "Mostrar todo ({{count}})",
+    "backToList": "← Volver a la lista",
+    "allChip": "Todos",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "Entradas",
+    "graph": "Vista de grafo",
+    "templates": "Plantillas"
+  },
+  "home": {
+    "newWorkPlaceholder": "Nombre de la nueva obra",
+    "createWork": "+ Crear obra",
+    "noWorks": "Aún no hay obras. Crea una con el formulario de arriba.",
+    "updatedAt": "Actualizado: {{date}}",
+    "importSectionTitle": "Importar una obra",
+    "importButton": "Importar desde archivo JSON / ZIP"
+  },
+  "work": {
+    "notFound": "Obra no encontrada.",
+    "renamePrompt": "Cambiar nombre de la obra",
+    "rename": "Renombrar",
+    "exportJson": "Exportar JSON",
+    "zipping": "Generando ZIP...",
+    "exportZip": "Exportar ZIP",
+    "deleteConfirm": "Se eliminará \"{{name}}\". No se puede deshacer. ¿Continuar?",
+    "backToHome": "Volver al inicio"
+  },
+  "entryList": {
+    "searchPlaceholder": "Buscar por título, cuerpo o etiquetas",
+    "allCategories": "Todas las categorías",
+    "newEntry": "+ Nueva entrada",
+    "browseByCategory": "Explorar por categoría",
+    "browseByTag": "Explorar por etiqueta",
+    "untagged": "Sin etiqueta ({{count}})",
+    "noEntries": "Aún no hay entradas.",
+    "noMatch": "No hay entradas que coincidan.",
+    "untaggedLabel": "Sin etiqueta"
+  },
+  "entryView": {
+    "notFound": "Entrada no encontrada.",
+    "viewRelations": "Ver relaciones",
+    "deleteConfirm": "Se eliminará \"{{title}}\". ¿Continuar?",
+    "bodyTitle": "Cuerpo",
+    "relationsTitle": "Relaciones",
+    "imagesTitle": "Imágenes"
+  },
+  "entryEdit": {
+    "newTitle": "Nueva entrada",
+    "editTitle": "Editar entrada",
+    "titleLabel": "Título",
+    "titlePlaceholder": "p. ej. Aldo",
+    "categoryLabel": "Categoría",
+    "categoryPlaceholder": "p. ej. Personaje, Nación, Época, Facción, Presagio...",
+    "tagsLabel": "Etiquetas",
+    "removeTagAria": "Quitar etiqueta",
+    "tagInputPlaceholder": "Escribe una etiqueta y pulsa Enter",
+    "propertiesTitle": "Propiedades",
+    "bodyPlaceholder": "Escribe libremente. Los títulos de otras entradas se enlazan automáticamente."
+  },
+  "graph": {
+    "backToFullGraph": "← Volver al grafo completo",
+    "pickHint": "Elige una para ver el grafo solo con las entradas de esa categoría/etiqueta.",
+    "empty": "Aún no hay relaciones que mostrar. Añade relaciones desde la pantalla de edición de una entrada."
+  },
+  "templates": {
+    "helper": "Registra un conjunto de propiedades habituales por categoría para insertarlas todas a la vez con \"Insertar desde plantilla\" al editar una entrada.",
+    "noTemplates": "Aún no hay plantillas.",
+    "deleteConfirm": "¿Eliminar esta plantilla?",
+    "newTemplateTitle": "Crear nueva plantilla",
+    "nameLabel": "Nombre de la plantilla",
+    "namePlaceholder": "p. ej. Datos básicos del personaje",
+    "categoryLabel": "Categoría objetivo",
+    "categoryPlaceholder": "p. ej. Personaje",
+    "propertiesLabel": "Nombres de propiedades (los valores se insertan vacíos)",
+    "saveButton": "Guardar plantilla"
+  },
+  "properties": {
+    "keyPlaceholder": "Nombre de propiedad (p. ej. Edad)",
+    "valuePlaceholder": "Valor",
+    "removeAria": "Quitar propiedad",
+    "addRow": "+ Añadir propiedad",
+    "insertFromTemplate": "Insertar desde plantilla"
+  },
+  "relations": {
+    "labelPlaceholder": "Relación (p. ej. Mentor, Rival, Afiliación)",
+    "removeAria": "Quitar relación",
+    "searchPlaceholder": "Busca títulos para añadir una relación..."
+  },
+  "images": {
+    "altFallback": "Imagen adjunta",
+    "captionPlaceholder": "Descripción",
+    "mainLabel": "★ Principal",
+    "setMainButton": "Marcar como principal",
+    "addButton": "+ Añadir imagen"
+  },
+  "wikiLink": {
+    "empty": "Aún no hay texto."
+  },
+  "errors": {
+    "workNotFound": "Obra no encontrada",
+    "zipMissingWorkJson": "No se encontró work.json. Puede que este ZIP no haya sido creado por {{appName}}.",
+    "invalidWorkData": "El formato de los datos de la obra no es válido.",
+    "importFailed": "Error al importar. Revisa el contenido del archivo.",
+    "zipCreateFailed": "No se pudo generar el ZIP.",
+    "imageLoadFailed": "No se pudo cargar la imagen."
+  },
+  "language": {
+    "label": "Idioma"
+  }
+}

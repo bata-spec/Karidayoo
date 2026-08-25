@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { ImageRef } from '../types';
 import { fileToCompressedDataUrl } from '../utils/image';
 import { newId } from '../utils/id';
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function ImagesEditor({ images, onChange }: Props) {
+  const { t } = useTranslation();
   const inputRef = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
 
@@ -27,7 +29,7 @@ export default function ImagesEditor({ images, onChange }: Props) {
       }
       onChange(combined);
     } catch {
-      alert('画像の読み込みに失敗しました。');
+      alert(t('errors.imageLoadFailed'));
     } finally {
       setBusy(false);
       if (inputRef.current) inputRef.current.value = '';
@@ -56,19 +58,19 @@ export default function ImagesEditor({ images, onChange }: Props) {
         <div className="image-grid">
           {images.map((img) => (
             <div key={img.id} className={`image-card${img.isMain ? ' is-main' : ''}`}>
-              <img src={img.dataUrl} alt={img.caption || '添付画像'} />
+              <img src={img.dataUrl} alt={img.caption || t('images.altFallback')} />
               <input
                 type="text"
-                placeholder="キャプション"
+                placeholder={t('images.captionPlaceholder')}
                 value={img.caption}
                 onChange={(e) => updateCaption(img.id, e.target.value)}
               />
               <div className="image-card-actions">
                 <button type="button" className="btn btn-ghost" onClick={() => setMain(img.id)} disabled={img.isMain}>
-                  {img.isMain ? '★ メイン' : 'メインにする'}
+                  {img.isMain ? t('images.mainLabel') : t('images.setMainButton')}
                 </button>
                 <button type="button" className="btn btn-ghost" onClick={() => remove(img.id)}>
-                  削除
+                  {t('common.delete')}
                 </button>
               </div>
             </div>
@@ -84,7 +86,7 @@ export default function ImagesEditor({ images, onChange }: Props) {
         style={{ display: 'none' }}
       />
       <button type="button" className="btn" onClick={() => inputRef.current?.click()} disabled={busy}>
-        {busy ? '読み込み中...' : '＋ 画像を追加'}
+        {busy ? t('common.loading') : t('images.addButton')}
       </button>
     </div>
   );

@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "delete": "Удалить",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "edit": "Изменить",
+    "add": "Добавить",
+    "untitled": "(Без названия)",
+    "uncategorized": "Без категории",
+    "deletedEntry": "(Удалено)",
+    "showAll": "Показать все ({{count}})",
+    "backToList": "← Назад к списку",
+    "allChip": "Все",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "Записи",
+    "graph": "Граф связей",
+    "templates": "Шаблоны"
+  },
+  "home": {
+    "newWorkPlaceholder": "Название нового произведения",
+    "createWork": "+ Создать произведение",
+    "noWorks": "Произведений пока нет. Создайте одно с помощью формы выше.",
+    "updatedAt": "Обновлено: {{date}}",
+    "importSectionTitle": "Импортировать произведение",
+    "importButton": "Импорт из файла JSON / ZIP"
+  },
+  "work": {
+    "notFound": "Произведение не найдено.",
+    "renamePrompt": "Переименовать произведение",
+    "rename": "Переименовать",
+    "exportJson": "Экспорт JSON",
+    "zipping": "Создание ZIP...",
+    "exportZip": "Экспорт ZIP",
+    "deleteConfirm": "«{{name}}» будет удалено. Это действие нельзя отменить. Продолжить?",
+    "backToHome": "На главную"
+  },
+  "entryList": {
+    "searchPlaceholder": "Поиск по названию, тексту или тегам",
+    "allCategories": "Все категории",
+    "newEntry": "+ Новая запись",
+    "browseByCategory": "Просмотр по категориям",
+    "browseByTag": "Просмотр по тегам",
+    "untagged": "Без тега ({{count}})",
+    "noEntries": "Записей пока нет.",
+    "noMatch": "Нет подходящих записей.",
+    "untaggedLabel": "Без тега"
+  },
+  "entryView": {
+    "notFound": "Запись не найдена.",
+    "viewRelations": "Показать связи",
+    "deleteConfirm": "«{{title}}» будет удалена. Продолжить?",
+    "bodyTitle": "Текст",
+    "relationsTitle": "Связи",
+    "imagesTitle": "Изображения"
+  },
+  "entryEdit": {
+    "newTitle": "Новая запись",
+    "editTitle": "Редактирование записи",
+    "titleLabel": "Название",
+    "titlePlaceholder": "напр., Альдо",
+    "categoryLabel": "Категория",
+    "categoryPlaceholder": "напр., Персонаж, Государство, Эпоха, Фракция, Предвестие...",
+    "tagsLabel": "Теги",
+    "removeTagAria": "Удалить тег",
+    "tagInputPlaceholder": "Введите тег и нажмите Enter",
+    "propertiesTitle": "Свойства",
+    "bodyPlaceholder": "Пишите свободно. Названия других записей автоматически становятся ссылками."
+  },
+  "graph": {
+    "backToFullGraph": "← Назад к полному графу",
+    "pickHint": "Выберите, чтобы показать граф только для записей этой категории/тега.",
+    "empty": "Пока нет связей для отображения. Добавьте связи на экране редактирования записи."
+  },
+  "templates": {
+    "helper": "Сохраните часто используемый набор свойств для категории, чтобы добавлять их сразу через «Вставить из шаблона» при редактировании записи.",
+    "noTemplates": "Шаблонов пока нет.",
+    "deleteConfirm": "Удалить этот шаблон?",
+    "newTemplateTitle": "Создать новый шаблон",
+    "nameLabel": "Название шаблона",
+    "namePlaceholder": "напр., Основная информация о персонаже",
+    "categoryLabel": "Целевая категория",
+    "categoryPlaceholder": "напр., Персонаж",
+    "propertiesLabel": "Названия свойств (значения будут добавлены пустыми)",
+    "saveButton": "Сохранить шаблон"
+  },
+  "properties": {
+    "keyPlaceholder": "Название свойства (напр., Возраст)",
+    "valuePlaceholder": "Значение",
+    "removeAria": "Удалить свойство",
+    "addRow": "+ Добавить свойство",
+    "insertFromTemplate": "Вставить из шаблона"
+  },
+  "relations": {
+    "labelPlaceholder": "Связь (напр., Наставник, Соперник, Принадлежность)",
+    "removeAria": "Удалить связь",
+    "searchPlaceholder": "Поиск названий для добавления связи..."
+  },
+  "images": {
+    "altFallback": "Прикреплённое изображение",
+    "captionPlaceholder": "Подпись",
+    "mainLabel": "★ Главное",
+    "setMainButton": "Сделать главным",
+    "addButton": "+ Добавить изображение"
+  },
+  "wikiLink": {
+    "empty": "Текста пока нет."
+  },
+  "errors": {
+    "workNotFound": "Произведение не найдено",
+    "zipMissingWorkJson": "Файл work.json не найден. Возможно, этот ZIP создан не в {{appName}}.",
+    "invalidWorkData": "Неверный формат данных произведения.",
+    "importFailed": "Не удалось импортировать. Проверьте содержимое файла.",
+    "zipCreateFailed": "Не удалось создать ZIP.",
+    "imageLoadFailed": "Не удалось загрузить изображение."
+  },
+  "language": {
+    "label": "Язык"
+  }
+}

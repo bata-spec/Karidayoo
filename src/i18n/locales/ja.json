@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "delete": "削除",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "edit": "編集",
+    "add": "追加",
+    "untitled": "(無題)",
+    "uncategorized": "未分類",
+    "deletedEntry": "(削除済み)",
+    "showAll": "すべて表示({{count}}件)",
+    "backToList": "← 一覧に戻る",
+    "allChip": "すべて",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "エントリ一覧",
+    "graph": "グラフビュー",
+    "templates": "テンプレート"
+  },
+  "home": {
+    "newWorkPlaceholder": "新しい作品名",
+    "createWork": "＋ 作品を作る",
+    "noWorks": "まだ作品がありません。上のフォームから作品を作成してください。",
+    "updatedAt": "更新: {{date}}",
+    "importSectionTitle": "作品データを読み込む",
+    "importButton": "JSON / ZIPファイルからインポート"
+  },
+  "work": {
+    "notFound": "作品が見つかりませんでした。",
+    "renamePrompt": "作品名を変更",
+    "rename": "名前変更",
+    "exportJson": "JSONエクスポート",
+    "zipping": "ZIP作成中...",
+    "exportZip": "ZIPエクスポート",
+    "deleteConfirm": "「{{name}}」を削除します。元に戻せません。よろしいですか？",
+    "backToHome": "ホームに戻る"
+  },
+  "entryList": {
+    "searchPlaceholder": "タイトル・本文・タグで検索",
+    "allCategories": "すべてのカテゴリ",
+    "newEntry": "＋ 新規エントリ",
+    "browseByCategory": "カテゴリで見る",
+    "browseByTag": "タグで見る",
+    "untagged": "タグなし ({{count}})",
+    "noEntries": "まだエントリがありません。",
+    "noMatch": "条件に一致するエントリがありません。",
+    "untaggedLabel": "タグなし"
+  },
+  "entryView": {
+    "notFound": "エントリが見つかりませんでした。",
+    "viewRelations": "関連を見る",
+    "deleteConfirm": "「{{title}}」を削除します。よろしいですか？",
+    "bodyTitle": "本文",
+    "relationsTitle": "関連",
+    "imagesTitle": "画像"
+  },
+  "entryEdit": {
+    "newTitle": "新規エントリ",
+    "editTitle": "エントリを編集",
+    "titleLabel": "タイトル",
+    "titlePlaceholder": "例:アルド",
+    "categoryLabel": "カテゴリ",
+    "categoryPlaceholder": "例:キャラクター、国、時代、組織、伏線...",
+    "tagsLabel": "タグ",
+    "removeTagAria": "タグを削除",
+    "tagInputPlaceholder": "タグを入力してEnter",
+    "propertiesTitle": "属性",
+    "bodyPlaceholder": "自由に記述してください。他のエントリのタイトルは自動でリンクになります。"
+  },
+  "graph": {
+    "backToFullGraph": "← 全体グラフに戻る",
+    "pickHint": "選ぶと、そのカテゴリ/タグのエントリだけでグラフを表示します。",
+    "empty": "表示できる関連がまだありません。エントリの編集画面から関連を追加してください。"
+  },
+  "templates": {
+    "helper": "カテゴリごとによく使う項目セットを登録しておくと、エントリ編集時に「テンプレートから挿入」でまとめて追加できます。",
+    "noTemplates": "まだテンプレートがありません。",
+    "deleteConfirm": "このテンプレートを削除しますか？",
+    "newTemplateTitle": "新しいテンプレートを作る",
+    "nameLabel": "テンプレート名",
+    "namePlaceholder": "例:キャラクター基本情報",
+    "categoryLabel": "対象カテゴリ",
+    "categoryPlaceholder": "例:キャラクター",
+    "propertiesLabel": "項目名(値は空のまま挿入されます)",
+    "saveButton": "テンプレートを保存"
+  },
+  "properties": {
+    "keyPlaceholder": "項目名(例:年齢)",
+    "valuePlaceholder": "値",
+    "removeAria": "項目を削除",
+    "addRow": "＋ 項目を追加",
+    "insertFromTemplate": "テンプレートから挿入"
+  },
+  "relations": {
+    "labelPlaceholder": "関係(例:師弟、敵対、所属)",
+    "removeAria": "関連を削除",
+    "searchPlaceholder": "タイトルで検索して関連を追加..."
+  },
+  "images": {
+    "altFallback": "添付画像",
+    "captionPlaceholder": "キャプション",
+    "mainLabel": "★ メイン",
+    "setMainButton": "メインにする",
+    "addButton": "＋ 画像を追加"
+  },
+  "wikiLink": {
+    "empty": "本文はまだありません。"
+  },
+  "errors": {
+    "workNotFound": "作品が見つかりません",
+    "zipMissingWorkJson": "work.json が見つかりません。{{appName}}で作成したZIPファイルではない可能性があります。",
+    "invalidWorkData": "作品データの形式が正しくありません。",
+    "importFailed": "読み込みに失敗しました。ファイル内容を確認してください。",
+    "zipCreateFailed": "ZIPの作成に失敗しました。",
+    "imageLoadFailed": "画像の読み込みに失敗しました。"
+  },
+  "language": {
+    "label": "言語"
+  }
+}

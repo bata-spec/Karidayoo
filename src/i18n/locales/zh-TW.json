@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "載入中...",
+    "delete": "刪除",
+    "save": "儲存",
+    "cancel": "取消",
+    "edit": "編輯",
+    "add": "新增",
+    "untitled": "(無標題)",
+    "uncategorized": "未分類",
+    "deletedEntry": "(已刪除)",
+    "showAll": "顯示全部({{count}}項)",
+    "backToList": "← 返回列表",
+    "allChip": "全部",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "條目列表",
+    "graph": "關聯圖",
+    "templates": "範本"
+  },
+  "home": {
+    "newWorkPlaceholder": "新作品名稱",
+    "createWork": "＋ 建立作品",
+    "noWorks": "還沒有作品。請使用上方表單建立。",
+    "updatedAt": "更新於: {{date}}",
+    "importSectionTitle": "匯入作品資料",
+    "importButton": "從 JSON / ZIP 檔案匯入"
+  },
+  "work": {
+    "notFound": "找不到該作品。",
+    "renamePrompt": "修改作品名稱",
+    "rename": "重新命名",
+    "exportJson": "匯出 JSON",
+    "zipping": "正在建立 ZIP...",
+    "exportZip": "匯出 ZIP",
+    "deleteConfirm": "將刪除「{{name}}」。此操作無法復原，確定要繼續嗎？",
+    "backToHome": "返回首頁"
+  },
+  "entryList": {
+    "searchPlaceholder": "依標題・內文・標籤搜尋",
+    "allCategories": "所有分類",
+    "newEntry": "＋ 新增條目",
+    "browseByCategory": "依分類瀏覽",
+    "browseByTag": "依標籤瀏覽",
+    "untagged": "無標籤 ({{count}})",
+    "noEntries": "還沒有條目。",
+    "noMatch": "沒有符合條件的條目。",
+    "untaggedLabel": "無標籤"
+  },
+  "entryView": {
+    "notFound": "找不到該條目。",
+    "viewRelations": "查看關聯",
+    "deleteConfirm": "將刪除「{{title}}」，確定要繼續嗎？",
+    "bodyTitle": "內文",
+    "relationsTitle": "關聯",
+    "imagesTitle": "圖片"
+  },
+  "entryEdit": {
+    "newTitle": "新增條目",
+    "editTitle": "編輯條目",
+    "titleLabel": "標題",
+    "titlePlaceholder": "例:阿爾多",
+    "categoryLabel": "分類",
+    "categoryPlaceholder": "例:角色、國家、時代、組織、伏筆...",
+    "tagsLabel": "標籤",
+    "removeTagAria": "刪除標籤",
+    "tagInputPlaceholder": "輸入標籤後按 Enter",
+    "propertiesTitle": "屬性",
+    "bodyPlaceholder": "自由撰寫。其他條目的標題會自動變成連結。"
+  },
+  "graph": {
+    "backToFullGraph": "← 返回完整關聯圖",
+    "pickHint": "選擇後將只顯示該分類/標籤下條目的關聯圖。",
+    "empty": "還沒有可顯示的關聯。請在條目編輯畫面新增關聯。"
+  },
+  "templates": {
+    "helper": "為每個分類預先登記常用的屬性組合，在編輯條目時可透過「從範本插入」一次新增。",
+    "noTemplates": "還沒有範本。",
+    "deleteConfirm": "確定要刪除此範本嗎？",
+    "newTemplateTitle": "建立新範本",
+    "nameLabel": "範本名稱",
+    "namePlaceholder": "例:角色基本資訊",
+    "categoryLabel": "適用分類",
+    "categoryPlaceholder": "例:角色",
+    "propertiesLabel": "屬性名稱(值將以空白插入)",
+    "saveButton": "儲存範本"
+  },
+  "properties": {
+    "keyPlaceholder": "屬性名(例:年齡)",
+    "valuePlaceholder": "值",
+    "removeAria": "刪除屬性",
+    "addRow": "＋ 新增屬性",
+    "insertFromTemplate": "從範本插入"
+  },
+  "relations": {
+    "labelPlaceholder": "關係(例:師徒、敵對、所屬)",
+    "removeAria": "刪除關聯",
+    "searchPlaceholder": "搜尋標題以新增關聯..."
+  },
+  "images": {
+    "altFallback": "附加圖片",
+    "captionPlaceholder": "說明文字",
+    "mainLabel": "★ 主圖",
+    "setMainButton": "設為主圖",
+    "addButton": "＋ 新增圖片"
+  },
+  "wikiLink": {
+    "empty": "還沒有內文內容。"
+  },
+  "errors": {
+    "workNotFound": "找不到該作品",
+    "zipMissingWorkJson": "找不到 work.json，此 ZIP 檔案可能不是由{{appName}}建立的。",
+    "invalidWorkData": "作品資料格式不正確。",
+    "importFailed": "匯入失敗，請檢查檔案內容。",
+    "zipCreateFailed": "ZIP 建立失敗。",
+    "imageLoadFailed": "圖片載入失敗。"
+  },
+  "language": {
+    "label": "語言"
+  }
+}

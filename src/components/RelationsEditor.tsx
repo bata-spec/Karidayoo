@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Entry, Relation } from '../types';
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function RelationsEditor({ relations, onChange, allEntries, currentEntryId }: Props) {
+  const { t } = useTranslation();
   const [query, setQuery] = useState('');
 
   const entryById = useMemo(() => new Map(allEntries.map((e) => [e.id, e])), [allEntries]);
@@ -43,16 +45,16 @@ export default function RelationsEditor({ relations, onChange, allEntries, curre
           return (
             <div className="row" key={rel.targetId}>
               <span className="chip" style={{ flexShrink: 0 }}>
-                {target ? target.title : '(削除済み)'}
+                {target ? target.title : t('common.deletedEntry')}
               </span>
               <input
                 type="text"
-                placeholder="関係(例:師弟、敵対、所属)"
+                placeholder={t('relations.labelPlaceholder')}
                 value={rel.label}
                 onChange={(e) => updateLabel(index, e.target.value)}
                 style={{ flex: 1 }}
               />
-              <button type="button" className="btn btn-ghost" onClick={() => removeRelation(index)} aria-label="関連を削除">
+              <button type="button" className="btn btn-ghost" onClick={() => removeRelation(index)} aria-label={t('relations.removeAria')}>
                 ✕
               </button>
             </div>
@@ -62,7 +64,7 @@ export default function RelationsEditor({ relations, onChange, allEntries, curre
       <div className="field" style={{ marginBottom: 4 }}>
         <input
           type="search"
-          placeholder="タイトルで検索して関連を追加..."
+          placeholder={t('relations.searchPlaceholder')}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />

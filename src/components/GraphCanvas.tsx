@@ -9,6 +9,7 @@ import {
   type SimulationLinkDatum,
 } from 'd3-force';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import type { Entry } from '../types';
 
 interface GraphNode extends SimulationNodeDatum {
@@ -39,6 +40,7 @@ function categoryColor(category: string): string {
 }
 
 export default function GraphCanvas({ entries, centerEntryId, width = 640, height = 440 }: Props) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { workId } = useParams();
 
@@ -60,7 +62,7 @@ export default function GraphCanvas({ entries, centerEntryId, width = 640, heigh
     const nodes: GraphNode[] = visibleEntries.map((e) => ({
       id: e.id,
       title: e.title,
-      category: e.category || '未分類',
+      category: e.category || t('common.uncategorized'),
       mainImage: e.images.find((img) => img.isMain)?.dataUrl,
     }));
 
@@ -94,10 +96,10 @@ export default function GraphCanvas({ entries, centerEntryId, width = 640, heigh
     const categories = Array.from(new Set(nodes.map((n) => n.category)));
 
     return { nodes, links, categories };
-  }, [entries, centerEntryId, width, height]);
+  }, [entries, centerEntryId, width, height, t]);
 
   if (nodes.length === 0) {
-    return <p className="empty-state">表示できる関連がまだありません。エントリの編集画面から関連を追加してください。</p>;
+    return <p className="empty-state">{t('graph.empty')}</p>;
   }
 
   return (

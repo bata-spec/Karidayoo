@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "delete": "हटाएं",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "edit": "संपादित करें",
+    "add": "जोड़ें",
+    "untitled": "(शीर्षक रहित)",
+    "uncategorized": "बिना श्रेणी",
+    "deletedEntry": "(हटा दिया गया)",
+    "showAll": "सभी दिखाएं ({{count}})",
+    "backToList": "← सूची पर वापस जाएं",
+    "allChip": "सभी",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "प्रविष्टियां",
+    "graph": "ग्राफ़ दृश्य",
+    "templates": "टेम्पलेट"
+  },
+  "home": {
+    "newWorkPlaceholder": "नई रचना का नाम",
+    "createWork": "+ रचना बनाएं",
+    "noWorks": "अभी तक कोई रचना नहीं है। ऊपर दिए फ़ॉर्म से एक बनाएं।",
+    "updatedAt": "अपडेट किया गया: {{date}}",
+    "importSectionTitle": "रचना डेटा आयात करें",
+    "importButton": "JSON / ZIP फ़ाइल से आयात करें"
+  },
+  "work": {
+    "notFound": "रचना नहीं मिली।",
+    "renamePrompt": "रचना का नाम बदलें",
+    "rename": "नाम बदलें",
+    "exportJson": "JSON निर्यात करें",
+    "zipping": "ZIP बनाया जा रहा है...",
+    "exportZip": "ZIP निर्यात करें",
+    "deleteConfirm": "\"{{name}}\" हटाई जाएगी। इसे पूर्ववत नहीं किया जा सकता। क्या आप जारी रखना चाहते हैं?",
+    "backToHome": "होम पर वापस जाएं"
+  },
+  "entryList": {
+    "searchPlaceholder": "शीर्षक, मुख्य पाठ या टैग से खोजें",
+    "allCategories": "सभी श्रेणियां",
+    "newEntry": "+ नई प्रविष्टि",
+    "browseByCategory": "श्रेणी के अनुसार देखें",
+    "browseByTag": "टैग के अनुसार देखें",
+    "untagged": "बिना टैग ({{count}})",
+    "noEntries": "अभी तक कोई प्रविष्टि नहीं है।",
+    "noMatch": "कोई मेल खाती प्रविष्टि नहीं मिली।",
+    "untaggedLabel": "बिना टैग"
+  },
+  "entryView": {
+    "notFound": "प्रविष्टि नहीं मिली।",
+    "viewRelations": "संबंध देखें",
+    "deleteConfirm": "\"{{title}}\" हटाई जाएगी। क्या आप जारी रखना चाहते हैं?",
+    "bodyTitle": "मुख्य पाठ",
+    "relationsTitle": "संबंध",
+    "imagesTitle": "छवियां"
+  },
+  "entryEdit": {
+    "newTitle": "नई प्रविष्टि",
+    "editTitle": "प्रविष्टि संपादित करें",
+    "titleLabel": "शीर्षक",
+    "titlePlaceholder": "उदा: एल्डो",
+    "categoryLabel": "श्रेणी",
+    "categoryPlaceholder": "उदा: पात्र, राष्ट्र, युग, संगठन, पूर्वाभास...",
+    "tagsLabel": "टैग",
+    "removeTagAria": "टैग हटाएं",
+    "tagInputPlaceholder": "टैग लिखकर Enter दबाएं",
+    "propertiesTitle": "गुण",
+    "bodyPlaceholder": "स्वतंत्र रूप से लिखें। अन्य प्रविष्टियों के शीर्षक अपने आप लिंक बन जाते हैं।"
+  },
+  "graph": {
+    "backToFullGraph": "← पूर्ण ग्राफ़ पर वापस जाएं",
+    "pickHint": "चुनने पर केवल उस श्रेणी/टैग की प्रविष्टियों का ग्राफ़ दिखेगा।",
+    "empty": "अभी दिखाने के लिए कोई संबंध नहीं है। प्रविष्टि के संपादन स्क्रीन से संबंध जोड़ें।"
+  },
+  "templates": {
+    "helper": "हर श्रेणी के लिए अक्सर उपयोग होने वाले गुणों का सेट दर्ज करें, ताकि प्रविष्टि संपादित करते समय \"टेम्पलेट से जोड़ें\" द्वारा एक साथ जोड़ा जा सके।",
+    "noTemplates": "अभी तक कोई टेम्पलेट नहीं है।",
+    "deleteConfirm": "क्या इस टेम्पलेट को हटाना है?",
+    "newTemplateTitle": "नया टेम्पलेट बनाएं",
+    "nameLabel": "टेम्पलेट नाम",
+    "namePlaceholder": "उदा: पात्र की मूल जानकारी",
+    "categoryLabel": "लक्षित श्रेणी",
+    "categoryPlaceholder": "उदा: पात्र",
+    "propertiesLabel": "गुणों के नाम (मान खाली जोड़े जाएंगे)",
+    "saveButton": "टेम्पलेट सहेजें"
+  },
+  "properties": {
+    "keyPlaceholder": "गुण का नाम (उदा: आयु)",
+    "valuePlaceholder": "मान",
+    "removeAria": "गुण हटाएं",
+    "addRow": "+ गुण जोड़ें",
+    "insertFromTemplate": "टेम्पलेट से जोड़ें"
+  },
+  "relations": {
+    "labelPlaceholder": "संबंध (उदा: गुरु-शिष्य, प्रतिद्वंद्वी, संबद्धता)",
+    "removeAria": "संबंध हटाएं",
+    "searchPlaceholder": "संबंध जोड़ने के लिए शीर्षक खोजें..."
+  },
+  "images": {
+    "altFallback": "संलग्न छवि",
+    "captionPlaceholder": "कैप्शन",
+    "mainLabel": "★ मुख्य",
+    "setMainButton": "मुख्य के रूप में सेट करें",
+    "addButton": "+ छवि जोड़ें"
+  },
+  "wikiLink": {
+    "empty": "अभी तक कोई मुख्य पाठ नहीं है।"
+  },
+  "errors": {
+    "workNotFound": "रचना नहीं मिली",
+    "zipMissingWorkJson": "work.json नहीं मिली। हो सकता है यह ZIP {{appName}} से न बनाई गई हो।",
+    "invalidWorkData": "रचना डेटा का प्रारूप अमान्य है।",
+    "importFailed": "आयात विफल रहा। कृपया फ़ाइल की सामग्री जांचें।",
+    "zipCreateFailed": "ZIP बनाना विफल रहा।",
+    "imageLoadFailed": "छवि लोड करना विफल रहा।"
+  },
+  "language": {
+    "label": "भाषा"
+  }
+}

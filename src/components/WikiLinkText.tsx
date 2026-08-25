@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { linkifyBody } from '../utils/wikilink';
 
 interface Props {
@@ -7,12 +8,13 @@ interface Props {
 }
 
 export default function WikiLinkText({ body, candidates }: Props) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { workId } = useParams();
   const segments = linkifyBody(body, candidates);
 
   if (!body) {
-    return <p className="helper-text">本文はまだありません。</p>;
+    return <p className="helper-text">{t('wikiLink.empty')}</p>;
   }
 
   return (

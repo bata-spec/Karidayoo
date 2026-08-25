@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "جارٍ التحميل...",
+    "delete": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "untitled": "(بدون عنوان)",
+    "uncategorized": "بدون تصنيف",
+    "deletedEntry": "(محذوف)",
+    "showAll": "عرض الكل ({{count}})",
+    "backToList": "← العودة إلى القائمة",
+    "allChip": "الكل",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "المدخلات",
+    "graph": "عرض الرسم البياني",
+    "templates": "القوالب"
+  },
+  "home": {
+    "newWorkPlaceholder": "اسم العمل الجديد",
+    "createWork": "+ إنشاء عمل",
+    "noWorks": "لا توجد أعمال بعد. أنشئ واحدًا باستخدام النموذج أعلاه.",
+    "updatedAt": "آخر تحديث: {{date}}",
+    "importSectionTitle": "استيراد بيانات عمل",
+    "importButton": "استيراد من ملف JSON / ZIP"
+  },
+  "work": {
+    "notFound": "العمل غير موجود.",
+    "renamePrompt": "إعادة تسمية العمل",
+    "rename": "إعادة تسمية",
+    "exportJson": "تصدير JSON",
+    "zipping": "جارٍ إنشاء ملف ZIP...",
+    "exportZip": "تصدير ZIP",
+    "deleteConfirm": "سيتم حذف \"{{name}}\". لا يمكن التراجع عن هذا الإجراء. هل تريد المتابعة؟",
+    "backToHome": "العودة إلى الصفحة الرئيسية"
+  },
+  "entryList": {
+    "searchPlaceholder": "البحث بالعنوان أو النص أو الوسوم",
+    "allCategories": "جميع التصنيفات",
+    "newEntry": "+ مدخل جديد",
+    "browseByCategory": "تصفح حسب التصنيف",
+    "browseByTag": "تصفح حسب الوسم",
+    "untagged": "بدون وسم ({{count}})",
+    "noEntries": "لا توجد مدخلات بعد.",
+    "noMatch": "لا توجد مدخلات مطابقة.",
+    "untaggedLabel": "بدون وسم"
+  },
+  "entryView": {
+    "notFound": "المدخل غير موجود.",
+    "viewRelations": "عرض العلاقات",
+    "deleteConfirm": "سيتم حذف \"{{title}}\". هل تريد المتابعة؟",
+    "bodyTitle": "النص",
+    "relationsTitle": "العلاقات",
+    "imagesTitle": "الصور"
+  },
+  "entryEdit": {
+    "newTitle": "مدخل جديد",
+    "editTitle": "تعديل المدخل",
+    "titleLabel": "العنوان",
+    "titlePlaceholder": "مثال: ألدو",
+    "categoryLabel": "التصنيف",
+    "categoryPlaceholder": "مثال: شخصية، دولة، حقبة، فصيل، إشارة مسبقة...",
+    "tagsLabel": "الوسوم",
+    "removeTagAria": "إزالة الوسم",
+    "tagInputPlaceholder": "اكتب وسمًا ثم اضغط Enter",
+    "propertiesTitle": "الخصائص",
+    "bodyPlaceholder": "اكتب بحرية. تتحول عناوين المدخلات الأخرى تلقائيًا إلى روابط."
+  },
+  "graph": {
+    "backToFullGraph": "← العودة إلى الرسم البياني الكامل",
+    "pickHint": "اختر واحدًا لعرض الرسم البياني لمدخلات هذا التصنيف/الوسم فقط.",
+    "empty": "لا توجد علاقات لعرضها بعد. أضف علاقات من شاشة تعديل المدخل."
+  },
+  "templates": {
+    "helper": "سجّل مجموعة خصائص شائعة الاستخدام لكل تصنيف لإدراجها دفعة واحدة عبر \"إدراج من قالب\" أثناء تعديل مدخل.",
+    "noTemplates": "لا توجد قوالب بعد.",
+    "deleteConfirm": "هل تريد حذف هذا القالب؟",
+    "newTemplateTitle": "إنشاء قالب جديد",
+    "nameLabel": "اسم القالب",
+    "namePlaceholder": "مثال: المعلومات الأساسية للشخصية",
+    "categoryLabel": "التصنيف المستهدف",
+    "categoryPlaceholder": "مثال: شخصية",
+    "propertiesLabel": "أسماء الخصائص (تُدرج القيم فارغة)",
+    "saveButton": "حفظ القالب"
+  },
+  "properties": {
+    "keyPlaceholder": "اسم الخاصية (مثال: العمر)",
+    "valuePlaceholder": "القيمة",
+    "removeAria": "إزالة الخاصية",
+    "addRow": "+ إضافة خاصية",
+    "insertFromTemplate": "إدراج من قالب"
+  },
+  "relations": {
+    "labelPlaceholder": "العلاقة (مثال: معلّم، خصم، انتماء)",
+    "removeAria": "إزالة العلاقة",
+    "searchPlaceholder": "ابحث عن عناوين لإضافة علاقة..."
+  },
+  "images": {
+    "altFallback": "صورة مرفقة",
+    "captionPlaceholder": "تعليق",
+    "mainLabel": "★ رئيسية",
+    "setMainButton": "تعيين كصورة رئيسية",
+    "addButton": "+ إضافة صورة"
+  },
+  "wikiLink": {
+    "empty": "لا يوجد نص بعد."
+  },
+  "errors": {
+    "workNotFound": "العمل غير موجود",
+    "zipMissingWorkJson": "لم يتم العثور على work.json. قد لا يكون ملف ZIP هذا منشأً بواسطة {{appName}}.",
+    "invalidWorkData": "تنسيق بيانات العمل غير صالح.",
+    "importFailed": "فشل الاستيراد. يرجى التحقق من محتوى الملف.",
+    "zipCreateFailed": "فشل إنشاء ملف ZIP.",
+    "imageLoadFailed": "فشل تحميل الصورة."
+  },
+  "language": {
+    "label": "اللغة"
+  }
+}

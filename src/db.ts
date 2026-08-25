@@ -1,4 +1,5 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb';
+import i18n from './i18n';
 import type { Work, Entry, Template, WorkExport } from './types';
 import { newId } from './utils/id';
 
@@ -128,7 +129,7 @@ export async function deleteTemplate(id: string): Promise<void> {
 export async function exportWork(workId: string): Promise<WorkExport> {
   const db = await getDB();
   const work = await db.get('works', workId);
-  if (!work) throw new Error('作品が見つかりません');
+  if (!work) throw new Error(i18n.t('errors.workNotFound'));
   const entries = await db.getAllFromIndex('entries', 'workId', workId);
   const templates = await db.getAllFromIndex('templates', 'workId', workId);
   return { version: 1, work, entries, templates };

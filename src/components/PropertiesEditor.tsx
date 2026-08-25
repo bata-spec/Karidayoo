@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Property, Template } from '../types';
 
 interface Props {
@@ -8,6 +9,7 @@ interface Props {
 }
 
 export default function PropertiesEditor({ properties, onChange, templates }: Props) {
+  const { t } = useTranslation();
   const [showTemplates, setShowTemplates] = useState(false);
 
   function updateRow(index: number, field: 'key' | 'value', value: string) {
@@ -37,19 +39,19 @@ export default function PropertiesEditor({ properties, onChange, templates }: Pr
           <div className="row" key={index}>
             <input
               type="text"
-              placeholder="項目名(例:年齢)"
+              placeholder={t('properties.keyPlaceholder')}
               value={prop.key}
               onChange={(e) => updateRow(index, 'key', e.target.value)}
               style={{ flex: '0 0 38%' }}
             />
             <input
               type="text"
-              placeholder="値"
+              placeholder={t('properties.valuePlaceholder')}
               value={prop.value}
               onChange={(e) => updateRow(index, 'value', e.target.value)}
               style={{ flex: 1 }}
             />
-            <button type="button" className="btn btn-ghost" onClick={() => removeRow(index)} aria-label="項目を削除">
+            <button type="button" className="btn btn-ghost" onClick={() => removeRow(index)} aria-label={t('properties.removeAria')}>
               ✕
             </button>
           </div>
@@ -57,12 +59,12 @@ export default function PropertiesEditor({ properties, onChange, templates }: Pr
       </div>
       <div className="row">
         <button type="button" className="btn" onClick={addRow}>
-          ＋ 項目を追加
+          {t('properties.addRow')}
         </button>
         {templates.length > 0 && (
           <div style={{ position: 'relative' }}>
             <button type="button" className="btn" onClick={() => setShowTemplates((v) => !v)}>
-              テンプレートから挿入
+              {t('properties.insertFromTemplate')}
             </button>
             {showTemplates && (
               <div
@@ -70,15 +72,15 @@ export default function PropertiesEditor({ properties, onChange, templates }: Pr
                 style={{ position: 'absolute', top: '110%', left: 0, zIndex: 10, minWidth: 200 }}
               >
                 <div className="row-list">
-                  {templates.map((t) => (
+                  {templates.map((tpl) => (
                     <button
-                      key={t.id}
+                      key={tpl.id}
                       type="button"
                       className="btn btn-ghost"
                       style={{ justifyContent: 'flex-start' }}
-                      onClick={() => insertTemplate(t)}
+                      onClick={() => insertTemplate(tpl)}
                     >
-                      {t.name}
+                      {tpl.name}
                     </button>
                   ))}
                 </div>

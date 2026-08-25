@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "創作ノート"
+  },
+  "common": {
+    "loading": "加载中...",
+    "delete": "删除",
+    "save": "保存",
+    "cancel": "取消",
+    "edit": "编辑",
+    "add": "添加",
+    "untitled": "(无标题)",
+    "uncategorized": "未分类",
+    "deletedEntry": "(已删除)",
+    "showAll": "显示全部({{count}}项)",
+    "backToList": "← 返回列表",
+    "allChip": "全部",
+    "countSuffix": "({{count}})"
+  },
+  "nav": {
+    "entries": "条目列表",
+    "graph": "关系图",
+    "templates": "模板"
+  },
+  "home": {
+    "newWorkPlaceholder": "新作品名称",
+    "createWork": "＋ 创建作品",
+    "noWorks": "还没有作品。请使用上方表单创建。",
+    "updatedAt": "更新于: {{date}}",
+    "importSectionTitle": "导入作品数据",
+    "importButton": "从 JSON / ZIP 文件导入"
+  },
+  "work": {
+    "notFound": "未找到该作品。",
+    "renamePrompt": "修改作品名称",
+    "rename": "重命名",
+    "exportJson": "导出 JSON",
+    "zipping": "正在生成 ZIP...",
+    "exportZip": "导出 ZIP",
+    "deleteConfirm": "将删除“{{name}}”。此操作无法撤销，确定要继续吗？",
+    "backToHome": "返回主页"
+  },
+  "entryList": {
+    "searchPlaceholder": "按标题·正文·标签搜索",
+    "allCategories": "所有分类",
+    "newEntry": "＋ 新建条目",
+    "browseByCategory": "按分类浏览",
+    "browseByTag": "按标签浏览",
+    "untagged": "无标签 ({{count}})",
+    "noEntries": "还没有条目。",
+    "noMatch": "没有符合条件的条目。",
+    "untaggedLabel": "无标签"
+  },
+  "entryView": {
+    "notFound": "未找到该条目。",
+    "viewRelations": "查看关联",
+    "deleteConfirm": "将删除“{{title}}”，确定要继续吗？",
+    "bodyTitle": "正文",
+    "relationsTitle": "关联",
+    "imagesTitle": "图片"
+  },
+  "entryEdit": {
+    "newTitle": "新建条目",
+    "editTitle": "编辑条目",
+    "titleLabel": "标题",
+    "titlePlaceholder": "例:阿尔多",
+    "categoryLabel": "分类",
+    "categoryPlaceholder": "例:角色、国家、时代、组织、伏笔...",
+    "tagsLabel": "标签",
+    "removeTagAria": "删除标签",
+    "tagInputPlaceholder": "输入标签后按 Enter",
+    "propertiesTitle": "属性",
+    "bodyPlaceholder": "自由撰写。其他条目的标题会自动变为链接。"
+  },
+  "graph": {
+    "backToFullGraph": "← 返回完整关系图",
+    "pickHint": "选择后将只显示该分类/标签下条目的关系图。",
+    "empty": "还没有可显示的关联。请在条目编辑界面添加关联。"
+  },
+  "templates": {
+    "helper": "为每个分类预先登记常用的属性组合，在编辑条目时可通过“从模板插入”一次性添加。",
+    "noTemplates": "还没有模板。",
+    "deleteConfirm": "确定要删除此模板吗？",
+    "newTemplateTitle": "创建新模板",
+    "nameLabel": "模板名称",
+    "namePlaceholder": "例:角色基本信息",
+    "categoryLabel": "适用分类",
+    "categoryPlaceholder": "例:角色",
+    "propertiesLabel": "属性名称(值将以空白插入)",
+    "saveButton": "保存模板"
+  },
+  "properties": {
+    "keyPlaceholder": "属性名(例:年龄)",
+    "valuePlaceholder": "值",
+    "removeAria": "删除属性",
+    "addRow": "＋ 添加属性",
+    "insertFromTemplate": "从模板插入"
+  },
+  "relations": {
+    "labelPlaceholder": "关系(例:师徒、敌对、所属)",
+    "removeAria": "删除关联",
+    "searchPlaceholder": "搜索标题以添加关联..."
+  },
+  "images": {
+    "altFallback": "附加图片",
+    "captionPlaceholder": "说明文字",
+    "mainLabel": "★ 主图",
+    "setMainButton": "设为主图",
+    "addButton": "＋ 添加图片"
+  },
+  "wikiLink": {
+    "empty": "还没有正文内容。"
+  },
+  "errors": {
+    "workNotFound": "未找到该作品",
+    "zipMissingWorkJson": "未找到 work.json，该 ZIP 文件可能不是由{{appName}}创建的。",
+    "invalidWorkData": "作品数据格式不正确。",
+    "importFailed": "导入失败，请检查文件内容。",
+    "zipCreateFailed": "ZIP 生成失败。",
+    "imageLoadFailed": "图片加载失败。"
+  },
+  "language": {
+    "label": "语言"
+  }
+}

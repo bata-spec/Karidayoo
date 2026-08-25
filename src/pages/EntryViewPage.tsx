@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { deleteEntry, getEntry, listEntries } from '../db';
 import type { Entry } from '../types';
 import WikiLinkText from '../components/WikiLinkText';
 
 export default function EntryViewPage() {
+  const { t } = useTranslation();
   const { workId, entryId } = useParams();
   const navigate = useNavigate();
   const [entry, setEntry] = useState<Entry | null | undefined>(undefined);
@@ -25,13 +27,13 @@ export default function EntryViewPage() {
 
   async function handleDelete() {
     if (!entry) return;
-    if (!confirm(`「${entry.title}」を削除します。よろしいですか？`)) return;
+    if (!confirm(t('entryView.deleteConfirm', { title: entry.title }))) return;
     await deleteEntry(entry.id);
     navigate(`/works/${workId}/entries`);
   }
 
-  if (entry === undefined) return <p className="helper-text">読み込み中...</p>;
-  if (entry === null) return <p>エントリが見つかりませんでした。</p>;
+  if (entry === undefined) return <p className="helper-text">{t('common.loading')}</p>;
+  if (entry === null) return <p>{t('entryView.notFound')}</p>;
 
   const mainImage = entry.images.find((img) => img.isMain) ?? entry.images[0];
   const otherImages = entry.images.filter((img) => img.id !== mainImage?.id);
@@ -40,18 +42,18 @@ export default function EntryViewPage() {
     <div>
       <div className="top-bar">
         <div>
-          <h2 style={{ margin: '0 0 4px' }}>{entry.title || '(無題)'}</h2>
-          <span className="chip">{entry.category || '未分類'}</span>
+          <h2 style={{ margin: '0 0 4px' }}>{entry.title || t('common.untitled')}</h2>
+          <span className="chip">{entry.category || t('common.uncategorized')}</span>
         </div>
         <div className="row">
           <a className="btn" href={`#/works/${workId}/graph/${entry.id}`}>
-            関連を見る
+            {t('entryView.viewRelations')}
           </a>
           <a className="btn" href={`#/works/${workId}/entries/${entry.id}/edit`}>
-            編集
+            {t('common.edit')}
           </a>
           <button type="button" className="btn btn-danger" onClick={handleDelete}>
-            削除
+            {t('common.delete')}
           </button>
         </div>
       </div>
@@ -81,18 +83,18 @@ export default function EntryViewPage() {
         </div>
       )}
 
-      <div className="section-title">本文</div>
+      <div className="section-title">{t('entryView.bodyTitle')}</div>
       <WikiLinkText body={entry.body} candidates={linkCandidates} />
 
       {entry.relations.length > 0 && (
         <>
-          <div className="section-title">関連</div>
+          <div className="section-title">{t('entryView.relationsTitle')}</div>
           <div className="row" style={{ flexWrap: 'wrap', marginBottom: 16 }}>
             {entry.relations.map((rel, i) => {
               const target = entryById.get(rel.targetId);
               return (
                 <a key={i} className="chip" href={`#/works/${workId}/entries/${rel.targetId}`} style={{ textDecoration: 'none' }}>
-                  {target ? target.title : '(削除済み)'}
+                  {target ? target.title : t('common.deletedEntry')}
                   {rel.label && ` · ${rel.label}`}
                 </a>
               );
@@ -103,7 +105,7 @@ export default function EntryViewPage() {
 
       {otherImages.length > 0 && (
         <>
-          <div className="section-title">画像</div>
+          <div className="section-title">{t('entryView.imagesTitle')}</div>
           <div className="image-grid">
             {otherImages.map((img) => (
               <div key={img.id} className="image-card">

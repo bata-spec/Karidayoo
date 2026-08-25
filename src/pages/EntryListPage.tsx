@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { listEntries } from '../db';
 import type { Entry } from '../types';
 
 export default function EntryListPage() {
+  const { t } = useTranslation();
   const { workId } = useParams();
   const [entries, setEntries] = useState<Entry[] | null>(null);
   const [search, setSearch] = useState('');
@@ -22,11 +24,11 @@ export default function EntryListPage() {
     if (!entries) return [];
     const counts = new Map<string, number>();
     for (const e of entries) {
-      const c = e.category || '未分類';
+      const c = e.category || t('common.uncategorized');
       counts.set(c, (counts.get(c) ?? 0) + 1);
     }
-    return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'));
-  }, [entries]);
+    return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  }, [entries, t]);
 
   const categories = useMemo(() => categoryCounts.map(([c]) => c), [categoryCounts]);
 
@@ -36,7 +38,7 @@ export default function EntryListPage() {
     for (const e of entries) {
       for (const tag of e.tags) counts.set(tag, (counts.get(tag) ?? 0) + 1);
     }
-    return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'));
+    return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   }, [entries]);
 
   const untaggedCount = useMemo(() => entries?.filter((e) => e.tags.length === 0).length ?? 0, [entries]);
@@ -44,14 +46,14 @@ export default function EntryListPage() {
   const filtered = useMemo(() => {
     if (!entries) return [];
     return entries.filter((e) => {
-      if (category && (e.category || '未分類') !== category) return false;
+      if (category && (e.category || t('common.uncategorized')) !== category) return false;
       if (selectedTag && !e.tags.includes(selectedTag)) return false;
       if (showUntagged && e.tags.length > 0) return false;
       if (!search.trim()) return true;
       const q = search.trim();
-      return e.title.includes(q) || e.body.includes(q) || e.tags.some((t) => t.includes(q));
+      return e.title.includes(q) || e.body.includes(q) || e.tags.some((tag) => tag.includes(q));
     });
-  }, [entries, search, category, selectedTag, showUntagged]);
+  }, [entries, search, category, selectedTag, showUntagged, t]);
 
   const browsingByCategory = category !== '';
   const browsingByTag = selectedTag !== null || showUntagged;
@@ -71,14 +73,14 @@ export default function EntryListPage() {
       <div className="row" style={{ marginBottom: 10 }}>
         <input
           type="search"
-          placeholder="タイトル・本文・タグで検索"
+          placeholder={t('entryList.searchPlaceholder')}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           style={{ flex: 1 }}
         />
         {showList && (
           <select value={category} onChange={(e) => setCategory(e.target.value)}>
-            <option value="">すべてのカテゴリ</option>
+            <option value="">{t('entryList.allCategories')}</option>
             {categories.map((c) => (
               <option key={c} value={c}>
                 {c}
@@ -89,12 +91,12 @@ export default function EntryListPage() {
       </div>
       <div style={{ marginBottom: 14 }}>
         <a href={`#/works/${workId}/entries/new`} className="btn btn-primary">
-          ＋ 新規エントリ
+          {t('entryList.newEntry')}
         </a>
       </div>
 
       {entries === null ? (
-        <p className="helper-text">読み込み中...</p>
+        <p className="helper-text">{t('common.loading')}</p>
       ) : !showList ? (
         <div>
           <div className="tabs" style={{ marginBottom: 4 }}>
@@ -103,10 +105,10 @@ export default function EntryListPage() {
               className={browseMode === 'category' ? 'active' : ''}
               onClick={() => setBrowseMode('category')}
             >
-              カテゴリで見る
+              {t('entryList.browseByCategory')}
             </button>
             <button type="button" className={browseMode === 'tag' ? 'active' : ''} onClick={() => setBrowseMode('tag')}>
-              タグで見る
+              {t('entryList.browseByTag')}
             </button>
           </div>
 
@@ -114,7 +116,7 @@ export default function EntryListPage() {
             <div className="row" style={{ flexWrap: 'wrap', gap: 8 }}>
               {categoryCounts.map(([c, count]) => (
                 <button key={c} type="button" className="chip" onClick={() => setCategory(c)}>
-                  {c} ({count})
+                  {c} {t('common.countSuffix', { count })}
                 </button>
               ))}
             </div>
@@ -122,12 +124,12 @@ export default function EntryListPage() {
             <div className="row" style={{ flexWrap: 'wrap', gap: 8 }}>
               {tagCounts.map(([tag, count]) => (
                 <button key={tag} type="button" className="chip" onClick={() => setSelectedTag(tag)}>
-                  {tag} ({count})
+                  {tag} {t('common.countSuffix', { count })}
                 </button>
               ))}
               {untaggedCount > 0 && (
                 <button type="button" className="chip" onClick={() => setShowUntagged(true)}>
-                  タグなし ({untaggedCount})
+                  {t('entryList.untagged', { count: untaggedCount })}
                 </button>
               )}
             </div>
@@ -135,7 +137,7 @@ export default function EntryListPage() {
 
           <div style={{ marginTop: 14 }}>
             <button type="button" className="btn btn-ghost" onClick={() => setShowAll(true)}>
-              すべて表示({entries.length}件)
+              {t('common.showAll', { count: entries.length })}
             </button>
           </div>
         </div>
@@ -144,18 +146,18 @@ export default function EntryListPage() {
           {(browsingByCategory || browsingByTag || showAll) && hasAnyGrouping && (
             <div className="row" style={{ marginBottom: 10, flexWrap: 'wrap' }}>
               <button type="button" className="btn btn-ghost" onClick={backToBrowse}>
-                ← 一覧に戻る
+                {t('common.backToList')}
               </button>
               {category && <span className="chip">{category}</span>}
               {selectedTag && <span className="chip">{selectedTag}</span>}
-              {showUntagged && <span className="chip">タグなし</span>}
-              {showAll && <span className="chip">すべて</span>}
+              {showUntagged && <span className="chip">{t('entryList.untaggedLabel')}</span>}
+              {showAll && <span className="chip">{t('common.allChip')}</span>}
             </div>
           )}
 
           {filtered.length === 0 ? (
             <div className="empty-state">
-              <p>{entries.length === 0 ? 'まだエントリがありません。' : '条件に一致するエントリがありません。'}</p>
+              <p>{entries.length === 0 ? t('entryList.noEntries') : t('entryList.noMatch')}</p>
             </div>
           ) : (
             <div className="card-list">
@@ -165,9 +167,9 @@ export default function EntryListPage() {
                   <a key={entry.id} className="entry-row" href={`#/works/${workId}/entries/${entry.id}`}>
                     {main && <img className="thumb" src={main.dataUrl} alt="" />}
                     <div>
-                      <div className="entry-row-title">{entry.title || '(無題)'}</div>
+                      <div className="entry-row-title">{entry.title || t('common.untitled')}</div>
                       <div className="entry-row-meta">
-                        {entry.category || '未分類'}
+                        {entry.category || t('common.uncategorized')}
                         {entry.tags.length > 0 && ` · ${entry.tags.join(', ')}`}
                       </div>
                     </div>

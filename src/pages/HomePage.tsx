@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { createWork, importWork, listWorks } from '../db';
 import { parseWorkZip } from '../utils/zip';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 import type { Work, WorkExport } from '../types';
 
 export default function HomePage() {
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [works, setWorks] = useState<Work[] | null>(null);
   const [newName, setNewName] = useState('');
@@ -28,41 +31,42 @@ export default function HomePage() {
       const isZip = file.name.toLowerCase().endsWith('.zip');
       const data = isZip ? await parseWorkZip(file) : (JSON.parse(await file.text()) as WorkExport);
       if (!data.work || !Array.isArray(data.entries)) {
-        alert('作品データの形式が正しくありません。');
+        alert(t('errors.invalidWorkData'));
         return;
       }
       const work = await importWork(data);
       setWorks(await listWorks());
       navigate(`/works/${work.id}/entries`);
     } catch {
-      alert('読み込みに失敗しました。ファイル内容を確認してください。');
+      alert(t('errors.importFailed'));
     }
   }
 
   return (
     <div className="page">
       <div className="top-bar">
-        <h1>創作ノート</h1>
+        <h1>{t('app.name')}</h1>
+        <LanguageSwitcher />
       </div>
 
       <form onSubmit={handleCreate} className="row" style={{ marginBottom: 20 }}>
         <input
           type="text"
-          placeholder="新しい作品名"
+          placeholder={t('home.newWorkPlaceholder')}
           value={newName}
           onChange={(e) => setNewName(e.target.value)}
           style={{ flex: 1 }}
         />
         <button type="submit" className="btn btn-primary" disabled={!newName.trim()}>
-          ＋ 作品を作る
+          {t('home.createWork')}
         </button>
       </form>
 
       {works === null ? (
-        <p className="helper-text">読み込み中...</p>
+        <p className="helper-text">{t('common.loading')}</p>
       ) : works.length === 0 ? (
         <div className="empty-state">
-          <p>まだ作品がありません。上のフォームから作品を作成してください。</p>
+          <p>{t('home.noWorks')}</p>
         </div>
       ) : (
         <div className="card-list">
@@ -70,14 +74,16 @@ export default function HomePage() {
             <a key={work.id} className="entry-row" href={`#/works/${work.id}/entries`}>
               <div>
                 <div className="entry-row-title">{work.name}</div>
-                <div className="entry-row-meta">更新: {new Date(work.updatedAt).toLocaleString('ja-JP')}</div>
+                <div className="entry-row-meta">
+                  {t('home.updatedAt', { date: new Date(work.updatedAt).toLocaleString(i18n.language) })}
+                </div>
               </div>
             </a>
           ))}
         </div>
       )}
 
-      <div className="section-title">作品データを読み込む</div>
+      <div className="section-title">{t('home.importSectionTitle')}</div>
       <input
         ref={fileInputRef}
         type="file"
@@ -90,7 +96,7 @@ export default function HomePage() {
         }}
       />
       <button type="button" className="btn" onClick={() => fileInputRef.current?.click()}>
-        JSON / ZIPファイルからインポート
+        {t('home.importButton')}
       </button>
     </div>
   );

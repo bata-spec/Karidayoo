@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { getEntry, listEntries, listTemplates, saveEntry } from '../db';
 import type { Entry, Property, Relation, ImageRef } from '../types';
 import { newId } from '../utils/id';
@@ -8,6 +9,7 @@ import RelationsEditor from '../components/RelationsEditor';
 import ImagesEditor from '../components/ImagesEditor';
 
 export default function EntryEditPage() {
+  const { t } = useTranslation();
   const { workId, entryId } = useParams();
   const navigate = useNavigate();
   const isNew = !entryId;
@@ -55,7 +57,7 @@ export default function EntryEditPage() {
   );
 
   const categoryTemplates = useMemo(
-    () => templates.filter((t) => t.category === category),
+    () => templates.filter((tpl) => tpl.category === category),
     [templates, category],
   );
 
@@ -66,7 +68,7 @@ export default function EntryEditPage() {
   }
 
   function removeTag(tag: string) {
-    setTags(tags.filter((t) => t !== tag));
+    setTags(tags.filter((t2) => t2 !== tag));
   }
 
   async function handleSave() {
@@ -75,8 +77,8 @@ export default function EntryEditPage() {
     const entry: Entry = {
       id: entryId ?? newId('entry'),
       workId,
-      category: category.trim() || '未分類',
-      title: title.trim() || '(無題)',
+      category: category.trim() || t('common.uncategorized'),
+      title: title.trim() || t('common.untitled'),
       tags,
       properties: properties.filter((p) => p.key.trim() || p.value.trim()),
       body,
@@ -89,35 +91,35 @@ export default function EntryEditPage() {
     navigate(`/works/${workId}/entries/${entry.id}`);
   }
 
-  if (!loaded) return <p className="helper-text">読み込み中...</p>;
+  if (!loaded) return <p className="helper-text">{t('common.loading')}</p>;
 
   return (
     <div>
       <div className="top-bar">
-        <h2 style={{ margin: 0 }}>{isNew ? '新規エントリ' : 'エントリを編集'}</h2>
+        <h2 style={{ margin: 0 }}>{isNew ? t('entryEdit.newTitle') : t('entryEdit.editTitle')}</h2>
         <div className="row">
           <button type="button" className="btn" onClick={() => navigate(-1)}>
-            キャンセル
+            {t('common.cancel')}
           </button>
           <button type="button" className="btn btn-primary" onClick={handleSave}>
-            保存
+            {t('common.save')}
           </button>
         </div>
       </div>
 
       <div className="field">
-        <label>タイトル</label>
-        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="例:アルド" />
+        <label>{t('entryEdit.titleLabel')}</label>
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder={t('entryEdit.titlePlaceholder')} />
       </div>
 
       <div className="field">
-        <label>カテゴリ</label>
+        <label>{t('entryEdit.categoryLabel')}</label>
         <input
           type="text"
           list="category-options"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          placeholder="例:キャラクター、国、時代、組織、伏線..."
+          placeholder={t('entryEdit.categoryPlaceholder')}
         />
         <datalist id="category-options">
           {categories.map((c) => (
@@ -127,12 +129,12 @@ export default function EntryEditPage() {
       </div>
 
       <div className="field">
-        <label>タグ</label>
+        <label>{t('entryEdit.tagsLabel')}</label>
         <div className="row" style={{ flexWrap: 'wrap', marginBottom: 6 }}>
           {tags.map((tag) => (
             <span className="chip" key={tag}>
               {tag}
-              <button type="button" onClick={() => removeTag(tag)} aria-label="タグを削除">
+              <button type="button" onClick={() => removeTag(tag)} aria-label={t('entryEdit.removeTagAria')}>
                 ✕
               </button>
             </span>
@@ -149,23 +151,23 @@ export default function EntryEditPage() {
                 addTag();
               }
             }}
-            placeholder="タグを入力してEnter"
+            placeholder={t('entryEdit.tagInputPlaceholder')}
           />
           <button type="button" className="btn" onClick={addTag}>
-            追加
+            {t('common.add')}
           </button>
         </div>
       </div>
 
-      <div className="section-title">属性</div>
+      <div className="section-title">{t('entryEdit.propertiesTitle')}</div>
       <PropertiesEditor properties={properties} onChange={setProperties} templates={categoryTemplates} />
 
-      <div className="section-title">本文</div>
+      <div className="section-title">{t('entryView.bodyTitle')}</div>
       <div className="field">
-        <textarea value={body} onChange={(e) => setBody(e.target.value)} placeholder="自由に記述してください。他のエントリのタイトルは自動でリンクになります。" />
+        <textarea value={body} onChange={(e) => setBody(e.target.value)} placeholder={t('entryEdit.bodyPlaceholder')} />
       </div>
 
-      <div className="section-title">関連</div>
+      <div className="section-title">{t('entryView.relationsTitle')}</div>
       <RelationsEditor
         relations={relations}
         onChange={setRelations}
@@ -173,7 +175,7 @@ export default function EntryEditPage() {
         currentEntryId={entryId}
       />
 
-      <div className="section-title">画像</div>
+      <div className="section-title">{t('entryView.imagesTitle')}</div>
       <ImagesEditor images={images} onChange={setImages} />
     </div>
   );
