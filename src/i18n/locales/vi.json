@@ -52,7 +52,8 @@
     "untagged": "Không có thẻ ({{count}})",
     "noEntries": "Chưa có mục nào.",
     "noMatch": "Không có mục nào phù hợp.",
-    "untaggedLabel": "Không có thẻ"
+    "untaggedLabel": "Không có thẻ",
+    "showCategoryEntries": "Xem mục tại đây ({{count}})"
   },
   "entryView": {
     "notFound": "Không tìm thấy mục.",
@@ -84,7 +85,8 @@
     "empty": "Chưa có mối quan hệ nào để hiển thị. Thêm mối quan hệ từ màn hình chỉnh sửa mục.",
     "zoomIn": "Phóng to",
     "zoomOut": "Thu nhỏ",
-    "resetView": "Đặt lại chế độ xem"
+    "resetView": "Đặt lại chế độ xem",
+    "labelHint": "Phóng to để xem nhãn quan hệ."
   },
   "templates": {
     "helper": "Lưu sẵn một bộ thuộc tính thường dùng cho mỗi danh mục để chèn cùng lúc bằng \"Chèn từ mẫu\" khi chỉnh sửa mục.",

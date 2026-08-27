@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { listEntries } from '../db';
 import type { Entry } from '../types';
+import { buildCategoryTree, findCategoryNode } from '../utils/categoryTree';
 
 export default function EntryListPage() {
   const { t } = useTranslation();
@@ -14,6 +15,7 @@ export default function EntryListPage() {
   const [showUntagged, setShowUntagged] = useState(false);
   const [showAll, setShowAll] = useState(false);
   const [browseMode, setBrowseMode] = useState<'category' | 'tag'>('category');
+  const [categoryPath, setCategoryPath] = useState<string[]>([]);
 
   useEffect(() => {
     if (!workId) return;
@@ -31,6 +33,7 @@ export default function EntryListPage() {
   }, [entries, t]);
 
   const categories = useMemo(() => categoryCounts.map(([c]) => c), [categoryCounts]);
+  const categoryTree = useMemo(() => buildCategoryTree(categoryCounts), [categoryCounts]);
 
   const tagCounts = useMemo(() => {
     if (!entries) return [];
@@ -62,6 +65,7 @@ export default function EntryListPage() {
 
   function backToBrowse() {
     setCategory('');
+    setCategoryPath([]);
     setSelectedTag(null);
     setShowUntagged(false);
     setShowAll(false);
@@ -113,12 +117,50 @@ export default function EntryListPage() {
           </div>
 
           {browseMode === 'category' ? (
-            <div className="row" style={{ flexWrap: 'wrap', gap: 8 }}>
-              {categoryCounts.map(([c, count]) => (
-                <button key={c} type="button" className="chip" onClick={() => setCategory(c)}>
-                  {c} {t('common.countSuffix', { count })}
-                </button>
-              ))}
+            <div>
+              {categoryPath.length > 0 && (
+                <div className="row" style={{ flexWrap: 'wrap', gap: 4, marginBottom: 8 }}>
+                  <button type="button" className="btn btn-ghost" onClick={() => setCategoryPath([])}>
+                    {t('common.backToList')}
+                  </button>
+                  {categoryPath.map((segment, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      className="chip"
+                      onClick={() => setCategoryPath(categoryPath.slice(0, i + 1))}
+                    >
+                      {segment}
+                    </button>
+                  ))}
+                </div>
+              )}
+              <div className="row" style={{ flexWrap: 'wrap', gap: 8 }}>
+                {(categoryPath.length === 0 ? categoryTree : (findCategoryNode(categoryTree, categoryPath)?.children ?? [])).map(
+                  (node) => (
+                    <button
+                      key={node.segment}
+                      type="button"
+                      className="chip"
+                      onClick={() => (node.children.length === 0 ? setCategory(node.path.join('/')) : setCategoryPath(node.path))}
+                    >
+                      {node.children.length === 0 ? '' : '📁 '}
+                      {node.segment} {t('common.countSuffix', { count: node.totalCount })}
+                    </button>
+                  ),
+                )}
+              </div>
+              {categoryPath.length > 0 &&
+                (() => {
+                  const node = findCategoryNode(categoryTree, categoryPath);
+                  return node && node.directCount > 0 ? (
+                    <div style={{ marginTop: 10 }}>
+                      <button type="button" className="btn" onClick={() => setCategory(node.path.join('/'))}>
+                        {t('entryList.showCategoryEntries', { count: node.directCount })}
+                      </button>
+                    </div>
+                  ) : null;
+                })()}
             </div>
           ) : (
             <div className="row" style={{ flexWrap: 'wrap', gap: 8 }}>

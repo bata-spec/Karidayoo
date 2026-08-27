@@ -52,7 +52,8 @@
     "untagged": "Sans tag ({{count}})",
     "noEntries": "Aucune fiche pour le moment.",
     "noMatch": "Aucune fiche ne correspond.",
-    "untaggedLabel": "Sans tag"
+    "untaggedLabel": "Sans tag",
+    "showCategoryEntries": "Voir les entrées ici ({{count}})"
   },
   "entryView": {
     "notFound": "Fiche introuvable.",
@@ -84,7 +85,8 @@
     "empty": "Aucune relation à afficher pour le moment. Ajoutez des relations depuis l'écran d'édition d'une fiche.",
     "zoomIn": "Zoomer",
     "zoomOut": "Dézoomer",
-    "resetView": "Réinitialiser la vue"
+    "resetView": "Réinitialiser la vue",
+    "labelHint": "Zoomez pour afficher les étiquettes de relation."
   },
   "templates": {
     "helper": "Enregistrez un ensemble de propriétés fréquemment utilisées par catégorie pour les insérer d'un coup via « Insérer depuis un modèle » lors de l'édition d'une fiche.",

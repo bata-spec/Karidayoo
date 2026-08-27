@@ -52,7 +52,8 @@
     "untagged": "Sin etiqueta ({{count}})",
     "noEntries": "Aún no hay entradas.",
     "noMatch": "No hay entradas que coincidan.",
-    "untaggedLabel": "Sin etiqueta"
+    "untaggedLabel": "Sin etiqueta",
+    "showCategoryEntries": "Ver entradas aquí ({{count}})"
   },
   "entryView": {
     "notFound": "Entrada no encontrada.",
@@ -84,7 +85,8 @@
     "empty": "Aún no hay relaciones que mostrar. Añade relaciones desde la pantalla de edición de una entrada.",
     "zoomIn": "Acercar",
     "zoomOut": "Alejar",
-    "resetView": "Restablecer vista"
+    "resetView": "Restablecer vista",
+    "labelHint": "Amplía la vista para ver las etiquetas de relación."
   },
   "templates": {
     "helper": "Registra un conjunto de propiedades habituales por categoría para insertarlas todas a la vez con \"Insertar desde plantilla\" al editar una entrada.",

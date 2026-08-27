@@ -52,7 +52,8 @@
     "untagged": "無標籤 ({{count}})",
     "noEntries": "還沒有條目。",
     "noMatch": "沒有符合條件的條目。",
-    "untaggedLabel": "無標籤"
+    "untaggedLabel": "無標籤",
+    "showCategoryEntries": "查看此處項目({{count}})"
   },
   "entryView": {
     "notFound": "找不到該條目。",
@@ -84,7 +85,8 @@
     "empty": "還沒有可顯示的關聯。請在條目編輯畫面新增關聯。",
     "zoomIn": "放大",
     "zoomOut": "縮小",
-    "resetView": "重設檢視"
+    "resetView": "重設檢視",
+    "labelHint": "放大後可查看關係標籤。"
   },
   "templates": {
     "helper": "為每個分類預先登記常用的屬性組合，在編輯條目時可透過「從範本插入」一次新增。",

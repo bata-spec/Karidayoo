@@ -52,7 +52,8 @@
     "untagged": "无标签 ({{count}})",
     "noEntries": "还没有条目。",
     "noMatch": "没有符合条件的条目。",
-    "untaggedLabel": "无标签"
+    "untaggedLabel": "无标签",
+    "showCategoryEntries": "查看此处条目({{count}})"
   },
   "entryView": {
     "notFound": "未找到该条目。",
@@ -84,7 +85,8 @@
     "empty": "还没有可显示的关联。请在条目编辑界面添加关联。",
     "zoomIn": "放大",
     "zoomOut": "缩小",
-    "resetView": "重置视图"
+    "resetView": "重置视图",
+    "labelHint": "放大后可查看关系标签。"
   },
   "templates": {
     "helper": "为每个分类预先登记常用的属性组合，在编辑条目时可通过“从模板插入”一次性添加。",

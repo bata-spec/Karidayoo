@@ -52,7 +52,8 @@
     "untagged": "태그 없음 ({{count}})",
     "noEntries": "아직 항목이 없습니다.",
     "noMatch": "조건에 맞는 항목이 없습니다.",
-    "untaggedLabel": "태그 없음"
+    "untaggedLabel": "태그 없음",
+    "showCategoryEntries": "여기 항목 보기 ({{count}}개)"
   },
   "entryView": {
     "notFound": "항목을 찾을 수 없습니다.",
@@ -84,7 +85,8 @@
     "empty": "아직 표시할 관련이 없습니다. 항목 편집 화면에서 관련을 추가해 주세요.",
     "zoomIn": "확대",
     "zoomOut": "축소",
-    "resetView": "보기 재설정"
+    "resetView": "보기 재설정",
+    "labelHint": "확대하면 관계 라벨이 표시됩니다."
   },
   "templates": {
     "helper": "카테고리별로 자주 쓰는 속성 세트를 등록해두면, 항목 편집 시 \"템플릿에서 삽입\"으로 한 번에 추가할 수 있습니다.",

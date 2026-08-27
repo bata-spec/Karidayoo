@@ -52,7 +52,8 @@
     "untagged": "タグなし ({{count}})",
     "noEntries": "まだエントリがありません。",
     "noMatch": "条件に一致するエントリがありません。",
-    "untaggedLabel": "タグなし"
+    "untaggedLabel": "タグなし",
+    "showCategoryEntries": "ここのエントリを見る({{count}}件)"
   },
   "entryView": {
     "notFound": "エントリが見つかりませんでした。",
@@ -84,7 +85,8 @@
     "empty": "表示できる関連がまだありません。エントリの編集画面から関連を追加してください。",
     "zoomIn": "拡大",
     "zoomOut": "縮小",
-    "resetView": "表示をリセット"
+    "resetView": "表示をリセット",
+    "labelHint": "拡大すると関連ラベルが表示されます。"
   },
   "templates": {
     "helper": "カテゴリごとによく使う項目セットを登録しておくと、エントリ編集時に「テンプレートから挿入」でまとめて追加できます。",

@@ -52,7 +52,8 @@
     "untagged": "Ohne Tag ({{count}})",
     "noEntries": "Noch keine Einträge.",
     "noMatch": "Keine passenden Einträge gefunden.",
-    "untaggedLabel": "Ohne Tag"
+    "untaggedLabel": "Ohne Tag",
+    "showCategoryEntries": "Einträge hier anzeigen ({{count}})"
   },
   "entryView": {
     "notFound": "Eintrag nicht gefunden.",
@@ -84,7 +85,8 @@
     "empty": "Noch keine Beziehungen zum Anzeigen. Fügen Sie Beziehungen im Bearbeitungsbildschirm eines Eintrags hinzu.",
     "zoomIn": "Vergrößern",
     "zoomOut": "Verkleinern",
-    "resetView": "Ansicht zurücksetzen"
+    "resetView": "Ansicht zurücksetzen",
+    "labelHint": "Zoomen Sie hinein, um Beziehungsbeschriftungen zu sehen."
   },
   "templates": {
     "helper": "Hinterlegen Sie pro Kategorie ein häufig genutztes Eigenschaften-Set, um es beim Bearbeiten eines Eintrags über „Aus Vorlage einfügen“ auf einmal einzufügen.",

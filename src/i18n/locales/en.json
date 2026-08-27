@@ -52,7 +52,8 @@
     "untagged": "Untagged ({{count}})",
     "noEntries": "No entries yet.",
     "noMatch": "No entries match.",
-    "untaggedLabel": "Untagged"
+    "untaggedLabel": "Untagged",
+    "showCategoryEntries": "View entries here ({{count}})"
   },
   "entryView": {
     "notFound": "Entry not found.",
@@ -84,7 +85,8 @@
     "empty": "No relations to show yet. Add relations from an entry's edit screen.",
     "zoomIn": "Zoom in",
     "zoomOut": "Zoom out",
-    "resetView": "Reset view"
+    "resetView": "Reset view",
+    "labelHint": "Zoom in to see relation labels."
   },
   "templates": {
     "helper": "Register a commonly used set of properties per category to insert them all at once via \"Insert from template\" while editing an entry.",

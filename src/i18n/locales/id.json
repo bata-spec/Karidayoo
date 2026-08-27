@@ -52,7 +52,8 @@
     "untagged": "Tanpa tag ({{count}})",
     "noEntries": "Belum ada entri.",
     "noMatch": "Tidak ada entri yang cocok.",
-    "untaggedLabel": "Tanpa tag"
+    "untaggedLabel": "Tanpa tag",
+    "showCategoryEntries": "Lihat entri di sini ({{count}})"
   },
   "entryView": {
     "notFound": "Entri tidak ditemukan.",
@@ -84,7 +85,8 @@
     "empty": "Belum ada relasi untuk ditampilkan. Tambahkan relasi dari layar edit entri.",
     "zoomIn": "Perbesar",
     "zoomOut": "Perkecil",
-    "resetView": "Setel ulang tampilan"
+    "resetView": "Setel ulang tampilan",
+    "labelHint": "Perbesar tampilan untuk melihat label relasi."
   },
   "templates": {
     "helper": "Daftarkan set properti yang sering dipakai per kategori agar bisa disisipkan sekaligus lewat \"Sisipkan dari template\" saat mengedit entri.",

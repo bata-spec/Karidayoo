@@ -32,6 +32,11 @@ interface Props {
 
 const MIN_SCALE = 0.3;
 const MAX_SCALE = 4;
+// Relation labels sit on every edge; rendering all of them at once on a
+// dense graph turns into unreadable overlapping text regardless of node
+// spacing, so they only appear once the user has zoomed in enough to have
+// room for them.
+const LINK_LABEL_MIN_SCALE = 1.3;
 
 function categoryColor(category: string): string {
   let hash = 0;
@@ -307,8 +312,17 @@ export default function GraphCanvas({ entries, centerEntryId, width = 640, heigh
               return (
                 <g key={i}>
                   <line x1={source.x} y1={source.y} x2={target.x} y2={target.y} stroke="#d8d0c2" strokeWidth={1.5} />
-                  {link.label && (
-                    <text x={midX} y={midY} fontSize={10} fill="#8a8175" textAnchor="middle">
+                  {link.label && view.k >= LINK_LABEL_MIN_SCALE && (
+                    <text
+                      x={midX}
+                      y={midY}
+                      fontSize={10}
+                      fill="#8a8175"
+                      textAnchor="middle"
+                      stroke="#faf9f7"
+                      strokeWidth={3}
+                      paintOrder="stroke"
+                    >
                       {link.label}
                     </text>
                   )}
@@ -341,7 +355,15 @@ export default function GraphCanvas({ entries, centerEntryId, width = 640, heigh
                 ) : (
                   <circle r={18} fill={categoryColor(node.category)} />
                 )}
-                <text y={32} fontSize={11} textAnchor="middle" fill="#2b2620">
+                <text
+                  y={32}
+                  fontSize={11}
+                  textAnchor="middle"
+                  fill="#2b2620"
+                  stroke="#faf9f7"
+                  strokeWidth={3}
+                  paintOrder="stroke"
+                >
                   {node.title}
                 </text>
               </g>
@@ -360,6 +382,7 @@ export default function GraphCanvas({ entries, centerEntryId, width = 640, heigh
           </button>
         </div>
       </div>
+      {links.length > 0 && view.k < LINK_LABEL_MIN_SCALE && <p className="helper-text">{t('graph.labelHint')}</p>}
       <div className="graph-legend">
         {categories.map((c) => (
           <span key={c} className="chip">

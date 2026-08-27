@@ -52,7 +52,8 @@
     "untagged": "Sem tag ({{count}})",
     "noEntries": "Ainda não há entradas.",
     "noMatch": "Nenhuma entrada corresponde.",
-    "untaggedLabel": "Sem tag"
+    "untaggedLabel": "Sem tag",
+    "showCategoryEntries": "Ver entradas aqui ({{count}})"
   },
   "entryView": {
     "notFound": "Entrada não encontrada.",
@@ -84,7 +85,8 @@
     "empty": "Ainda não há relações para mostrar. Adicione relações na tela de edição de uma entrada.",
     "zoomIn": "Aumentar zoom",
     "zoomOut": "Diminuir zoom",
-    "resetView": "Redefinir visualização"
+    "resetView": "Redefinir visualização",
+    "labelHint": "Aumente o zoom para ver os rótulos de relação."
   },
   "templates": {
     "helper": "Registre um conjunto de propriedades comuns por categoria para inseri-las de uma vez com \"Inserir do modelo\" ao editar uma entrada.",
