@@ -46,6 +46,23 @@ function clampScale(k: number): number {
   return Math.min(MAX_SCALE, Math.max(MIN_SCALE, k));
 }
 
+interface Bounds {
+  minX: number;
+  maxX: number;
+  minY: number;
+  maxY: number;
+}
+
+function computeFitView(bounds: Bounds, width: number, height: number) {
+  const pad = 70;
+  const boundsWidth = Math.max(1, bounds.maxX - bounds.minX + pad * 2);
+  const boundsHeight = Math.max(1, bounds.maxY - bounds.minY + pad * 2);
+  const k = clampScale(Math.min(width / boundsWidth, height / boundsHeight, 1.2));
+  const centerX = (bounds.minX + bounds.maxX) / 2;
+  const centerY = (bounds.minY + bounds.maxY) / 2;
+  return { k, x: width / 2 - centerX * k, y: height / 2 - centerY * k };
+}
+
 export default function GraphCanvas({ entries, centerEntryId, width = 640, height = 440 }: Props) {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -72,7 +89,7 @@ export default function GraphCanvas({ entries, centerEntryId, width = 640, heigh
   const [view, setView] = useState({ x: 0, y: 0, k: 1 });
   const [isPanning, setIsPanning] = useState(false);
 
-  const { nodes, links, categories } = useMemo(() => {
+  const { nodes, links, categories, bounds } = useMemo(() => {
     let visibleEntries = entries;
     if (centerEntryId) {
       const center = entries.find((e) => e.id === centerEntryId);
@@ -106,29 +123,50 @@ export default function GraphCanvas({ entries, centerEntryId, width = 640, heigh
       });
     });
 
+    // A fixed-size layout area gets crushed once there are more than a
+    // handful of nodes — labels overlap and become unreadable. Scale the
+    // simulation's working area (and the forces that fill it) with node
+    // count so bigger graphs get real breathing room instead of just being
+    // the same cramped layout at a different zoom level.
+    const areaScale = Math.max(1, Math.sqrt(nodes.length / 10));
+    const simWidth = width * areaScale;
+    const simHeight = height * areaScale;
+
     const simulation = forceSimulation(nodes)
       .force(
         'link',
         forceLink<GraphNode, GraphLink>(links)
           .id((d) => d.id)
-          .distance(110)
-          .strength(0.6),
+          .distance(140)
+          .strength(0.5),
       )
-      .force('charge', forceManyBody().strength(-220))
-      .force('center', forceCenter(width / 2, height / 2))
-      .force('collide', forceCollide(34))
+      .force('charge', forceManyBody().strength(-260 * areaScale))
+      .force('center', forceCenter(simWidth / 2, simHeight / 2))
+      .force('collide', forceCollide(48))
       .stop();
 
-    for (let i = 0; i < 300; i++) simulation.tick();
+    const tickCount = Math.min(700, 300 + nodes.length * 6);
+    for (let i = 0; i < tickCount; i++) simulation.tick();
 
     const categories = Array.from(new Set(nodes.map((n) => n.category)));
 
-    return { nodes, links, categories };
+    const xs = nodes.map((n) => n.x ?? 0);
+    const ys = nodes.map((n) => n.y ?? 0);
+    const bounds =
+      nodes.length > 0
+        ? { minX: Math.min(...xs), maxX: Math.max(...xs), minY: Math.min(...ys), maxY: Math.max(...ys) }
+        : { minX: 0, maxX: 0, minY: 0, maxY: 0 };
+
+    return { nodes, links, categories, bounds };
   }, [entries, centerEntryId, width, height, t]);
 
   useEffect(() => {
-    setView({ x: 0, y: 0, k: 1 });
-  }, [entries, centerEntryId]);
+    if (nodes.length === 0) return;
+    setView(computeFitView(bounds, width, height));
+    // Re-fit whenever the node set changes; bounds is derived from nodes so
+    // it's covered by including it directly rather than the whole nodes array.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bounds, width, height]);
 
   const viewRef = useRef(view);
   useEffect(() => {
@@ -238,7 +276,7 @@ export default function GraphCanvas({ entries, centerEntryId, width = 640, heigh
   }
 
   function resetView() {
-    setView({ x: 0, y: 0, k: 1 });
+    setView(computeFitView(bounds, width, height));
   }
 
   if (nodes.length === 0) {
