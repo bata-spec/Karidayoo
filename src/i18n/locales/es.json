@@ -75,7 +75,10 @@
   "graph": {
     "backToFullGraph": "← Volver al grafo completo",
     "pickHint": "Elige una para ver el grafo solo con las entradas de esa categoría/etiqueta.",
-    "empty": "Aún no hay relaciones que mostrar. Añade relaciones desde la pantalla de edición de una entrada."
+    "empty": "Aún no hay relaciones que mostrar. Añade relaciones desde la pantalla de edición de una entrada.",
+    "zoomIn": "Acercar",
+    "zoomOut": "Alejar",
+    "resetView": "Restablecer vista"
   },
   "templates": {
     "helper": "Registra un conjunto de propiedades habituales por categoría para insertarlas todas a la vez con \"Insertar desde plantilla\" al editar una entrada.",

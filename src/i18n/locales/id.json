@@ -75,7 +75,10 @@
   "graph": {
     "backToFullGraph": "← Kembali ke grafik lengkap",
     "pickHint": "Pilih untuk menampilkan grafik hanya untuk entri kategori/tag tersebut.",
-    "empty": "Belum ada relasi untuk ditampilkan. Tambahkan relasi dari layar edit entri."
+    "empty": "Belum ada relasi untuk ditampilkan. Tambahkan relasi dari layar edit entri.",
+    "zoomIn": "Perbesar",
+    "zoomOut": "Perkecil",
+    "resetView": "Setel ulang tampilan"
   },
   "templates": {
     "helper": "Daftarkan set properti yang sering dipakai per kategori agar bisa disisipkan sekaligus lewat \"Sisipkan dari template\" saat mengedit entri.",

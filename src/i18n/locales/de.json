@@ -75,7 +75,10 @@
   "graph": {
     "backToFullGraph": "← Zurück zum vollständigen Graphen",
     "pickHint": "Wählen Sie eine aus, um nur den Graphen dieser Kategorie/dieses Tags anzuzeigen.",
-    "empty": "Noch keine Beziehungen zum Anzeigen. Fügen Sie Beziehungen im Bearbeitungsbildschirm eines Eintrags hinzu."
+    "empty": "Noch keine Beziehungen zum Anzeigen. Fügen Sie Beziehungen im Bearbeitungsbildschirm eines Eintrags hinzu.",
+    "zoomIn": "Vergrößern",
+    "zoomOut": "Verkleinern",
+    "resetView": "Ansicht zurücksetzen"
   },
   "templates": {
     "helper": "Hinterlegen Sie pro Kategorie ein häufig genutztes Eigenschaften-Set, um es beim Bearbeiten eines Eintrags über „Aus Vorlage einfügen“ auf einmal einzufügen.",

@@ -75,7 +75,10 @@
   "graph": {
     "backToFullGraph": "← Retour au graphe complet",
     "pickHint": "Sélectionnez-en un pour afficher le graphe des fiches de cette catégorie/ce tag uniquement.",
-    "empty": "Aucune relation à afficher pour le moment. Ajoutez des relations depuis l'écran d'édition d'une fiche."
+    "empty": "Aucune relation à afficher pour le moment. Ajoutez des relations depuis l'écran d'édition d'une fiche.",
+    "zoomIn": "Zoomer",
+    "zoomOut": "Dézoomer",
+    "resetView": "Réinitialiser la vue"
   },
   "templates": {
     "helper": "Enregistrez un ensemble de propriétés fréquemment utilisées par catégorie pour les insérer d'un coup via « Insérer depuis un modèle » lors de l'édition d'une fiche.",

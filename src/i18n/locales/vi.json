@@ -75,7 +75,10 @@
   "graph": {
     "backToFullGraph": "← Quay lại sơ đồ đầy đủ",
     "pickHint": "Chọn để chỉ hiển thị sơ đồ của các mục thuộc danh mục/thẻ đó.",
-    "empty": "Chưa có mối quan hệ nào để hiển thị. Thêm mối quan hệ từ màn hình chỉnh sửa mục."
+    "empty": "Chưa có mối quan hệ nào để hiển thị. Thêm mối quan hệ từ màn hình chỉnh sửa mục.",
+    "zoomIn": "Phóng to",
+    "zoomOut": "Thu nhỏ",
+    "resetView": "Đặt lại chế độ xem"
   },
   "templates": {
     "helper": "Lưu sẵn một bộ thuộc tính thường dùng cho mỗi danh mục để chèn cùng lúc bằng \"Chèn từ mẫu\" khi chỉnh sửa mục.",

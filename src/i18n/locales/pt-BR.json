@@ -75,7 +75,10 @@
   "graph": {
     "backToFullGraph": "← Voltar ao grafo completo",
     "pickHint": "Escolha uma para ver o grafo apenas com as entradas dessa categoria/tag.",
-    "empty": "Ainda não há relações para mostrar. Adicione relações na tela de edição de uma entrada."
+    "empty": "Ainda não há relações para mostrar. Adicione relações na tela de edição de uma entrada.",
+    "zoomIn": "Aumentar zoom",
+    "zoomOut": "Diminuir zoom",
+    "resetView": "Redefinir visualização"
   },
   "templates": {
     "helper": "Registre um conjunto de propriedades comuns por categoria para inseri-las de uma vez com \"Inserir do modelo\" ao editar uma entrada.",

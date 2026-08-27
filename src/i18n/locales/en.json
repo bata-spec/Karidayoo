@@ -75,7 +75,10 @@
   "graph": {
     "backToFullGraph": "← Back to full graph",
     "pickHint": "Pick one to show a graph of just that category/tag's entries.",
-    "empty": "No relations to show yet. Add relations from an entry's edit screen."
+    "empty": "No relations to show yet. Add relations from an entry's edit screen.",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "resetView": "Reset view"
   },
   "templates": {
     "helper": "Register a commonly used set of properties per category to insert them all at once via \"Insert from template\" while editing an entry.",
