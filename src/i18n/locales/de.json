@@ -38,7 +38,10 @@
     "zipping": "ZIP wird erstellt...",
     "exportZip": "ZIP exportieren",
     "deleteConfirm": "„{{name}}“ wird gelöscht. Dies kann nicht rückgängig gemacht werden. Fortfahren?",
-    "backToHome": "Zurück zur Startseite"
+    "backToHome": "Zurück zur Startseite",
+    "updateFromFile": "Aus Datei aktualisieren",
+    "updating": "Wird aktualisiert...",
+    "updateConfirm": "Dadurch wird der Inhalt von „{{name}}“ durch den Inhalt der Datei ersetzt. Die aktuellen {{oldCount}} Einträge werden durch {{newCount}} ersetzt. Dies kann nicht rückgängig gemacht werden. Fortfahren?"
   },
   "entryList": {
     "searchPlaceholder": "Nach Titel, Text oder Tags suchen",

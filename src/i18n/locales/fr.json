@@ -38,7 +38,10 @@
     "zipping": "Création du ZIP...",
     "exportZip": "Exporter en ZIP",
     "deleteConfirm": "« {{name}} » sera supprimée. Cette action est irréversible. Continuer ?",
-    "backToHome": "Retour à l'accueil"
+    "backToHome": "Retour à l'accueil",
+    "updateFromFile": "Mettre à jour depuis un fichier",
+    "updating": "Mise à jour...",
+    "updateConfirm": "Cela remplacera le contenu de « {{name}} » par celui du fichier. Les {{oldCount}} entrées actuelles seront remplacées par {{newCount}}. Cette action est irréversible. Continuer ?"
   },
   "entryList": {
     "searchPlaceholder": "Rechercher par titre, texte ou tags",

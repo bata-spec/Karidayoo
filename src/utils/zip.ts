@@ -115,3 +115,8 @@ export async function parseWorkZip(file: File): Promise<WorkExport> {
 
   return { version: 1, work: workJson.work, entries, templates: workJson.templates ?? [] };
 }
+
+export async function parseImportFile(file: File): Promise<WorkExport> {
+  const isZip = file.name.toLowerCase().endsWith('.zip');
+  return isZip ? parseWorkZip(file) : (JSON.parse(await file.text()) as WorkExport);
+}

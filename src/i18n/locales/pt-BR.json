@@ -38,7 +38,10 @@
     "zipping": "Gerando ZIP...",
     "exportZip": "Exportar ZIP",
     "deleteConfirm": "\"{{name}}\" será excluída. Isso não pode ser desfeito. Deseja continuar?",
-    "backToHome": "Voltar ao início"
+    "backToHome": "Voltar ao início",
+    "updateFromFile": "Atualizar a partir de arquivo",
+    "updating": "Atualizando...",
+    "updateConfirm": "Isso substituirá o conteúdo de \"{{name}}\" pelo conteúdo do arquivo. As {{oldCount}} entradas atuais serão substituídas por {{newCount}}. Esta ação não pode ser desfeita. Continuar?"
   },
   "entryList": {
     "searchPlaceholder": "Buscar por título, texto ou tags",

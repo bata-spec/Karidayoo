@@ -38,7 +38,10 @@
     "zipping": "ZIP 생성 중...",
     "exportZip": "ZIP 내보내기",
     "deleteConfirm": "\"{{name}}\"을(를) 삭제합니다. 되돌릴 수 없습니다. 계속하시겠습니까?",
-    "backToHome": "홈으로 돌아가기"
+    "backToHome": "홈으로 돌아가기",
+    "updateFromFile": "파일로 업데이트",
+    "updating": "업데이트 중...",
+    "updateConfirm": "\"{{name}}\"의 내용을 파일 내용으로 업데이트합니다. 현재 {{oldCount}}개의 항목이 {{newCount}}개로 교체됩니다. 되돌릴 수 없습니다. 계속하시겠습니까?"
   },
   "entryList": {
     "searchPlaceholder": "제목·본문·태그로 검색",

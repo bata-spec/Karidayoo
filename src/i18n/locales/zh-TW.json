@@ -38,7 +38,10 @@
     "zipping": "正在建立 ZIP...",
     "exportZip": "匯出 ZIP",
     "deleteConfirm": "將刪除「{{name}}」。此操作無法復原，確定要繼續嗎？",
-    "backToHome": "返回首頁"
+    "backToHome": "返回首頁",
+    "updateFromFile": "從檔案更新",
+    "updating": "更新中...",
+    "updateConfirm": "將使用檔案內容更新「{{name}}」。目前的 {{oldCount}} 個項目將被替換為 {{newCount}} 個項目。此操作無法復原，確定要繼續嗎？"
   },
   "entryList": {
     "searchPlaceholder": "依標題・內文・標籤搜尋",

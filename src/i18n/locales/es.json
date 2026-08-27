@@ -38,7 +38,10 @@
     "zipping": "Generando ZIP...",
     "exportZip": "Exportar ZIP",
     "deleteConfirm": "Se eliminará \"{{name}}\". No se puede deshacer. ¿Continuar?",
-    "backToHome": "Volver al inicio"
+    "backToHome": "Volver al inicio",
+    "updateFromFile": "Actualizar desde archivo",
+    "updating": "Actualizando...",
+    "updateConfirm": "Esto reemplazará el contenido de \"{{name}}\" con el del archivo. Las {{oldCount}} entradas actuales se sustituirán por {{newCount}}. Esta acción no se puede deshacer. ¿Continuar?"
   },
   "entryList": {
     "searchPlaceholder": "Buscar por título, cuerpo o etiquetas",

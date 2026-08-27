@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NavLink, Outlet, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { deleteWork, exportWork, getWork, renameWork } from '../db';
-import { buildWorkZip } from '../utils/zip';
+import { deleteWork, exportWork, getWork, listEntries, renameWork, replaceWorkContent } from '../db';
+import { buildWorkZip, parseImportFile } from '../utils/zip';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import type { Work } from '../types';
 
@@ -21,6 +21,8 @@ export default function DashboardLayout() {
   const navigate = useNavigate();
   const [work, setWork] = useState<Work | null | undefined>(undefined);
   const [zipping, setZipping] = useState(false);
+  const [updating, setUpdating] = useState(false);
+  const updateFileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (!workId) return;
@@ -63,6 +65,31 @@ export default function DashboardLayout() {
     navigate('/');
   }
 
+  async function handleUpdateFromFile(file: File) {
+    if (!work) return;
+    setUpdating(true);
+    try {
+      const data = await parseImportFile(file);
+      if (!data.work || !Array.isArray(data.entries)) {
+        alert(t('errors.invalidWorkData'));
+        return;
+      }
+      const currentEntries = await listEntries(work.id);
+      const message = t('work.updateConfirm', {
+        name: work.name,
+        oldCount: currentEntries.length,
+        newCount: data.entries.length,
+      });
+      if (!confirm(message)) return;
+      await replaceWorkContent(work.id, data);
+      navigate(0);
+    } catch {
+      alert(t('errors.importFailed'));
+    } finally {
+      setUpdating(false);
+    }
+  }
+
   if (work === undefined) {
     return <div className="page">{t('common.loading')}</div>;
   }
@@ -96,6 +123,25 @@ export default function DashboardLayout() {
           </button>
           <button type="button" className="btn btn-ghost" onClick={handleExportZip} disabled={zipping}>
             {zipping ? t('work.zipping') : t('work.exportZip')}
+          </button>
+          <input
+            ref={updateFileInputRef}
+            type="file"
+            accept="application/json,.json,application/zip,.zip"
+            style={{ display: 'none' }}
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) handleUpdateFromFile(file);
+              e.target.value = '';
+            }}
+          />
+          <button
+            type="button"
+            className="btn btn-ghost"
+            onClick={() => updateFileInputRef.current?.click()}
+            disabled={updating}
+          >
+            {updating ? t('work.updating') : t('work.updateFromFile')}
           </button>
           <button type="button" className="btn btn-danger" onClick={handleDelete}>
             {t('common.delete')}

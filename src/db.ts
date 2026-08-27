@@ -167,3 +167,49 @@ export async function importWork(data: WorkExport): Promise<Work> {
   await tx.done;
   return work;
 }
+
+export async function replaceWorkContent(workId: string, data: WorkExport): Promise<void> {
+  const db = await getDB();
+  const idMap = new Map<string, string>();
+  for (const entry of data.entries) {
+    idMap.set(entry.id, newId('entry'));
+  }
+
+  const tx = db.transaction(['works', 'entries', 'templates'], 'readwrite');
+
+  const entryStore = tx.objectStore('entries');
+  const oldEntries = await entryStore.index('workId').getAllKeys(workId);
+  for (const key of oldEntries) {
+    await entryStore.delete(key);
+  }
+
+  const templateStore = tx.objectStore('templates');
+  const oldTemplates = await templateStore.index('workId').getAllKeys(workId);
+  for (const key of oldTemplates) {
+    await templateStore.delete(key);
+  }
+
+  for (const entry of data.entries) {
+    const remapped: Entry = {
+      ...entry,
+      id: idMap.get(entry.id)!,
+      workId,
+      relations: entry.relations
+        .filter((r) => idMap.has(r.targetId))
+        .map((r) => ({ ...r, targetId: idMap.get(r.targetId)! })),
+    };
+    await entryStore.put(remapped);
+  }
+
+  for (const template of data.templates) {
+    await templateStore.put({ ...template, id: newId('template'), workId });
+  }
+
+  const work = await tx.objectStore('works').get(workId);
+  if (work) {
+    work.updatedAt = nowIso();
+    await tx.objectStore('works').put(work);
+  }
+
+  await tx.done;
+}

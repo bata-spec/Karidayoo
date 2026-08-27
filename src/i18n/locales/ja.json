@@ -38,7 +38,10 @@
     "zipping": "ZIP作成中...",
     "exportZip": "ZIPエクスポート",
     "deleteConfirm": "「{{name}}」を削除します。元に戻せません。よろしいですか？",
-    "backToHome": "ホームに戻る"
+    "backToHome": "ホームに戻る",
+    "updateFromFile": "ファイルで更新",
+    "updating": "更新中...",
+    "updateConfirm": "「{{name}}」の内容をファイルの内容で更新します。現在{{oldCount}}件のエントリが、{{newCount}}件に置き換わります。元に戻せません。よろしいですか？"
   },
   "entryList": {
     "searchPlaceholder": "タイトル・本文・タグで検索",

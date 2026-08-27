@@ -38,7 +38,10 @@
     "zipping": "正在生成 ZIP...",
     "exportZip": "导出 ZIP",
     "deleteConfirm": "将删除“{{name}}”。此操作无法撤销，确定要继续吗？",
-    "backToHome": "返回主页"
+    "backToHome": "返回主页",
+    "updateFromFile": "从文件更新",
+    "updating": "更新中...",
+    "updateConfirm": "将使用文件内容更新「{{name}}」。当前的 {{oldCount}} 个条目将被替换为 {{newCount}} 个条目。此操作无法撤销，是否继续？"
   },
   "entryList": {
     "searchPlaceholder": "按标题·正文·标签搜索",

@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { createWork, importWork, listWorks } from '../db';
-import { parseWorkZip } from '../utils/zip';
+import { parseImportFile } from '../utils/zip';
 import LanguageSwitcher from '../components/LanguageSwitcher';
-import type { Work, WorkExport } from '../types';
+import type { Work } from '../types';
 
 export default function HomePage() {
   const { t, i18n } = useTranslation();
@@ -28,8 +28,7 @@ export default function HomePage() {
 
   async function handleImportFile(file: File) {
     try {
-      const isZip = file.name.toLowerCase().endsWith('.zip');
-      const data = isZip ? await parseWorkZip(file) : (JSON.parse(await file.text()) as WorkExport);
+      const data = await parseImportFile(file);
       if (!data.work || !Array.isArray(data.entries)) {
         alert(t('errors.invalidWorkData'));
         return;

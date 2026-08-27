@@ -38,7 +38,10 @@
     "zipping": "Building ZIP...",
     "exportZip": "Export ZIP",
     "deleteConfirm": "Delete \"{{name}}\"? This cannot be undone. Are you sure?",
-    "backToHome": "Back to home"
+    "backToHome": "Back to home",
+    "updateFromFile": "Update from file",
+    "updating": "Updating...",
+    "updateConfirm": "This will replace the content of \"{{name}}\" with the file's content. The current {{oldCount}} entries will be replaced with {{newCount}} entries. This cannot be undone. Continue?"
   },
   "entryList": {
     "searchPlaceholder": "Search title, body, tags",

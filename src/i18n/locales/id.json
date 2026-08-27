@@ -38,7 +38,10 @@
     "zipping": "Membuat ZIP...",
     "exportZip": "Ekspor ZIP",
     "deleteConfirm": "\"{{name}}\" akan dihapus. Tindakan ini tidak dapat dibatalkan. Lanjutkan?",
-    "backToHome": "Kembali ke beranda"
+    "backToHome": "Kembali ke beranda",
+    "updateFromFile": "Perbarui dari file",
+    "updating": "Memperbarui...",
+    "updateConfirm": "Ini akan mengganti konten \"{{name}}\" dengan konten file. {{oldCount}} entri saat ini akan diganti dengan {{newCount}} entri. Tindakan ini tidak dapat dibatalkan. Lanjutkan?"
   },
   "entryList": {
     "searchPlaceholder": "Cari berdasarkan judul, isi, atau tag",
