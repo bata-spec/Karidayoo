@@ -70,7 +70,10 @@
     "removeTagAria": "刪除標籤",
     "tagInputPlaceholder": "輸入標籤後按 Enter",
     "propertiesTitle": "屬性",
-    "bodyPlaceholder": "自由撰寫。其他條目的標題會自動變成連結。"
+    "bodyPlaceholder": "自由撰寫。其他條目的標題會自動變成連結。",
+    "layoutLabel": "圖片版面",
+    "layoutBanner": "在頂部大圖顯示",
+    "layoutThumbnail": "左上角小圖顯示(證件照風格)"
   },
   "graph": {
     "backToFullGraph": "← 返回完整關聯圖",

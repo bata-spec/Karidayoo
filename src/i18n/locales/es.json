@@ -70,7 +70,10 @@
     "removeTagAria": "Quitar etiqueta",
     "tagInputPlaceholder": "Escribe una etiqueta y pulsa Enter",
     "propertiesTitle": "Propiedades",
-    "bodyPlaceholder": "Escribe libremente. Los títulos de otras entradas se enlazan automáticamente."
+    "bodyPlaceholder": "Escribe libremente. Los títulos de otras entradas se enlazan automáticamente.",
+    "layoutLabel": "Diseño de imagen",
+    "layoutBanner": "Grande, en la parte superior",
+    "layoutThumbnail": "Pequeña, arriba a la izquierda (estilo foto de carnet)"
   },
   "graph": {
     "backToFullGraph": "← Volver al grafo completo",

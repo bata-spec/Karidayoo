@@ -70,7 +70,10 @@
     "removeTagAria": "Remover tag",
     "tagInputPlaceholder": "Digite uma tag e pressione Enter",
     "propertiesTitle": "Propriedades",
-    "bodyPlaceholder": "Escreva livremente. Os títulos de outras entradas viram links automaticamente."
+    "bodyPlaceholder": "Escreva livremente. Os títulos de outras entradas viram links automaticamente.",
+    "layoutLabel": "Layout da imagem",
+    "layoutBanner": "Grande, no topo",
+    "layoutThumbnail": "Pequena, no canto superior esquerdo (estilo foto de identidade)"
   },
   "graph": {
     "backToFullGraph": "← Voltar ao grafo completo",

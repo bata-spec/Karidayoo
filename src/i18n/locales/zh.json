@@ -70,7 +70,10 @@
     "removeTagAria": "删除标签",
     "tagInputPlaceholder": "输入标签后按 Enter",
     "propertiesTitle": "属性",
-    "bodyPlaceholder": "自由撰写。其他条目的标题会自动变为链接。"
+    "bodyPlaceholder": "自由撰写。其他条目的标题会自动变为链接。",
+    "layoutLabel": "图片布局",
+    "layoutBanner": "在顶部大图显示",
+    "layoutThumbnail": "左上角小图显示(证件照风格)"
   },
   "graph": {
     "backToFullGraph": "← 返回完整关系图",

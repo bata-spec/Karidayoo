@@ -15,6 +15,8 @@ export interface ImageRef {
   isMain: boolean;
 }
 
+export type EntryLayout = 'banner' | 'thumbnail';
+
 export interface Entry {
   id: string;
   workId: string;
@@ -25,6 +27,7 @@ export interface Entry {
   body: string;
   relations: Relation[];
   images: ImageRef[];
+  layout?: EntryLayout;
   createdAt: string;
   updatedAt: string;
 }

@@ -1,6 +1,6 @@
 import JSZip from 'jszip';
 import i18n from '../i18n';
-import type { Entry, ImageRef, Template, Work, WorkExport } from '../types';
+import type { Entry, EntryLayout, ImageRef, Template, Work, WorkExport } from '../types';
 
 interface ZipImageRef {
   id: string;
@@ -18,6 +18,7 @@ interface ZipEntryJson {
   body: string;
   relations: Entry['relations'];
   images: ZipImageRef[];
+  layout?: EntryLayout;
   createdAt: string;
   updatedAt: string;
 }
@@ -55,6 +56,7 @@ export async function buildWorkZip(data: WorkExport): Promise<Blob> {
       body: entry.body,
       relations: entry.relations,
       images: imageRefs,
+      layout: entry.layout,
       createdAt: entry.createdAt,
       updatedAt: entry.updatedAt,
     };
@@ -105,6 +107,7 @@ export async function parseWorkZip(file: File): Promise<WorkExport> {
       body: raw.body ?? '',
       relations: raw.relations ?? [],
       images,
+      layout: raw.layout === 'thumbnail' ? 'thumbnail' : 'banner',
       createdAt: raw.createdAt,
       updatedAt: raw.updatedAt,
     });

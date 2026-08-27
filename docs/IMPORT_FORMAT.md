@@ -52,6 +52,7 @@ images/
     { "targetId": "person_maou", "label": "宿敵" }
   ],
   "images": [],
+  "layout": "banner",
   "createdAt": "2026-01-01T00:00:00.000Z",
   "updatedAt": "2026-01-01T00:00:00.000Z"
 }
@@ -70,6 +71,7 @@ images/
 - `relations`: `{ "targetId": "他エントリのid", "label": "関係を表す自由文字列" }` の配列。
   存在しない`targetId`を参照していると、インポート時にその関連だけ無視される。
 - `images`: 画像を使わないなら `[]` でよい。使う場合は下記参照。
+- `layout`: `"banner"`(画像を上部に大きく表示、デフォルト)または `"thumbnail"`(画像をタイトル横に小さく表示する証明写真風レイアウト)。省略時は `"banner"` として扱われる。
 - `createdAt` / `updatedAt`: 適当なISO日時でよい(必須フィールドだが値の妥当性はチェックされない)。
 
 ## 画像を含める場合

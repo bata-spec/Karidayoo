@@ -38,12 +38,19 @@ export default function EntryViewPage() {
   const mainImage = entry.images.find((img) => img.isMain) ?? entry.images[0];
   const otherImages = entry.images.filter((img) => img.id !== mainImage?.id);
 
+  const isThumbnailLayout = entry.layout === 'thumbnail' && !!mainImage;
+
   return (
     <div>
       <div className="top-bar">
-        <div>
-          <h2 style={{ margin: '0 0 4px' }}>{entry.title || t('common.untitled')}</h2>
-          <span className="chip">{entry.category || t('common.uncategorized')}</span>
+        <div className="row" style={{ alignItems: 'flex-start' }}>
+          {isThumbnailLayout && (
+            <img className="thumb-id" src={mainImage!.dataUrl} alt={mainImage!.caption || t('images.altFallback')} />
+          )}
+          <div>
+            <h2 style={{ margin: '0 0 4px' }}>{entry.title || t('common.untitled')}</h2>
+            <span className="chip">{entry.category || t('common.uncategorized')}</span>
+          </div>
         </div>
         <div className="row">
           <a className="btn" href={`#/works/${workId}/graph/${entry.id}`}>
@@ -68,7 +75,9 @@ export default function EntryViewPage() {
         </div>
       )}
 
-      {mainImage && <img className="thumb-lg" src={mainImage.dataUrl} alt={mainImage.caption} style={{ marginBottom: 14 }} />}
+      {mainImage && !isThumbnailLayout && (
+        <img className="thumb-lg" src={mainImage.dataUrl} alt={mainImage.caption} style={{ marginBottom: 14 }} />
+      )}
 
       {entry.properties.length > 0 && (
         <div className="card" style={{ marginBottom: 16 }}>

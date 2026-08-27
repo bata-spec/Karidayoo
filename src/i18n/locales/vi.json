@@ -70,7 +70,10 @@
     "removeTagAria": "Xóa thẻ",
     "tagInputPlaceholder": "Nhập thẻ rồi nhấn Enter",
     "propertiesTitle": "Thuộc tính",
-    "bodyPlaceholder": "Viết tự do. Tiêu đề của các mục khác sẽ tự động trở thành liên kết."
+    "bodyPlaceholder": "Viết tự do. Tiêu đề của các mục khác sẽ tự động trở thành liên kết.",
+    "layoutLabel": "Bố cục hình ảnh",
+    "layoutBanner": "Lớn, ở trên cùng",
+    "layoutThumbnail": "Nhỏ, phía trên bên trái (kiểu ảnh thẻ)"
   },
   "graph": {
     "backToFullGraph": "← Quay lại sơ đồ đầy đủ",

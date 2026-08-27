@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getEntry, listEntries, listTemplates, saveEntry } from '../db';
-import type { Entry, Property, Relation, ImageRef } from '../types';
+import type { Entry, EntryLayout, Property, Relation, ImageRef } from '../types';
 import { newId } from '../utils/id';
 import PropertiesEditor from '../components/PropertiesEditor';
 import RelationsEditor from '../components/RelationsEditor';
@@ -23,6 +23,7 @@ export default function EntryEditPage() {
   const [body, setBody] = useState('');
   const [relations, setRelations] = useState<Relation[]>([]);
   const [images, setImages] = useState<ImageRef[]>([]);
+  const [layout, setLayout] = useState<EntryLayout>('banner');
   const [createdAt, setCreatedAt] = useState('');
 
   const [allEntries, setAllEntries] = useState<Entry[]>([]);
@@ -45,6 +46,7 @@ export default function EntryEditPage() {
         setBody(entry.body);
         setRelations(entry.relations);
         setImages(entry.images);
+        setLayout(entry.layout ?? 'banner');
         setCreatedAt(entry.createdAt);
       }
       setLoaded(true);
@@ -84,6 +86,7 @@ export default function EntryEditPage() {
       body,
       relations,
       images,
+      layout,
       createdAt: createdAt || now,
       updatedAt: now,
     };
@@ -177,6 +180,26 @@ export default function EntryEditPage() {
 
       <div className="section-title">{t('entryView.imagesTitle')}</div>
       <ImagesEditor images={images} onChange={setImages} />
+
+      <div className="field">
+        <label>{t('entryEdit.layoutLabel')}</label>
+        <div className="row" style={{ flexWrap: 'wrap' }}>
+          <button
+            type="button"
+            className={`btn${layout === 'banner' ? ' btn-primary' : ''}`}
+            onClick={() => setLayout('banner')}
+          >
+            {t('entryEdit.layoutBanner')}
+          </button>
+          <button
+            type="button"
+            className={`btn${layout === 'thumbnail' ? ' btn-primary' : ''}`}
+            onClick={() => setLayout('thumbnail')}
+          >
+            {t('entryEdit.layoutThumbnail')}
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

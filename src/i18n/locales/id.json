@@ -70,7 +70,10 @@
     "removeTagAria": "Hapus tag",
     "tagInputPlaceholder": "Ketik tag lalu tekan Enter",
     "propertiesTitle": "Properti",
-    "bodyPlaceholder": "Tulis dengan bebas. Judul entri lain akan otomatis menjadi tautan."
+    "bodyPlaceholder": "Tulis dengan bebas. Judul entri lain akan otomatis menjadi tautan.",
+    "layoutLabel": "Tata letak gambar",
+    "layoutBanner": "Besar, di bagian atas",
+    "layoutThumbnail": "Kecil, di kiri atas (gaya foto ID)"
   },
   "graph": {
     "backToFullGraph": "← Kembali ke grafik lengkap",

@@ -70,7 +70,10 @@
     "removeTagAria": "Remove tag",
     "tagInputPlaceholder": "Type a tag and press Enter",
     "propertiesTitle": "Properties",
-    "bodyPlaceholder": "Write freely. Other entries' titles are auto-linked."
+    "bodyPlaceholder": "Write freely. Other entries' titles are auto-linked.",
+    "layoutLabel": "Image layout",
+    "layoutBanner": "Large, at the top",
+    "layoutThumbnail": "Small, top-left (ID-photo style)"
   },
   "graph": {
     "backToFullGraph": "← Back to full graph",

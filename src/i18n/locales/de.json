@@ -70,7 +70,10 @@
     "removeTagAria": "Tag entfernen",
     "tagInputPlaceholder": "Tag eingeben und Enter drücken",
     "propertiesTitle": "Eigenschaften",
-    "bodyPlaceholder": "Schreiben Sie frei. Titel anderer Einträge werden automatisch verlinkt."
+    "bodyPlaceholder": "Schreiben Sie frei. Titel anderer Einträge werden automatisch verlinkt.",
+    "layoutLabel": "Bildlayout",
+    "layoutBanner": "Groß, oben",
+    "layoutThumbnail": "Klein, oben links (Ausweisfoto-Stil)"
   },
   "graph": {
     "backToFullGraph": "← Zurück zum vollständigen Graphen",

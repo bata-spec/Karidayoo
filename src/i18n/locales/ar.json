@@ -70,7 +70,10 @@
     "removeTagAria": "إزالة الوسم",
     "tagInputPlaceholder": "اكتب وسمًا ثم اضغط Enter",
     "propertiesTitle": "الخصائص",
-    "bodyPlaceholder": "اكتب بحرية. تتحول عناوين المدخلات الأخرى تلقائيًا إلى روابط."
+    "bodyPlaceholder": "اكتب بحرية. تتحول عناوين المدخلات الأخرى تلقائيًا إلى روابط.",
+    "layoutLabel": "تخطيط الصورة",
+    "layoutBanner": "كبيرة، في الأعلى",
+    "layoutThumbnail": "صغيرة، أعلى اليسار (بأسلوب صورة الهوية)"
   },
   "graph": {
     "backToFullGraph": "← العودة إلى الرسم البياني الكامل",

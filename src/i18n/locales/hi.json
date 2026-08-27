@@ -70,7 +70,10 @@
     "removeTagAria": "टैग हटाएं",
     "tagInputPlaceholder": "टैग लिखकर Enter दबाएं",
     "propertiesTitle": "गुण",
-    "bodyPlaceholder": "स्वतंत्र रूप से लिखें। अन्य प्रविष्टियों के शीर्षक अपने आप लिंक बन जाते हैं।"
+    "bodyPlaceholder": "स्वतंत्र रूप से लिखें। अन्य प्रविष्टियों के शीर्षक अपने आप लिंक बन जाते हैं।",
+    "layoutLabel": "छवि लेआउट",
+    "layoutBanner": "ऊपर बड़ा दिखाएं",
+    "layoutThumbnail": "ऊपर-बाईं ओर छोटा दिखाएं (पहचान-फोटो शैली)"
   },
   "graph": {
     "backToFullGraph": "← पूर्ण ग्राफ़ पर वापस जाएं",

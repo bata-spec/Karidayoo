@@ -70,7 +70,10 @@
     "removeTagAria": "タグを削除",
     "tagInputPlaceholder": "タグを入力してEnter",
     "propertiesTitle": "属性",
-    "bodyPlaceholder": "自由に記述してください。他のエントリのタイトルは自動でリンクになります。"
+    "bodyPlaceholder": "自由に記述してください。他のエントリのタイトルは自動でリンクになります。",
+    "layoutLabel": "画像レイアウト",
+    "layoutBanner": "上部に大きく表示",
+    "layoutThumbnail": "左上に小さく表示(証明写真風)"
   },
   "graph": {
     "backToFullGraph": "← 全体グラフに戻る",

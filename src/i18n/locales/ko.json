@@ -70,7 +70,10 @@
     "removeTagAria": "태그 삭제",
     "tagInputPlaceholder": "태그를 입력하고 Enter",
     "propertiesTitle": "속성",
-    "bodyPlaceholder": "자유롭게 작성하세요. 다른 항목의 제목은 자동으로 링크됩니다."
+    "bodyPlaceholder": "자유롭게 작성하세요. 다른 항목의 제목은 자동으로 링크됩니다.",
+    "layoutLabel": "이미지 레이아웃",
+    "layoutBanner": "상단에 크게 표시",
+    "layoutThumbnail": "왼쪽 상단에 작게 표시(증명사진 스타일)"
   },
   "graph": {
     "backToFullGraph": "← 전체 그래프로 돌아가기",
