@@ -15,12 +15,17 @@
     "showAll": "แสดงทั้งหมด ({{count}})",
     "backToList": "← กลับไปยังรายการ",
     "allChip": "ทั้งหมด",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "ย้ายขึ้น",
+    "moveDown": "ย้ายลง"
   },
   "nav": {
     "entries": "รายการข้อมูล",
     "graph": "มุมมองกราฟ",
-    "templates": "เทมเพลต"
+    "templates": "เทมเพลต",
+    "plots": "โครงเรื่อง",
+    "timelines": "ไทม์ไลน์",
+    "manuscript": "ต้นฉบับ"
   },
   "home": {
     "newWorkPlaceholder": "ชื่อผลงานใหม่",
@@ -41,7 +46,14 @@
     "backToHome": "กลับไปหน้าแรก",
     "updateFromFile": "อัปเดตจากไฟล์",
     "updating": "กำลังอัปเดต...",
-    "updateConfirm": "การดำเนินการนี้จะแทนที่เนื้อหาของ \"{{name}}\" ด้วยเนื้อหาจากไฟล์ รายการปัจจุบัน {{oldCount}} รายการจะถูกแทนที่ด้วย {{newCount}} รายการ ไม่สามารถย้อนกลับได้ ดำเนินการต่อหรือไม่?"
+    "updateConfirm": "การดำเนินการนี้จะแทนที่เนื้อหาของ \"{{name}}\" ด้วยเนื้อหาจากไฟล์ รายการปัจจุบัน {{oldCount}} รายการจะถูกแทนที่ด้วย {{newCount}} รายการ ไม่สามารถย้อนกลับได้ ดำเนินการต่อหรือไม่?",
+    "settings": "การตั้งค่าผลงาน",
+    "genreLabel": "แนว",
+    "genrePlaceholder": "เช่น นิยาย, ไลท์โนเวล, มังงะ, บทเกม...",
+    "categoriesLabel": "หมวดหมู่",
+    "categoryInputPlaceholder": "พิมพ์หมวดหมู่แล้วกด Enter",
+    "targetWordCountLabel": "จำนวนคำเป้าหมาย",
+    "targetWordCountPlaceholder": "ป้อนจำนวนคำที่วางแผนไว้"
   },
   "entryList": {
     "searchPlaceholder": "ค้นหาจากชื่อเรื่อง เนื้อหา หรือแท็ก",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "ภาษา"
+  },
+  "plot": {
+    "helper": "จัดระเบียบเนื้อเรื่องเป็นบล็อกอิสระ จะไม่ปรากฏในรายการหรือมุมมองกราฟ",
+    "newPlotPlaceholder": "ชื่อโครงเรื่องใหม่",
+    "createPlot": "+ สร้างโครงเรื่อง",
+    "noPlots": "ยังไม่มีโครงเรื่อง สร้างได้จากแบบฟอร์มด้านบน",
+    "blockCount": "{{count}} บล็อก",
+    "deleteConfirm": "ลบโครงเรื่องนี้หรือไม่?",
+    "notFound": "ไม่พบโครงเรื่อง",
+    "blockTitlePlaceholder": "หัวข้อ (เช่น เริ่มเรื่อง)",
+    "blockBodyPlaceholder": "เขียนเนื้อหาที่นี่",
+    "addBlock": "+ เพิ่มบล็อก"
+  },
+  "timeline": {
+    "helper": "จัดระเบียบเหตุการณ์ในเรื่องตามลำดับเวลา จะไม่ปรากฏในรายการหรือมุมมองกราฟ",
+    "newTimelinePlaceholder": "ชื่อไทม์ไลน์ใหม่",
+    "createTimeline": "+ สร้างไทม์ไลน์",
+    "noTimelines": "ยังไม่มีไทม์ไลน์ สร้างได้จากแบบฟอร์มด้านบน",
+    "eventCount": "{{count}} เหตุการณ์",
+    "deleteConfirm": "ลบไทม์ไลน์นี้หรือไม่?",
+    "notFound": "ไม่พบไทม์ไลน์",
+    "eventTimePlaceholder": "ช่วงเวลา (เช่น ปี X, บทที่ 3)",
+    "eventBodyPlaceholder": "อธิบายสิ่งที่เกิดขึ้น",
+    "addEvent": "+ เพิ่มเหตุการณ์"
+  },
+  "manuscript": {
+    "totalWithTarget": "รวม {{total}} ตัวอักษร (เป้าหมาย {{target}} · {{percent}}%)",
+    "totalOnly": "รวม {{total}} ตัวอักษร",
+    "newChapterPlaceholder": "ชื่อต้นฉบับใหม่",
+    "createChapter": "+ สร้างต้นฉบับ",
+    "noChapters": "ยังไม่มีต้นฉบับ สร้างได้จากแบบฟอร์มด้านบน",
+    "charCount": "{{count}} ตัวอักษร",
+    "deleteConfirm": "ลบต้นฉบับนี้หรือไม่?",
+    "notFound": "ไม่พบต้นฉบับ",
+    "bodyPlaceholder": "เขียนต้นฉบับของคุณที่นี่"
   }
 }

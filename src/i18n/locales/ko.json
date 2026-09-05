@@ -15,12 +15,17 @@
     "showAll": "모두 보기 ({{count}}건)",
     "backToList": "← 목록으로 돌아가기",
     "allChip": "전체",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "위로 이동",
+    "moveDown": "아래로 이동"
   },
   "nav": {
     "entries": "항목 목록",
     "graph": "그래프 보기",
-    "templates": "템플릿"
+    "templates": "템플릿",
+    "plots": "플롯",
+    "timelines": "연표",
+    "manuscript": "원고"
   },
   "home": {
     "newWorkPlaceholder": "새 작품 이름",
@@ -41,7 +46,14 @@
     "backToHome": "홈으로 돌아가기",
     "updateFromFile": "파일로 업데이트",
     "updating": "업데이트 중...",
-    "updateConfirm": "\"{{name}}\"의 내용을 파일 내용으로 업데이트합니다. 현재 {{oldCount}}개의 항목이 {{newCount}}개로 교체됩니다. 되돌릴 수 없습니다. 계속하시겠습니까?"
+    "updateConfirm": "\"{{name}}\"의 내용을 파일 내용으로 업데이트합니다. 현재 {{oldCount}}개의 항목이 {{newCount}}개로 교체됩니다. 되돌릴 수 없습니다. 계속하시겠습니까?",
+    "settings": "작품 설정",
+    "genreLabel": "장르",
+    "genrePlaceholder": "예: 소설, 라이트노벨, 만화, 게임 시나리오...",
+    "categoriesLabel": "카테고리",
+    "categoryInputPlaceholder": "카테고리를 입력하고 Enter",
+    "targetWordCountLabel": "목표 글자 수",
+    "targetWordCountPlaceholder": "예정 글자 수 입력"
   },
   "entryList": {
     "searchPlaceholder": "제목·본문·태그로 검색",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "언어"
+  },
+  "plot": {
+    "helper": "이야기의 흐름을 자유로운 블록으로 나누어 정리할 수 있습니다. 엔트리나 그래프 뷰에는 반영되지 않습니다.",
+    "newPlotPlaceholder": "새 플롯 이름",
+    "createPlot": "+ 플롯 만들기",
+    "noPlots": "아직 플롯이 없습니다. 위 양식에서 만들어 보세요.",
+    "blockCount": "{{count}}개 블록",
+    "deleteConfirm": "이 플롯을 삭제하시겠습니까?",
+    "notFound": "플롯을 찾을 수 없습니다.",
+    "blockTitlePlaceholder": "제목(예: 기)",
+    "blockBodyPlaceholder": "내용을 작성해 주세요",
+    "addBlock": "+ 블록 추가"
+  },
+  "timeline": {
+    "helper": "이야기 속 사건을 시간 순서로 정리할 수 있습니다. 엔트리나 그래프 뷰에는 반영되지 않습니다.",
+    "newTimelinePlaceholder": "새 연표 이름",
+    "createTimeline": "+ 연표 만들기",
+    "noTimelines": "아직 연표가 없습니다. 위 양식에서 만들어 보세요.",
+    "eventCount": "{{count}}개 사건",
+    "deleteConfirm": "이 연표를 삭제하시겠습니까?",
+    "notFound": "연표를 찾을 수 없습니다.",
+    "eventTimePlaceholder": "시기(예: X년, 3장)",
+    "eventBodyPlaceholder": "사건 내용을 작성해 주세요",
+    "addEvent": "+ 사건 추가"
+  },
+  "manuscript": {
+    "totalWithTarget": "총 {{total}}자(목표 {{target}}자・{{percent}}%)",
+    "totalOnly": "총 {{total}}자",
+    "newChapterPlaceholder": "새 원고 이름",
+    "createChapter": "+ 원고 만들기",
+    "noChapters": "아직 원고가 없습니다. 위 양식에서 만들어 보세요.",
+    "charCount": "{{count}}자",
+    "deleteConfirm": "이 원고를 삭제하시겠습니까?",
+    "notFound": "원고를 찾을 수 없습니다.",
+    "bodyPlaceholder": "여기에 본문을 집필하세요."
   }
 }

@@ -15,12 +15,17 @@
     "showAll": "顯示全部({{count}}項)",
     "backToList": "← 返回列表",
     "allChip": "全部",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "上移",
+    "moveDown": "下移"
   },
   "nav": {
     "entries": "條目列表",
     "graph": "關聯圖",
-    "templates": "範本"
+    "templates": "範本",
+    "plots": "情節",
+    "timelines": "時間線",
+    "manuscript": "原稿"
   },
   "home": {
     "newWorkPlaceholder": "新作品名稱",
@@ -41,7 +46,14 @@
     "backToHome": "返回首頁",
     "updateFromFile": "從檔案更新",
     "updating": "更新中...",
-    "updateConfirm": "將使用檔案內容更新「{{name}}」。目前的 {{oldCount}} 個項目將被替換為 {{newCount}} 個項目。此操作無法復原，確定要繼續嗎？"
+    "updateConfirm": "將使用檔案內容更新「{{name}}」。目前的 {{oldCount}} 個項目將被替換為 {{newCount}} 個項目。此操作無法復原，確定要繼續嗎？",
+    "settings": "作品設定",
+    "genreLabel": "類型",
+    "genrePlaceholder": "例如:小說、輕小說、漫畫、遊戲劇本...",
+    "categoriesLabel": "分類",
+    "categoryInputPlaceholder": "輸入分類後按Enter",
+    "targetWordCountLabel": "目標字數",
+    "targetWordCountPlaceholder": "輸入預計字數"
   },
   "entryList": {
     "searchPlaceholder": "依標題・內文・標籤搜尋",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "語言"
+  },
+  "plot": {
+    "helper": "可以將故事的流程拆分為自由的區塊來整理。不會反映在條目或圖譜視圖中。",
+    "newPlotPlaceholder": "新情節名稱",
+    "createPlot": "+ 建立情節",
+    "noPlots": "還沒有情節。請使用上面的表單建立。",
+    "blockCount": "{{count}}個區塊",
+    "deleteConfirm": "要刪除此情節嗎？",
+    "notFound": "找不到該情節。",
+    "blockTitlePlaceholder": "標題(例如:起)",
+    "blockBodyPlaceholder": "請在此輸入內容",
+    "addBlock": "+ 新增區塊"
+  },
+  "timeline": {
+    "helper": "可以按時間順序整理故事中的事件。不會反映在條目或圖譜視圖中。",
+    "newTimelinePlaceholder": "新時間線名稱",
+    "createTimeline": "+ 建立時間線",
+    "noTimelines": "還沒有時間線。請使用上面的表單建立。",
+    "eventCount": "{{count}}個事件",
+    "deleteConfirm": "要刪除此時間線嗎？",
+    "notFound": "找不到該時間線。",
+    "eventTimePlaceholder": "時間(例如:X年、第3章)",
+    "eventBodyPlaceholder": "請描述事件內容",
+    "addEvent": "+ 新增事件"
+  },
+  "manuscript": {
+    "totalWithTarget": "共{{total}}字(目標{{target}}字・{{percent}}%)",
+    "totalOnly": "共{{total}}字",
+    "newChapterPlaceholder": "新原稿名稱",
+    "createChapter": "+ 建立原稿",
+    "noChapters": "還沒有原稿。請使用上面的表單建立。",
+    "charCount": "{{count}}字",
+    "deleteConfirm": "要刪除此原稿嗎？",
+    "notFound": "找不到該原稿。",
+    "bodyPlaceholder": "請在此處撰寫正文。"
   }
 }

@@ -15,12 +15,17 @@
     "showAll": "Alle anzeigen ({{count}})",
     "backToList": "← Zurück zur Liste",
     "allChip": "Alle",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "Nach oben verschieben",
+    "moveDown": "Nach unten verschieben"
   },
   "nav": {
     "entries": "Einträge",
     "graph": "Graphansicht",
-    "templates": "Vorlagen"
+    "templates": "Vorlagen",
+    "plots": "Handlung",
+    "timelines": "Zeitachse",
+    "manuscript": "Manuskript"
   },
   "home": {
     "newWorkPlaceholder": "Name des neuen Werks",
@@ -41,7 +46,14 @@
     "backToHome": "Zurück zur Startseite",
     "updateFromFile": "Aus Datei aktualisieren",
     "updating": "Wird aktualisiert...",
-    "updateConfirm": "Dadurch wird der Inhalt von „{{name}}“ durch den Inhalt der Datei ersetzt. Die aktuellen {{oldCount}} Einträge werden durch {{newCount}} ersetzt. Dies kann nicht rückgängig gemacht werden. Fortfahren?"
+    "updateConfirm": "Dadurch wird der Inhalt von „{{name}}“ durch den Inhalt der Datei ersetzt. Die aktuellen {{oldCount}} Einträge werden durch {{newCount}} ersetzt. Dies kann nicht rückgängig gemacht werden. Fortfahren?",
+    "settings": "Werkeinstellungen",
+    "genreLabel": "Genre",
+    "genrePlaceholder": "z. B. Roman, Light Novel, Manga, Spielszenario...",
+    "categoriesLabel": "Kategorien",
+    "categoryInputPlaceholder": "Kategorie eingeben und Enter drücken",
+    "targetWordCountLabel": "Zielwortanzahl",
+    "targetWordCountPlaceholder": "Geplante Wortanzahl eingeben"
   },
   "entryList": {
     "searchPlaceholder": "Nach Titel, Text oder Tags suchen",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "Sprache"
+  },
+  "plot": {
+    "helper": "Organisieren Sie den Handlungsverlauf in frei gestaltbaren Blöcken. Erscheint nicht in Einträgen oder der Graphansicht.",
+    "newPlotPlaceholder": "Name der neuen Handlung",
+    "createPlot": "+ Handlung erstellen",
+    "noPlots": "Noch keine Handlung vorhanden. Erstellen Sie eine über das obige Formular.",
+    "blockCount": "{{count}} Blöcke",
+    "deleteConfirm": "Diese Handlung löschen?",
+    "notFound": "Handlung nicht gefunden.",
+    "blockTitlePlaceholder": "Überschrift (z. B. Einleitung)",
+    "blockBodyPlaceholder": "Inhalt hier eingeben",
+    "addBlock": "+ Block hinzufügen"
+  },
+  "timeline": {
+    "helper": "Ordnen Sie die Ereignisse der Geschichte chronologisch an. Erscheint nicht in Einträgen oder der Graphansicht.",
+    "newTimelinePlaceholder": "Name der neuen Zeitachse",
+    "createTimeline": "+ Zeitachse erstellen",
+    "noTimelines": "Noch keine Zeitachse vorhanden. Erstellen Sie eine über das obige Formular.",
+    "eventCount": "{{count}} Ereignisse",
+    "deleteConfirm": "Diese Zeitachse löschen?",
+    "notFound": "Zeitachse nicht gefunden.",
+    "eventTimePlaceholder": "Zeitpunkt (z. B. Jahr X, Kapitel 3)",
+    "eventBodyPlaceholder": "Beschreiben Sie, was geschieht",
+    "addEvent": "+ Ereignis hinzufügen"
+  },
+  "manuscript": {
+    "totalWithTarget": "Insgesamt {{total}} Zeichen (Ziel {{target}} · {{percent}} %)",
+    "totalOnly": "Insgesamt {{total}} Zeichen",
+    "newChapterPlaceholder": "Name des neuen Kapitels",
+    "createChapter": "+ Kapitel erstellen",
+    "noChapters": "Noch kein Kapitel vorhanden. Erstellen Sie eines über das obige Formular.",
+    "charCount": "{{count}} Zeichen",
+    "deleteConfirm": "Dieses Kapitel löschen?",
+    "notFound": "Kapitel nicht gefunden.",
+    "bodyPlaceholder": "Schreiben Sie hier Ihr Manuskript."
   }
 }

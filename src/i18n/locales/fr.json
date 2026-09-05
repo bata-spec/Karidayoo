@@ -15,12 +15,17 @@
     "showAll": "Tout afficher ({{count}})",
     "backToList": "← Retour à la liste",
     "allChip": "Tous",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "Monter",
+    "moveDown": "Descendre"
   },
   "nav": {
     "entries": "Fiches",
     "graph": "Vue graphique",
-    "templates": "Modèles"
+    "templates": "Modèles",
+    "plots": "Intrigue",
+    "timelines": "Chronologie",
+    "manuscript": "Manuscrit"
   },
   "home": {
     "newWorkPlaceholder": "Nom de la nouvelle œuvre",
@@ -41,7 +46,14 @@
     "backToHome": "Retour à l'accueil",
     "updateFromFile": "Mettre à jour depuis un fichier",
     "updating": "Mise à jour...",
-    "updateConfirm": "Cela remplacera le contenu de « {{name}} » par celui du fichier. Les {{oldCount}} entrées actuelles seront remplacées par {{newCount}}. Cette action est irréversible. Continuer ?"
+    "updateConfirm": "Cela remplacera le contenu de « {{name}} » par celui du fichier. Les {{oldCount}} entrées actuelles seront remplacées par {{newCount}}. Cette action est irréversible. Continuer ?",
+    "settings": "Paramètres de l'œuvre",
+    "genreLabel": "Genre",
+    "genrePlaceholder": "ex. roman, light novel, manga, scénario de jeu...",
+    "categoriesLabel": "Catégories",
+    "categoryInputPlaceholder": "Saisissez une catégorie et appuyez sur Entrée",
+    "targetWordCountLabel": "Nombre de mots cible",
+    "targetWordCountPlaceholder": "Saisissez le nombre de mots prévu"
   },
   "entryList": {
     "searchPlaceholder": "Rechercher par titre, texte ou tags",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "Langue"
+  },
+  "plot": {
+    "helper": "Organisez le déroulement de votre histoire en blocs libres. Cela n'apparaît pas dans les entrées ni dans la vue graphique.",
+    "newPlotPlaceholder": "Nom de la nouvelle intrigue",
+    "createPlot": "+ Créer une intrigue",
+    "noPlots": "Aucune intrigue pour le moment. Créez-en une avec le formulaire ci-dessus.",
+    "blockCount": "{{count}} blocs",
+    "deleteConfirm": "Supprimer cette intrigue ?",
+    "notFound": "Intrigue introuvable.",
+    "blockTitlePlaceholder": "Titre (ex. Exposition)",
+    "blockBodyPlaceholder": "Rédigez le contenu ici",
+    "addBlock": "+ Ajouter un bloc"
+  },
+  "timeline": {
+    "helper": "Organisez les événements de l'histoire par ordre chronologique. Cela n'apparaît pas dans les entrées ni dans la vue graphique.",
+    "newTimelinePlaceholder": "Nom de la nouvelle chronologie",
+    "createTimeline": "+ Créer une chronologie",
+    "noTimelines": "Aucune chronologie pour le moment. Créez-en une avec le formulaire ci-dessus.",
+    "eventCount": "{{count}} événements",
+    "deleteConfirm": "Supprimer cette chronologie ?",
+    "notFound": "Chronologie introuvable.",
+    "eventTimePlaceholder": "Période (ex. Année X, Chapitre 3)",
+    "eventBodyPlaceholder": "Décrivez ce qui se passe",
+    "addEvent": "+ Ajouter un événement"
+  },
+  "manuscript": {
+    "totalWithTarget": "{{total}} caractères au total (objectif {{target}} · {{percent}} %)",
+    "totalOnly": "{{total}} caractères au total",
+    "newChapterPlaceholder": "Nom du nouveau chapitre",
+    "createChapter": "+ Créer un chapitre",
+    "noChapters": "Aucun chapitre pour le moment. Créez-en un avec le formulaire ci-dessus.",
+    "charCount": "{{count}} caractères",
+    "deleteConfirm": "Supprimer ce chapitre ?",
+    "notFound": "Chapitre introuvable.",
+    "bodyPlaceholder": "Rédigez votre manuscrit ici."
   }
 }

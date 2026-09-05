@@ -15,12 +15,17 @@
     "showAll": "Show all ({{count}})",
     "backToList": "← Back to list",
     "allChip": "All",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "Move up",
+    "moveDown": "Move down"
   },
   "nav": {
     "entries": "Entries",
     "graph": "Graph view",
-    "templates": "Templates"
+    "templates": "Templates",
+    "plots": "Plot",
+    "timelines": "Timeline",
+    "manuscript": "Manuscript"
   },
   "home": {
     "newWorkPlaceholder": "New work name",
@@ -41,7 +46,14 @@
     "backToHome": "Back to home",
     "updateFromFile": "Update from file",
     "updating": "Updating...",
-    "updateConfirm": "This will replace the content of \"{{name}}\" with the file's content. The current {{oldCount}} entries will be replaced with {{newCount}} entries. This cannot be undone. Continue?"
+    "updateConfirm": "This will replace the content of \"{{name}}\" with the file's content. The current {{oldCount}} entries will be replaced with {{newCount}} entries. This cannot be undone. Continue?",
+    "settings": "Work settings",
+    "genreLabel": "Genre",
+    "genrePlaceholder": "e.g. novel, light novel, manga, game scenario...",
+    "categoriesLabel": "Categories",
+    "categoryInputPlaceholder": "Type a category and press Enter",
+    "targetWordCountLabel": "Target word count",
+    "targetWordCountPlaceholder": "Enter a target word count"
   },
   "entryList": {
     "searchPlaceholder": "Search title, body, tags",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "Language"
+  },
+  "plot": {
+    "helper": "Organize your story's flow into freeform blocks. This does not appear in entries or the graph view.",
+    "newPlotPlaceholder": "New plot name",
+    "createPlot": "+ Create plot",
+    "noPlots": "No plots yet. Create one using the form above.",
+    "blockCount": "{{count}} blocks",
+    "deleteConfirm": "Delete this plot?",
+    "notFound": "Plot not found.",
+    "blockTitlePlaceholder": "Heading (e.g. Setup)",
+    "blockBodyPlaceholder": "Write the content here",
+    "addBlock": "+ Add block"
+  },
+  "timeline": {
+    "helper": "Organize in-story events in chronological order. This does not appear in entries or the graph view.",
+    "newTimelinePlaceholder": "New timeline name",
+    "createTimeline": "+ Create timeline",
+    "noTimelines": "No timelines yet. Create one using the form above.",
+    "eventCount": "{{count}} events",
+    "deleteConfirm": "Delete this timeline?",
+    "notFound": "Timeline not found.",
+    "eventTimePlaceholder": "Time (e.g. Year X, Chapter 3)",
+    "eventBodyPlaceholder": "Describe what happens",
+    "addEvent": "+ Add event"
+  },
+  "manuscript": {
+    "totalWithTarget": "{{total}} characters total (target {{target}} · {{percent}}%)",
+    "totalOnly": "{{total}} characters total",
+    "newChapterPlaceholder": "New chapter name",
+    "createChapter": "+ Create chapter",
+    "noChapters": "No chapters yet. Create one using the form above.",
+    "charCount": "{{count}} characters",
+    "deleteConfirm": "Delete this chapter?",
+    "notFound": "Chapter not found.",
+    "bodyPlaceholder": "Write your manuscript here."
   }
 }

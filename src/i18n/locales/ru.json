@@ -15,12 +15,17 @@
     "showAll": "Показать все ({{count}})",
     "backToList": "← Назад к списку",
     "allChip": "Все",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "Переместить вверх",
+    "moveDown": "Переместить вниз"
   },
   "nav": {
     "entries": "Записи",
     "graph": "Граф связей",
-    "templates": "Шаблоны"
+    "templates": "Шаблоны",
+    "plots": "Сюжет",
+    "timelines": "Хронология",
+    "manuscript": "Рукопись"
   },
   "home": {
     "newWorkPlaceholder": "Название нового произведения",
@@ -41,7 +46,14 @@
     "backToHome": "На главную",
     "updateFromFile": "Обновить из файла",
     "updating": "Обновление...",
-    "updateConfirm": "Это заменит содержимое «{{name}}» содержимым файла. Текущие {{oldCount}} записей будут заменены на {{newCount}}. Это действие нельзя отменить. Продолжить?"
+    "updateConfirm": "Это заменит содержимое «{{name}}» содержимым файла. Текущие {{oldCount}} записей будут заменены на {{newCount}}. Это действие нельзя отменить. Продолжить?",
+    "settings": "Настройки произведения",
+    "genreLabel": "Жанр",
+    "genrePlaceholder": "напр. роман, лайт-новелла, манга, сценарий игры...",
+    "categoriesLabel": "Категории",
+    "categoryInputPlaceholder": "Введите категорию и нажмите Enter",
+    "targetWordCountLabel": "Целевое количество слов",
+    "targetWordCountPlaceholder": "Введите планируемое количество слов"
   },
   "entryList": {
     "searchPlaceholder": "Поиск по названию, тексту или тегам",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "Язык"
+  },
+  "plot": {
+    "helper": "Организуйте сюжет истории в свободные блоки. Это не отображается в записях или на графе.",
+    "newPlotPlaceholder": "Название нового сюжета",
+    "createPlot": "+ Создать сюжет",
+    "noPlots": "Пока нет сюжетов. Создайте его с помощью формы выше.",
+    "blockCount": "{{count}} блоков",
+    "deleteConfirm": "Удалить этот сюжет?",
+    "notFound": "Сюжет не найден.",
+    "blockTitlePlaceholder": "Заголовок (напр. Завязка)",
+    "blockBodyPlaceholder": "Напишите содержание здесь",
+    "addBlock": "+ Добавить блок"
+  },
+  "timeline": {
+    "helper": "Организуйте события истории в хронологическом порядке. Это не отображается в записях или на графе.",
+    "newTimelinePlaceholder": "Название новой хронологии",
+    "createTimeline": "+ Создать хронологию",
+    "noTimelines": "Пока нет хронологий. Создайте её с помощью формы выше.",
+    "eventCount": "{{count}} событий",
+    "deleteConfirm": "Удалить эту хронологию?",
+    "notFound": "Хронология не найдена.",
+    "eventTimePlaceholder": "Время (напр. Год X, глава 3)",
+    "eventBodyPlaceholder": "Опишите, что происходит",
+    "addEvent": "+ Добавить событие"
+  },
+  "manuscript": {
+    "totalWithTarget": "Всего {{total}} символов (цель {{target}} · {{percent}}%)",
+    "totalOnly": "Всего {{total}} символов",
+    "newChapterPlaceholder": "Название новой рукописи",
+    "createChapter": "+ Создать рукопись",
+    "noChapters": "Пока нет рукописей. Создайте её с помощью формы выше.",
+    "charCount": "{{count}} символов",
+    "deleteConfirm": "Удалить эту рукопись?",
+    "notFound": "Рукопись не найдена.",
+    "bodyPlaceholder": "Напишите рукопись здесь."
   }
 }

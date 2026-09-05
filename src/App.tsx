@@ -9,6 +9,12 @@ import EntryViewPage from './pages/EntryViewPage';
 import EntryEditPage from './pages/EntryEditPage';
 import GraphPage from './pages/GraphPage';
 import TemplatesPage from './pages/TemplatesPage';
+import PlotListPage from './pages/PlotListPage';
+import PlotEditPage from './pages/PlotEditPage';
+import TimelineListPage from './pages/TimelineListPage';
+import TimelineEditPage from './pages/TimelineEditPage';
+import ManuscriptListPage from './pages/ManuscriptListPage';
+import ManuscriptEditPage from './pages/ManuscriptEditPage';
 
 export default function App() {
   const { i18n, t } = useTranslation();
@@ -31,6 +37,12 @@ export default function App() {
         <Route path="graph" element={<GraphPage />} />
         <Route path="graph/:entryId" element={<GraphPage />} />
         <Route path="templates" element={<TemplatesPage />} />
+        <Route path="plots" element={<PlotListPage />} />
+        <Route path="plots/:plotId" element={<PlotEditPage />} />
+        <Route path="timelines" element={<TimelineListPage />} />
+        <Route path="timelines/:timelineId" element={<TimelineEditPage />} />
+        <Route path="manuscript" element={<ManuscriptListPage />} />
+        <Route path="manuscript/:chapterId" element={<ManuscriptEditPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

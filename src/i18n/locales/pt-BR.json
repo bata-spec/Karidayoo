@@ -15,12 +15,17 @@
     "showAll": "Mostrar tudo ({{count}})",
     "backToList": "← Voltar à lista",
     "allChip": "Todos",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "Mover para cima",
+    "moveDown": "Mover para baixo"
   },
   "nav": {
     "entries": "Entradas",
     "graph": "Visualização de grafo",
-    "templates": "Modelos"
+    "templates": "Modelos",
+    "plots": "Trama",
+    "timelines": "Linha do tempo",
+    "manuscript": "Manuscrito"
   },
   "home": {
     "newWorkPlaceholder": "Nome da nova obra",
@@ -41,7 +46,14 @@
     "backToHome": "Voltar ao início",
     "updateFromFile": "Atualizar a partir de arquivo",
     "updating": "Atualizando...",
-    "updateConfirm": "Isso substituirá o conteúdo de \"{{name}}\" pelo conteúdo do arquivo. As {{oldCount}} entradas atuais serão substituídas por {{newCount}}. Esta ação não pode ser desfeita. Continuar?"
+    "updateConfirm": "Isso substituirá o conteúdo de \"{{name}}\" pelo conteúdo do arquivo. As {{oldCount}} entradas atuais serão substituídas por {{newCount}}. Esta ação não pode ser desfeita. Continuar?",
+    "settings": "Configurações da obra",
+    "genreLabel": "Gênero",
+    "genrePlaceholder": "ex.: romance, light novel, mangá, roteiro de jogo...",
+    "categoriesLabel": "Categorias",
+    "categoryInputPlaceholder": "Digite uma categoria e pressione Enter",
+    "targetWordCountLabel": "Meta de contagem de palavras",
+    "targetWordCountPlaceholder": "Digite a contagem prevista"
   },
   "entryList": {
     "searchPlaceholder": "Buscar por título, texto ou tags",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "Idioma"
+  },
+  "plot": {
+    "helper": "Organize o fluxo da sua história em blocos livres. Isso não aparece nas entradas nem na visualização de grafo.",
+    "newPlotPlaceholder": "Nome da nova trama",
+    "createPlot": "+ Criar trama",
+    "noPlots": "Ainda não há tramas. Crie uma usando o formulário acima.",
+    "blockCount": "{{count}} blocos",
+    "deleteConfirm": "Excluir esta trama?",
+    "notFound": "Trama não encontrada.",
+    "blockTitlePlaceholder": "Título (ex.: Introdução)",
+    "blockBodyPlaceholder": "Escreva o conteúdo aqui",
+    "addBlock": "+ Adicionar bloco"
+  },
+  "timeline": {
+    "helper": "Organize os eventos da história em ordem cronológica. Isso não aparece nas entradas nem na visualização de grafo.",
+    "newTimelinePlaceholder": "Nome da nova linha do tempo",
+    "createTimeline": "+ Criar linha do tempo",
+    "noTimelines": "Ainda não há linhas do tempo. Crie uma usando o formulário acima.",
+    "eventCount": "{{count}} eventos",
+    "deleteConfirm": "Excluir esta linha do tempo?",
+    "notFound": "Linha do tempo não encontrada.",
+    "eventTimePlaceholder": "Época (ex.: Ano X, Capítulo 3)",
+    "eventBodyPlaceholder": "Descreva o que acontece",
+    "addEvent": "+ Adicionar evento"
+  },
+  "manuscript": {
+    "totalWithTarget": "{{total}} caracteres no total (meta {{target}} · {{percent}}%)",
+    "totalOnly": "{{total}} caracteres no total",
+    "newChapterPlaceholder": "Nome do novo capítulo",
+    "createChapter": "+ Criar capítulo",
+    "noChapters": "Ainda não há capítulos. Crie um usando o formulário acima.",
+    "charCount": "{{count}} caracteres",
+    "deleteConfirm": "Excluir este capítulo?",
+    "notFound": "Capítulo não encontrado.",
+    "bodyPlaceholder": "Escreva seu manuscrito aqui."
   }
 }

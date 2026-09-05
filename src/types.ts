@@ -35,6 +35,9 @@ export interface Entry {
 export interface Work {
   id: string;
   name: string;
+  genre?: string;
+  categories?: string[];
+  targetWordCount?: number;
   createdAt: string;
   updatedAt: string;
 }
@@ -47,9 +50,52 @@ export interface Template {
   properties: Property[];
 }
 
+export interface PlotBlock {
+  id: string;
+  title: string;
+  body: string;
+}
+
+export interface Plot {
+  id: string;
+  workId: string;
+  name: string;
+  blocks: PlotBlock[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface TimelineEvent {
+  id: string;
+  time: string;
+  body: string;
+}
+
+export interface Timeline {
+  id: string;
+  workId: string;
+  name: string;
+  events: TimelineEvent[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ManuscriptChapter {
+  id: string;
+  workId: string;
+  title: string;
+  body: string;
+  order: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface WorkExport {
   version: 1;
   work: Work;
   entries: Entry[];
   templates: Template[];
+  plots?: Plot[];
+  timelines?: Timeline[];
+  manuscriptChapters?: ManuscriptChapter[];
 }

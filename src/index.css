@@ -362,6 +362,17 @@ button.chip:hover {
   font-size: 0.78rem;
 }
 
+.plain-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  resize: vertical;
+  line-height: 1.6;
+  font: inherit;
+}
+
 .graph-legend {
   display: flex;
   flex-wrap: wrap;

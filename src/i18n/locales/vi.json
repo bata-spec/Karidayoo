@@ -15,12 +15,17 @@
     "showAll": "Hiện tất cả ({{count}})",
     "backToList": "← Quay lại danh sách",
     "allChip": "Tất cả",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "Di chuyển lên",
+    "moveDown": "Di chuyển xuống"
   },
   "nav": {
     "entries": "Danh sách mục",
     "graph": "Xem sơ đồ",
-    "templates": "Mẫu"
+    "templates": "Mẫu",
+    "plots": "Cốt truyện",
+    "timelines": "Dòng thời gian",
+    "manuscript": "Bản thảo"
   },
   "home": {
     "newWorkPlaceholder": "Tên tác phẩm mới",
@@ -41,7 +46,14 @@
     "backToHome": "Quay lại trang chủ",
     "updateFromFile": "Cập nhật từ tệp",
     "updating": "Đang cập nhật...",
-    "updateConfirm": "Thao tác này sẽ thay thế nội dung của \"{{name}}\" bằng nội dung của tệp. {{oldCount}} mục hiện tại sẽ được thay bằng {{newCount}} mục. Không thể hoàn tác. Tiếp tục?"
+    "updateConfirm": "Thao tác này sẽ thay thế nội dung của \"{{name}}\" bằng nội dung của tệp. {{oldCount}} mục hiện tại sẽ được thay bằng {{newCount}} mục. Không thể hoàn tác. Tiếp tục?",
+    "settings": "Cài đặt tác phẩm",
+    "genreLabel": "Thể loại",
+    "genrePlaceholder": "vd: tiểu thuyết, light novel, manga, kịch bản game...",
+    "categoriesLabel": "Danh mục",
+    "categoryInputPlaceholder": "Nhập danh mục rồi nhấn Enter",
+    "targetWordCountLabel": "Số từ mục tiêu",
+    "targetWordCountPlaceholder": "Nhập số từ dự kiến"
   },
   "entryList": {
     "searchPlaceholder": "Tìm theo tiêu đề, nội dung hoặc thẻ",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "Ngôn ngữ"
+  },
+  "plot": {
+    "helper": "Sắp xếp diễn biến câu chuyện thành các khối tự do. Sẽ không hiển thị trong mục hoặc chế độ xem đồ thị.",
+    "newPlotPlaceholder": "Tên cốt truyện mới",
+    "createPlot": "+ Tạo cốt truyện",
+    "noPlots": "Chưa có cốt truyện nào. Hãy tạo bằng biểu mẫu ở trên.",
+    "blockCount": "{{count}} khối",
+    "deleteConfirm": "Xóa cốt truyện này?",
+    "notFound": "Không tìm thấy cốt truyện.",
+    "blockTitlePlaceholder": "Tiêu đề (vd: Mở đầu)",
+    "blockBodyPlaceholder": "Viết nội dung tại đây",
+    "addBlock": "+ Thêm khối"
+  },
+  "timeline": {
+    "helper": "Sắp xếp các sự kiện trong truyện theo trình tự thời gian. Sẽ không hiển thị trong mục hoặc chế độ xem đồ thị.",
+    "newTimelinePlaceholder": "Tên dòng thời gian mới",
+    "createTimeline": "+ Tạo dòng thời gian",
+    "noTimelines": "Chưa có dòng thời gian nào. Hãy tạo bằng biểu mẫu ở trên.",
+    "eventCount": "{{count}} sự kiện",
+    "deleteConfirm": "Xóa dòng thời gian này?",
+    "notFound": "Không tìm thấy dòng thời gian.",
+    "eventTimePlaceholder": "Thời điểm (vd: Năm X, Chương 3)",
+    "eventBodyPlaceholder": "Mô tả sự việc diễn ra",
+    "addEvent": "+ Thêm sự kiện"
+  },
+  "manuscript": {
+    "totalWithTarget": "Tổng {{total}} ký tự (mục tiêu {{target}} · {{percent}}%)",
+    "totalOnly": "Tổng {{total}} ký tự",
+    "newChapterPlaceholder": "Tên bản thảo mới",
+    "createChapter": "+ Tạo bản thảo",
+    "noChapters": "Chưa có bản thảo nào. Hãy tạo bằng biểu mẫu ở trên.",
+    "charCount": "{{count}} ký tự",
+    "deleteConfirm": "Xóa bản thảo này?",
+    "notFound": "Không tìm thấy bản thảo.",
+    "bodyPlaceholder": "Viết bản thảo của bạn tại đây."
   }
 }

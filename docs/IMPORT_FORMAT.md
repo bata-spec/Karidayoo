@@ -22,6 +22,11 @@
    **丸ごと置き換わる**(差分マージではない。作品自体のid/名前は維持される)。
    そのため、内容を更新するたびに変更点だけでなく**その時点の全エントリを含んだファイル**
    を書き出すこと。省略したエントリは削除されたものとして扱われる。
+3. **プロット・時系列・執筆(原稿)・作品のジャンル/カテゴリ/目標文字数が追加された**
+   `work.json` に任意で `plots` / `timelines` / `manuscriptChapters` 配列と、
+   `work.genre` / `work.categories` / `work.targetWordCount` を追加できるようになった
+   (詳細は下記)。これらはエントリやグラフビューには一切反映されない、執筆支援専用のデータ。
+   省略しても既存の形式のままインポートできる。
 
 ## ZIPの構造
 
@@ -41,17 +46,51 @@ images/
   "work": {
     "id": "work_temp",
     "name": "作品名",
+    "genre": "小説",
+    "categories": ["ファンタジー", "異世界"],
+    "targetWordCount": 100000,
     "createdAt": "2026-01-01T00:00:00.000Z",
     "updatedAt": "2026-01-01T00:00:00.000Z"
   },
-  "templates": []
+  "templates": [],
+  "plots": [
+    {
+      "id": "plot_temp",
+      "name": "全体プロット",
+      "blocks": [
+        { "id": "block_1", "title": "起", "body": "冒頭の出来事" },
+        { "id": "block_2", "title": "承", "body": "展開部分" }
+      ]
+    }
+  ],
+  "timelines": [
+    {
+      "id": "timeline_temp",
+      "name": "年表",
+      "events": [
+        { "id": "event_1", "time": "X年", "body": "魔王襲来" }
+      ]
+    }
+  ],
+  "manuscriptChapters": [
+    { "id": "chapter_1", "title": "第一章", "body": "本文...", "order": 0 }
+  ]
 }
 ```
 
 - `work.id` はZIP内で使われないダミー値でよい(インポート時に新しいIDへ自動的に振り直される)。
 - `work.name` が作品名としてそのまま使われる。
+- `work.genre` / `work.categories` / `work.targetWordCount` は省略可。作品設定画面に表示され、
+  `targetWordCount` は執筆(原稿)タブの進捗% 表示に使われる。
 - `createdAt` / `updatedAt` はインポート時に上書きされるので適当なISO日時で構わない。
 - `templates` は省略可(プロパティテンプレート機能。使わないなら `[]`)。
+- `plots` / `timelines` / `manuscriptChapters` はいずれも省略可(`[]` またはキー自体を省略してよい)。
+  プロット・時系列は「構成」機能用のドキュメントで、それぞれ複数作成できる。
+  `plots[].blocks` / `timelines[].events` は自由な順序・数のブロック/出来事の配列
+  (`title`/`body`、`time`/`body` はいずれも自由文字列)。
+  `manuscriptChapters` は原稿(章)の配列で、`order` が表示順(0始まりの整数)。
+  これらのidはZIP内で一意なら何でもよく、インポート時に自動的に振り直される。
+  entriesの`relations`のようにこれらのid同士を参照する仕組みはない(独立したデータ)。
 
 ## entries/\<エントリID\>.json
 

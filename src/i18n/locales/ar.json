@@ -15,12 +15,17 @@
     "showAll": "عرض الكل ({{count}})",
     "backToList": "← العودة إلى القائمة",
     "allChip": "الكل",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "نقل للأعلى",
+    "moveDown": "نقل للأسفل"
   },
   "nav": {
     "entries": "المدخلات",
     "graph": "عرض الرسم البياني",
-    "templates": "القوالب"
+    "templates": "القوالب",
+    "plots": "الحبكة",
+    "timelines": "الخط الزمني",
+    "manuscript": "المخطوطة"
   },
   "home": {
     "newWorkPlaceholder": "اسم العمل الجديد",
@@ -41,7 +46,14 @@
     "backToHome": "العودة إلى الصفحة الرئيسية",
     "updateFromFile": "تحديث من ملف",
     "updating": "جارٍ التحديث...",
-    "updateConfirm": "سيؤدي هذا إلى استبدال محتوى \"{{name}}\" بمحتوى الملف. سيتم استبدال {{oldCount}} إدخالات حالية بـ {{newCount}} إدخالات. لا يمكن التراجع عن هذا الإجراء. هل تريد المتابعة؟"
+    "updateConfirm": "سيؤدي هذا إلى استبدال محتوى \"{{name}}\" بمحتوى الملف. سيتم استبدال {{oldCount}} إدخالات حالية بـ {{newCount}} إدخالات. لا يمكن التراجع عن هذا الإجراء. هل تريد المتابعة؟",
+    "settings": "إعدادات العمل",
+    "genreLabel": "النوع",
+    "genrePlaceholder": "مثال: رواية، رواية خفيفة، مانغا، سيناريو لعبة...",
+    "categoriesLabel": "الفئات",
+    "categoryInputPlaceholder": "اكتب فئة واضغط Enter",
+    "targetWordCountLabel": "عدد الكلمات المستهدف",
+    "targetWordCountPlaceholder": "أدخل عدد الكلمات المخطط له"
   },
   "entryList": {
     "searchPlaceholder": "البحث بالعنوان أو النص أو الوسوم",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "اللغة"
+  },
+  "plot": {
+    "helper": "نظّم سير قصتك في كتل حرة. لا يظهر هذا في الإدخالات أو عرض الرسم البياني.",
+    "newPlotPlaceholder": "اسم حبكة جديدة",
+    "createPlot": "+ إنشاء حبكة",
+    "noPlots": "لا توجد حبكات بعد. أنشئ واحدة باستخدام النموذج أعلاه.",
+    "blockCount": "{{count}} كتلة",
+    "deleteConfirm": "هل تريد حذف هذه الحبكة؟",
+    "notFound": "لم يتم العثور على الحبكة.",
+    "blockTitlePlaceholder": "عنوان (مثال: البداية)",
+    "blockBodyPlaceholder": "اكتب المحتوى هنا",
+    "addBlock": "+ إضافة كتلة"
+  },
+  "timeline": {
+    "helper": "نظّم أحداث القصة بترتيب زمني. لا يظهر هذا في الإدخالات أو عرض الرسم البياني.",
+    "newTimelinePlaceholder": "اسم خط زمني جديد",
+    "createTimeline": "+ إنشاء خط زمني",
+    "noTimelines": "لا توجد خطوط زمنية بعد. أنشئ واحدة باستخدام النموذج أعلاه.",
+    "eventCount": "{{count}} حدث",
+    "deleteConfirm": "هل تريد حذف هذا الخط الزمني؟",
+    "notFound": "لم يتم العثور على الخط الزمني.",
+    "eventTimePlaceholder": "الزمن (مثال: السنة X، الفصل 3)",
+    "eventBodyPlaceholder": "صف ما يحدث",
+    "addEvent": "+ إضافة حدث"
+  },
+  "manuscript": {
+    "totalWithTarget": "الإجمالي {{total}} حرفًا (الهدف {{target}} · {{percent}}%)",
+    "totalOnly": "الإجمالي {{total}} حرفًا",
+    "newChapterPlaceholder": "اسم مخطوطة جديدة",
+    "createChapter": "+ إنشاء مخطوطة",
+    "noChapters": "لا توجد مخطوطات بعد. أنشئ واحدة باستخدام النموذج أعلاه.",
+    "charCount": "{{count}} حرف",
+    "deleteConfirm": "هل تريد حذف هذه المخطوطة؟",
+    "notFound": "لم يتم العثور على المخطوطة.",
+    "bodyPlaceholder": "اكتب مخطوطتك هنا."
   }
 }

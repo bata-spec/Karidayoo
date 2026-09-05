@@ -15,12 +15,17 @@
     "showAll": "Tampilkan semua ({{count}})",
     "backToList": "← Kembali ke daftar",
     "allChip": "Semua",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "Pindah ke atas",
+    "moveDown": "Pindah ke bawah"
   },
   "nav": {
     "entries": "Daftar entri",
     "graph": "Tampilan grafik",
-    "templates": "Template"
+    "templates": "Template",
+    "plots": "Plot",
+    "timelines": "Garis waktu",
+    "manuscript": "Naskah"
   },
   "home": {
     "newWorkPlaceholder": "Nama karya baru",
@@ -41,7 +46,14 @@
     "backToHome": "Kembali ke beranda",
     "updateFromFile": "Perbarui dari file",
     "updating": "Memperbarui...",
-    "updateConfirm": "Ini akan mengganti konten \"{{name}}\" dengan konten file. {{oldCount}} entri saat ini akan diganti dengan {{newCount}} entri. Tindakan ini tidak dapat dibatalkan. Lanjutkan?"
+    "updateConfirm": "Ini akan mengganti konten \"{{name}}\" dengan konten file. {{oldCount}} entri saat ini akan diganti dengan {{newCount}} entri. Tindakan ini tidak dapat dibatalkan. Lanjutkan?",
+    "settings": "Pengaturan karya",
+    "genreLabel": "Genre",
+    "genrePlaceholder": "mis. novel, light novel, manga, skenario game...",
+    "categoriesLabel": "Kategori",
+    "categoryInputPlaceholder": "Ketik kategori lalu tekan Enter",
+    "targetWordCountLabel": "Target jumlah kata",
+    "targetWordCountPlaceholder": "Masukkan target jumlah kata"
   },
   "entryList": {
     "searchPlaceholder": "Cari berdasarkan judul, isi, atau tag",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "Bahasa"
+  },
+  "plot": {
+    "helper": "Susun alur cerita Anda ke dalam blok bebas. Ini tidak muncul di entri atau tampilan graf.",
+    "newPlotPlaceholder": "Nama plot baru",
+    "createPlot": "+ Buat plot",
+    "noPlots": "Belum ada plot. Buat menggunakan formulir di atas.",
+    "blockCount": "{{count}} blok",
+    "deleteConfirm": "Hapus plot ini?",
+    "notFound": "Plot tidak ditemukan.",
+    "blockTitlePlaceholder": "Judul (mis. Pembuka)",
+    "blockBodyPlaceholder": "Tulis isinya di sini",
+    "addBlock": "+ Tambah blok"
+  },
+  "timeline": {
+    "helper": "Susun peristiwa dalam cerita secara kronologis. Ini tidak muncul di entri atau tampilan graf.",
+    "newTimelinePlaceholder": "Nama garis waktu baru",
+    "createTimeline": "+ Buat garis waktu",
+    "noTimelines": "Belum ada garis waktu. Buat menggunakan formulir di atas.",
+    "eventCount": "{{count}} peristiwa",
+    "deleteConfirm": "Hapus garis waktu ini?",
+    "notFound": "Garis waktu tidak ditemukan.",
+    "eventTimePlaceholder": "Waktu (mis. Tahun X, Bab 3)",
+    "eventBodyPlaceholder": "Jelaskan apa yang terjadi",
+    "addEvent": "+ Tambah peristiwa"
+  },
+  "manuscript": {
+    "totalWithTarget": "Total {{total}} karakter (target {{target}} · {{percent}}%)",
+    "totalOnly": "Total {{total}} karakter",
+    "newChapterPlaceholder": "Nama naskah baru",
+    "createChapter": "+ Buat naskah",
+    "noChapters": "Belum ada naskah. Buat menggunakan formulir di atas.",
+    "charCount": "{{count}} karakter",
+    "deleteConfirm": "Hapus naskah ini?",
+    "notFound": "Naskah tidak ditemukan.",
+    "bodyPlaceholder": "Tulis naskah Anda di sini."
   }
 }

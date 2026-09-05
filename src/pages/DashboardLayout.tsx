@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavLink, Outlet, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { deleteWork, exportWork, getWork, listEntries, renameWork, replaceWorkContent } from '../db';
+import { deleteWork, exportWork, getWork, listEntries, renameWork, replaceWorkContent, updateWorkSettings } from '../db';
 import { buildWorkZip, parseImportFile } from '../utils/zip';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import type { Work } from '../types';
@@ -23,11 +23,49 @@ export default function DashboardLayout() {
   const [zipping, setZipping] = useState(false);
   const [updating, setUpdating] = useState(false);
   const updateFileInputRef = useRef<HTMLInputElement>(null);
+  const [showSettings, setShowSettings] = useState(false);
+  const [genre, setGenre] = useState('');
+  const [categories, setCategories] = useState<string[]>([]);
+  const [categoryInput, setCategoryInput] = useState('');
+  const [targetWordCount, setTargetWordCount] = useState('');
 
   useEffect(() => {
     if (!workId) return;
-    getWork(workId).then((w) => setWork(w ?? null));
+    getWork(workId).then((w) => {
+      setWork(w ?? null);
+      if (w) {
+        setGenre(w.genre ?? '');
+        setCategories(w.categories ?? []);
+        setTargetWordCount(w.targetWordCount ? String(w.targetWordCount) : '');
+      }
+    });
   }, [workId]);
+
+  function addCategory() {
+    const value = categoryInput.trim();
+    if (!value || categories.includes(value)) {
+      setCategoryInput('');
+      return;
+    }
+    setCategories([...categories, value]);
+    setCategoryInput('');
+  }
+
+  function removeCategory(value: string) {
+    setCategories(categories.filter((c) => c !== value));
+  }
+
+  async function handleSaveSettings() {
+    if (!work) return;
+    const parsedTarget = targetWordCount.trim() ? Number(targetWordCount) : undefined;
+    await updateWorkSettings(work.id, {
+      genre: genre.trim() || undefined,
+      categories: categories.length > 0 ? categories : undefined,
+      targetWordCount: parsedTarget && parsedTarget > 0 ? parsedTarget : undefined,
+    });
+    setWork({ ...work, genre: genre.trim() || undefined, categories, targetWordCount: parsedTarget });
+    setShowSettings(false);
+  }
 
   async function handleRename() {
     if (!work) return;
@@ -146,8 +184,63 @@ export default function DashboardLayout() {
           <button type="button" className="btn btn-danger" onClick={handleDelete}>
             {t('common.delete')}
           </button>
+          <button type="button" className="btn btn-ghost" onClick={() => setShowSettings((v) => !v)}>
+            {t('work.settings')}
+          </button>
         </div>
       </div>
+
+      {showSettings && (
+        <div className="card" style={{ marginBottom: 16 }}>
+          <div className="field">
+            <label>{t('work.genreLabel')}</label>
+            <input type="text" value={genre} onChange={(e) => setGenre(e.target.value)} placeholder={t('work.genrePlaceholder')} />
+          </div>
+          <div className="field">
+            <label>{t('work.categoriesLabel')}</label>
+            <div className="row" style={{ flexWrap: 'wrap', marginBottom: 6 }}>
+              {categories.map((c) => (
+                <span className="chip" key={c}>
+                  {c}
+                  <button type="button" onClick={() => removeCategory(c)} aria-label={t('entryEdit.removeTagAria')}>
+                    ✕
+                  </button>
+                </span>
+              ))}
+            </div>
+            <div className="row">
+              <input
+                type="text"
+                value={categoryInput}
+                onChange={(e) => setCategoryInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addCategory();
+                  }
+                }}
+                placeholder={t('work.categoryInputPlaceholder')}
+              />
+              <button type="button" className="btn" onClick={addCategory}>
+                {t('common.add')}
+              </button>
+            </div>
+          </div>
+          <div className="field">
+            <label>{t('work.targetWordCountLabel')}</label>
+            <input
+              type="number"
+              min={0}
+              value={targetWordCount}
+              onChange={(e) => setTargetWordCount(e.target.value)}
+              placeholder={t('work.targetWordCountPlaceholder')}
+            />
+          </div>
+          <button type="button" className="btn btn-primary" onClick={handleSaveSettings}>
+            {t('common.save')}
+          </button>
+        </div>
+      )}
 
       <nav className="tabs">
         <NavLink to="entries" className={({ isActive }) => (isActive ? 'active' : '')}>
@@ -155,6 +248,15 @@ export default function DashboardLayout() {
         </NavLink>
         <NavLink to="graph" className={({ isActive }) => (isActive ? 'active' : '')}>
           {t('nav.graph')}
+        </NavLink>
+        <NavLink to="plots" className={({ isActive }) => (isActive ? 'active' : '')}>
+          {t('nav.plots')}
+        </NavLink>
+        <NavLink to="timelines" className={({ isActive }) => (isActive ? 'active' : '')}>
+          {t('nav.timelines')}
+        </NavLink>
+        <NavLink to="manuscript" className={({ isActive }) => (isActive ? 'active' : '')}>
+          {t('nav.manuscript')}
         </NavLink>
         <NavLink to="templates" className={({ isActive }) => (isActive ? 'active' : '')}>
           {t('nav.templates')}

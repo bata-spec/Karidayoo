@@ -15,12 +15,17 @@
     "showAll": "सभी दिखाएं ({{count}})",
     "backToList": "← सूची पर वापस जाएं",
     "allChip": "सभी",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "ऊपर ले जाएँ",
+    "moveDown": "नीचे ले जाएँ"
   },
   "nav": {
     "entries": "प्रविष्टियां",
     "graph": "ग्राफ़ दृश्य",
-    "templates": "टेम्पलेट"
+    "templates": "टेम्पलेट",
+    "plots": "कथानक",
+    "timelines": "समयरेखा",
+    "manuscript": "पांडुलिपि"
   },
   "home": {
     "newWorkPlaceholder": "नई रचना का नाम",
@@ -41,7 +46,14 @@
     "backToHome": "होम पर वापस जाएं",
     "updateFromFile": "फ़ाइल से अपडेट करें",
     "updating": "अपडेट हो रहा है...",
-    "updateConfirm": "इससे \"{{name}}\" की सामग्री फ़ाइल की सामग्री से बदल जाएगी। मौजूदा {{oldCount}} प्रविष्टियाँ {{newCount}} प्रविष्टियों से बदल दी जाएँगी। इसे पूर्ववत नहीं किया जा सकता। जारी रखें?"
+    "updateConfirm": "इससे \"{{name}}\" की सामग्री फ़ाइल की सामग्री से बदल जाएगी। मौजूदा {{oldCount}} प्रविष्टियाँ {{newCount}} प्रविष्टियों से बदल दी जाएँगी। इसे पूर्ववत नहीं किया जा सकता। जारी रखें?",
+    "settings": "कृति सेटिंग्स",
+    "genreLabel": "शैली",
+    "genrePlaceholder": "उदा: उपन्यास, लाइट नॉवेल, मंगा, गेम परिदृश्य...",
+    "categoriesLabel": "श्रेणियाँ",
+    "categoryInputPlaceholder": "श्रेणी लिखें और Enter दबाएँ",
+    "targetWordCountLabel": "लक्ष्य शब्द संख्या",
+    "targetWordCountPlaceholder": "अनुमानित शब्द संख्या दर्ज करें"
   },
   "entryList": {
     "searchPlaceholder": "शीर्षक, मुख्य पाठ या टैग से खोजें",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "भाषा"
+  },
+  "plot": {
+    "helper": "अपनी कहानी के प्रवाह को स्वतंत्र ब्लॉकों में व्यवस्थित करें। यह प्रविष्टियों या ग्राफ़ दृश्य में दिखाई नहीं देता।",
+    "newPlotPlaceholder": "नए कथानक का नाम",
+    "createPlot": "+ कथानक बनाएँ",
+    "noPlots": "अभी तक कोई कथानक नहीं है। ऊपर दिए गए फ़ॉर्म से बनाएँ।",
+    "blockCount": "{{count}} ब्लॉक",
+    "deleteConfirm": "क्या इस कथानक को हटाएँ?",
+    "notFound": "कथानक नहीं मिला।",
+    "blockTitlePlaceholder": "शीर्षक (उदा: आरंभ)",
+    "blockBodyPlaceholder": "यहाँ सामग्री लिखें",
+    "addBlock": "+ ब्लॉक जोड़ें"
+  },
+  "timeline": {
+    "helper": "कहानी की घटनाओं को कालानुक्रमिक क्रम में व्यवस्थित करें। यह प्रविष्टियों या ग्राफ़ दृश्य में दिखाई नहीं देता।",
+    "newTimelinePlaceholder": "नई समयरेखा का नाम",
+    "createTimeline": "+ समयरेखा बनाएँ",
+    "noTimelines": "अभी तक कोई समयरेखा नहीं है। ऊपर दिए गए फ़ॉर्म से बनाएँ।",
+    "eventCount": "{{count}} घटनाएँ",
+    "deleteConfirm": "क्या इस समयरेखा को हटाएँ?",
+    "notFound": "समयरेखा नहीं मिली।",
+    "eventTimePlaceholder": "समय (उदा: वर्ष X, अध्याय 3)",
+    "eventBodyPlaceholder": "घटना का विवरण लिखें",
+    "addEvent": "+ घटना जोड़ें"
+  },
+  "manuscript": {
+    "totalWithTarget": "कुल {{total}} अक्षर (लक्ष्य {{target}} · {{percent}}%)",
+    "totalOnly": "कुल {{total}} अक्षर",
+    "newChapterPlaceholder": "नई पांडुलिपि का नाम",
+    "createChapter": "+ पांडुलिपि बनाएँ",
+    "noChapters": "अभी तक कोई पांडुलिपि नहीं है। ऊपर दिए गए फ़ॉर्म से बनाएँ।",
+    "charCount": "{{count}} अक्षर",
+    "deleteConfirm": "क्या इस पांडुलिपि को हटाएँ?",
+    "notFound": "पांडुलिपि नहीं मिली।",
+    "bodyPlaceholder": "यहाँ अपनी पांडुलिपि लिखें।"
   }
 }

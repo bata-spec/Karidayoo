@@ -15,12 +15,17 @@
     "showAll": "すべて表示({{count}}件)",
     "backToList": "← 一覧に戻る",
     "allChip": "すべて",
-    "countSuffix": "({{count}})"
+    "countSuffix": "({{count}})",
+    "moveUp": "上へ移動",
+    "moveDown": "下へ移動"
   },
   "nav": {
     "entries": "エントリ一覧",
     "graph": "グラフビュー",
-    "templates": "テンプレート"
+    "templates": "テンプレート",
+    "plots": "プロット",
+    "timelines": "時系列",
+    "manuscript": "執筆"
   },
   "home": {
     "newWorkPlaceholder": "新しい作品名",
@@ -41,7 +46,14 @@
     "backToHome": "ホームに戻る",
     "updateFromFile": "ファイルで更新",
     "updating": "更新中...",
-    "updateConfirm": "「{{name}}」の内容をファイルの内容で更新します。現在{{oldCount}}件のエントリが、{{newCount}}件に置き換わります。元に戻せません。よろしいですか？"
+    "updateConfirm": "「{{name}}」の内容をファイルの内容で更新します。現在{{oldCount}}件のエントリが、{{newCount}}件に置き換わります。元に戻せません。よろしいですか？",
+    "settings": "作品設定",
+    "genreLabel": "ジャンル",
+    "genrePlaceholder": "例:小説、ライトノベル、漫画、ゲームシナリオ...",
+    "categoriesLabel": "カテゴリ",
+    "categoryInputPlaceholder": "カテゴリを入力してEnter",
+    "targetWordCountLabel": "目標文字数",
+    "targetWordCountPlaceholder": "予定文字数を入力"
   },
   "entryList": {
     "searchPlaceholder": "タイトル・本文・タグで検索",
@@ -132,5 +144,40 @@
   },
   "language": {
     "label": "言語"
+  },
+  "plot": {
+    "helper": "物語の流れを自由なブロックに分けて整理できます。エントリやグラフビューには反映されません。",
+    "newPlotPlaceholder": "新しいプロット名",
+    "createPlot": "＋ プロットを作る",
+    "noPlots": "まだプロットがありません。上のフォームから作成してください。",
+    "blockCount": "{{count}}ブロック",
+    "deleteConfirm": "このプロットを削除しますか？",
+    "notFound": "プロットが見つかりませんでした。",
+    "blockTitlePlaceholder": "見出し(例:起)",
+    "blockBodyPlaceholder": "内容を書いてください",
+    "addBlock": "＋ ブロックを追加"
+  },
+  "timeline": {
+    "helper": "物語内の出来事を時系列順に整理できます。エントリやグラフビューには反映されません。",
+    "newTimelinePlaceholder": "新しい時系列名",
+    "createTimeline": "＋ 時系列を作る",
+    "noTimelines": "まだ時系列がありません。上のフォームから作成してください。",
+    "eventCount": "{{count}}件の出来事",
+    "deleteConfirm": "この時系列を削除しますか？",
+    "notFound": "時系列が見つかりませんでした。",
+    "eventTimePlaceholder": "時期(例:X年、第3章)",
+    "eventBodyPlaceholder": "出来事の内容を書いてください",
+    "addEvent": "＋ 出来事を追加"
+  },
+  "manuscript": {
+    "totalWithTarget": "計{{total}}文字(目標{{target}}文字・{{percent}}%)",
+    "totalOnly": "計{{total}}文字",
+    "newChapterPlaceholder": "新しい原稿名",
+    "createChapter": "＋ 原稿を作る",
+    "noChapters": "まだ原稿がありません。上のフォームから作成してください。",
+    "charCount": "{{count}}字",
+    "deleteConfirm": "この原稿を削除しますか？",
+    "notFound": "原稿が見つかりませんでした。",
+    "bodyPlaceholder": "ここに本文を執筆してください。"
   }
 }

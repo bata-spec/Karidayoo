@@ -1,6 +1,6 @@
 import JSZip from 'jszip';
 import i18n from '../i18n';
-import type { Entry, EntryLayout, ImageRef, Template, Work, WorkExport } from '../types';
+import type { Entry, EntryLayout, ImageRef, ManuscriptChapter, Plot, Template, Timeline, Work, WorkExport } from '../types';
 
 interface ZipImageRef {
   id: string;
@@ -27,12 +27,22 @@ interface ZipWorkJson {
   version: 1;
   work: Work;
   templates: Template[];
+  plots?: Plot[];
+  timelines?: Timeline[];
+  manuscriptChapters?: ManuscriptChapter[];
 }
 
 export async function buildWorkZip(data: WorkExport): Promise<Blob> {
   const zip = new JSZip();
 
-  const workJson: ZipWorkJson = { version: 1, work: data.work, templates: data.templates };
+  const workJson: ZipWorkJson = {
+    version: 1,
+    work: data.work,
+    templates: data.templates,
+    plots: data.plots,
+    timelines: data.timelines,
+    manuscriptChapters: data.manuscriptChapters,
+  };
   zip.file('work.json', JSON.stringify(workJson, null, 2));
 
   const entriesFolder = zip.folder('entries')!;
@@ -113,7 +123,15 @@ export async function parseWorkZip(file: File): Promise<WorkExport> {
     });
   }
 
-  return { version: 1, work: workJson.work, entries, templates: workJson.templates ?? [] };
+  return {
+    version: 1,
+    work: workJson.work,
+    entries,
+    templates: workJson.templates ?? [],
+    plots: workJson.plots ?? [],
+    timelines: workJson.timelines ?? [],
+    manuscriptChapters: workJson.manuscriptChapters ?? [],
+  };
 }
 
 export async function parseImportFile(file: File): Promise<WorkExport> {
